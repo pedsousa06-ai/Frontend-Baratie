@@ -1224,3 +1224,33 @@ header img {
 .btn-suporte:hover {
   background: #b09070;
 }
+
+@media (max-width: 768px) {
+  header {
+    padding: 12px 20px;
+  }
+ 
+  header img {
+    width: 38px;
+    height: 38px;
+  }
+ 
+  .nav-header ul {
+    gap: 16px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  header {
+    padding: 10px 16px;
+  }
+ 
+  .nav-header ul {
+    gap: 10px;
+  }
+ 
+  .nav-header-item {
+    font-size: 13px;
+  }
+}
+
