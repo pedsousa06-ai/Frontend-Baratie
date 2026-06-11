@@ -44,86 +44,112 @@ header img {                                        /* Logo SVG da marca */
 
 
 /*MAIN*/
+/* =========================
+   HERO
+========================= */
+
 .hero {
-  background: var(--color-white);          /* Fundo branco base */
-  position: relative;                      /* Necessário para posicionar o wave */
-  overflow: hidden;                        /* Evita scroll horizontal */
-  min-height: 88vh;                        /* Ocupa quase toda a altura da tela */
+    background: var(--color-white);
+    position: relative;
+    overflow: hidden;
+    min-height: 88vh;
 }
- 
+
 .hero-content {
-  display: grid;                           /* Layout de duas colunas */
-  grid-template-columns: 1fr 1fr;          /* Texto e imagem com peso igual */
-  align-items: center;                     /* Alinha verticalmente ao centro */
-  min-height: 88vh;                        /* Mesma altura da section */
-  padding: 0 var(--spacing-4xl);           /* Espaçamento lateral: 80px */
+    display: grid;
+    grid-template-columns: 1fr 45%;
+
+    align-items: center;
+
+    min-height: 88vh;
+
+    padding-left: var(--spacing-4xl);
+    padding-right: 0;
 }
- 
+
+/* =========================
+   TEXTO
+========================= */
+
 .hero-text {
-  display: flex;                           /* Empilha título, parágrafo e botão */
-  flex-direction: column;
-  align-items: flex-start;                 /* Alinha conteúdo à esquerda */
-  gap: var(--spacing-lg);                  /* 24px entre cada elemento */
-  padding-right: var(--spacing-xl);        /* 32px de respiro em relação à imagem */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: var(--spacing-lg);
+
+    max-width: 650px;
 }
- 
+
 .hero-text h1 {
-  font-family: var(--font-title);          /* Alexandria, sans-serif */
-  font-size: var(--font-h1);              /* 50px */
-  font-weight: var(--font-bold);           /* 700 */
-  color: var(--color-accent);             /* #FCA029 laranja da marca */
-  line-height: 1.15;
+    font-family: var(--font-title);
+    font-size: 72px;
+    font-weight: var(--font-bold);
+
+    line-height: 1.15;
+
+    color: var(--color-accent);
 }
- 
+
 .hero-text p {
-  font-family: var(--font-body);           /* Inter, sans-serif */
-  font-size: var(--font-body2);            /* 18px */
-  font-weight: var(--font-regular);        /* 400 */
-  color: var(--color-gray-400);            /* #6E6E6E */
-  line-height: 1.7;
-  max-width: 480px;
+    font-family: var(--font-body);
+    font-size: 28px;
+    font-style: italic;
+    font-weight: var(--font-regular);
+
+    color: var(--color-l-black);
+
+    line-height: 1.4;
+
+    max-width: 700px;
 }
- 
+
 .btn-primary {
-  display: inline-block;
-  background: var(--color-accent);         /* #FCA029 laranja da marca */
-  color: var(--color-white);              /* Texto branco */
-  font-family: var(--font-body);
-  font-size: var(--font-body3);            /* 16px */
-  font-weight: var(--font-semibold);       /* 600 */
-  padding: var(--spacing-md) var(--spacing-2xl); /* 16px 48px */
-  border-radius: var(--radius-lg);         /* 12px */
-  text-decoration: none;
-  transition: opacity var(--transition-fast), transform var(--transition-fast); /* 0.2s */
+    display: inline-block;
+
+    padding: var(--spacing-md) var(--spacing-2xl);
+
+    background: var(--color-accent);
+    color: var(--color-white);
+
+    border-radius: var(--radius-md);
+
+    text-decoration: none;
+
+    font-family: var(--font-body);
+    font-size: var(--font-body1);
+    font-weight: var(--font-medium);
+    font-style: italic;
+
+    transition: var(--transition-fast);
 }
- 
+
 .btn-primary:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);             /* Leve elevação ao hover */
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
- 
+
+/* =========================
+   IMAGEM
+========================= */
+
 .hero-image {
-  width: 100%;
-  height: 88vh;
-  overflow: hidden;                        /* Garante que a imagem não vaze */
+    width: 100%;
+    height: 88vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
- 
+
 .hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;                       /* Preenche sem distorcer */
-  clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%); /* Corte diagonal na borda esquerda */
+
+    object-fit: cover;
+
+    display: block;
 }
- 
-.hero-wave {
-  position: absolute;                      /* Sobrepõe o conteúdo na base da section */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: var(--color-gray-100);       /* Cor da próxima section (#F5F5F5) */
-  clip-path: ellipse(55% 100% at 50% 100%); /* Curva ondulada na base */
-}
+
+
 
 .section-pratos {
   background: #C9E8E3;                       /* Fundo verde-menta */
@@ -335,4 +361,132 @@ header img {                                        /* Logo SVG da marca */
  
 .pratos-load-more:hover {
   opacity: 0.7;
+}
+
+.section-filtrar {
+  background: var(--color-gray-100);         /* #F5F5F5 fundo acinzentado claro */
+  padding: var(--spacing-3xl) var(--spacing-2xl); /* 64px 48px */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);                    /* 24px entre cada bloco */
+  max-width: var(--container-md);            /* 1024px largura máxima */
+  margin: 0 auto;                            /* Centraliza na página */
+  border-radius: var(--radius-2xl);          /* 24px bordas arredondadas */
+}
+ 
+/* --- Bloco genérico (Calorias / Macros / Ordenar / Restrições) --- */
+ 
+.filtrar-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);                    /* 8px entre título, valor e slider */
+  padding-bottom: var(--spacing-lg);         /* 24px */
+  border-bottom: var(--border-thin) solid var(--color-gray-200); /* Linha divisória */
+}
+ 
+.filtrar-bloco:last-child {
+  border-bottom: none;                       /* Remove borda no último bloco */
+  padding-bottom: 0;
+}
+ 
+.filtrar-bloco-titulo {
+  font-family: var(--font-title);            /* Alexandria */
+  font-size: var(--font-h4);                /* 21px */
+  font-weight: var(--font-bold);
+  color: var(--color-gray-300);              /* #999999 cinza médio */
+}
+ 
+/* --- Bloco: Calorias --- */
+ 
+.filtrar-kcal-valor {
+  font-family: var(--font-body);
+  font-size: var(--font-body3);              /* 16px */
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-400);              /* #6E6E6E */
+}
+ 
+.filtrar-slider {
+  width: 50%;                                /* Slider ocupa metade da largura como no design */
+  accent-color: #6AC8E3;                     /* Azul claro do thumb e trilha */
+  cursor: pointer;
+}
+ 
+/* --- Bloco: Macronutrientes --- */
+ 
+.filtrar-macro-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);                    /* 16px entre Prot, Carb e Gord */
+  margin-top: var(--spacing-sm);
+}
+ 
+.filtrar-macro-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);                    /* 16px entre label e slider */
+}
+ 
+.filtrar-macro-label {
+  font-family: var(--font-body);
+  font-size: var(--font-body3);              /* 16px */
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-300);              /* #999999 */
+  width: 48px;                               /* Largura fixa para alinhar os sliders */
+  flex-shrink: 0;
+}
+ 
+/* --- Bloco: Ordenar Por Calorias --- */
+ 
+.filtrar-ordenar-btns {
+  display: flex;
+  gap: var(--spacing-md);                    /* 16px entre Crescente e Decrescente */
+  margin-top: var(--spacing-sm);
+}
+ 
+.btn-ordenar {
+  flex: 1;                                   /* Cada botão ocupa metade do espaço */
+  padding: var(--spacing-md) var(--spacing-lg); /* 16px 24px */
+  border-radius: 30px;                       /* Pill shape */
+  border: var(--border-thin) solid var(--color-gray-200);
+  font-family: var(--font-body);
+  font-size: var(--font-body3);              /* 16px */
+  font-weight: var(--font-medium);
+  color: var(--color-gray-300);              /* #999999 mesma cor nos dois botões */
+  background: var(--color-white);            /* Fundo branco igual nos dois */
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+ 
+.btn-ordenar:hover {
+  border-color: var(--color-gray-300);       /* Borda mais escura no hover */
+}
+ 
+/* --- Bloco: Restrições Alimentares --- */
+ 
+.filtrar-restricoes {
+  display: flex;
+  flex-wrap: wrap;                           /* Tags quebram linha se necessário */
+  gap: var(--spacing-sm);                    /* 8px entre as tags */
+  margin-top: var(--spacing-sm);
+}
+ 
+.tag-restricao {
+  padding: var(--spacing-sm) var(--spacing-md); /* 8px 16px */
+  border-radius: 30px;                       /* Pill shape */
+  border: var(--border-thin) solid var(--color-gray-300);
+  font-family: var(--font-body);
+  font-size: var(--font-body4);              /* 14px */
+  font-weight: var(--font-medium);
+  color: var(--color-gray-400);
+  background: var(--color-white);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+ 
+.tag-restricao.ativa {
+  color: var(--color-white);
+}
+ 
+.tag-restricao:hover:not(.ativa) {
+  border-color: var(--color-gray-400);
 }
