@@ -363,3 +363,130 @@ header img {                                        /* Logo SVG da marca */
   opacity: 0.7;
 }
 
+.section-filtrar {
+  background: var(--color-gray-100);         /* #F5F5F5 fundo acinzentado claro */
+  padding: var(--spacing-3xl) var(--spacing-2xl); /* 64px 48px */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);                    /* 24px entre cada bloco */
+  max-width: var(--container-md);            /* 1024px largura máxima */
+  margin: 0 auto;                            /* Centraliza na página */
+  border-radius: var(--radius-2xl);          /* 24px bordas arredondadas */
+}
+ 
+/* --- Bloco genérico (Calorias / Macros / Ordenar / Restrições) --- */
+ 
+.filtrar-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);                    /* 8px entre título, valor e slider */
+  padding-bottom: var(--spacing-lg);         /* 24px */
+  border-bottom: var(--border-thin) solid var(--color-gray-200); /* Linha divisória */
+}
+ 
+.filtrar-bloco:last-child {
+  border-bottom: none;                       /* Remove borda no último bloco */
+  padding-bottom: 0;
+}
+ 
+.filtrar-bloco-titulo {
+  font-family: var(--font-title);            /* Alexandria */
+  font-size: var(--font-h4);                /* 21px */
+  font-weight: var(--font-bold);
+  color: var(--color-gray-300);              /* #999999 cinza médio */
+}
+ 
+/* --- Bloco: Calorias --- */
+ 
+.filtrar-kcal-valor {
+  font-family: var(--font-body);
+  font-size: var(--font-body3);              /* 16px */
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-400);              /* #6E6E6E */
+}
+ 
+.filtrar-slider {
+  width: 50%;                                /* Slider ocupa metade da largura como no design */
+  accent-color: #6AC8E3;                     /* Azul claro do thumb e trilha */
+  cursor: pointer;
+}
+ 
+/* --- Bloco: Macronutrientes --- */
+ 
+.filtrar-macro-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);                    /* 16px entre Prot, Carb e Gord */
+  margin-top: var(--spacing-sm);
+}
+ 
+.filtrar-macro-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);                    /* 16px entre label e slider */
+}
+ 
+.filtrar-macro-label {
+  font-family: var(--font-body);
+  font-size: var(--font-body3);              /* 16px */
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-300);              /* #999999 */
+  width: 48px;                               /* Largura fixa para alinhar os sliders */
+  flex-shrink: 0;
+}
+ 
+/* --- Bloco: Ordenar Por Calorias --- */
+ 
+.filtrar-ordenar-btns {
+  display: flex;
+  gap: var(--spacing-md);                    /* 16px entre Crescente e Decrescente */
+  margin-top: var(--spacing-sm);
+}
+ 
+.btn-ordenar {
+  flex: 1;                                   /* Cada botão ocupa metade do espaço */
+  padding: var(--spacing-md) var(--spacing-lg); /* 16px 24px */
+  border-radius: 30px;                       /* Pill shape */
+  border: var(--border-thin) solid var(--color-gray-200);
+  font-family: var(--font-body);
+  font-size: var(--font-body3);              /* 16px */
+  font-weight: var(--font-medium);
+  color: var(--color-gray-300);              /* #999999 mesma cor nos dois botões */
+  background: var(--color-white);            /* Fundo branco igual nos dois */
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+ 
+.btn-ordenar:hover {
+  border-color: var(--color-gray-300);       /* Borda mais escura no hover */
+}
+ 
+/* --- Bloco: Restrições Alimentares --- */
+ 
+.filtrar-restricoes {
+  display: flex;
+  flex-wrap: wrap;                           /* Tags quebram linha se necessário */
+  gap: var(--spacing-sm);                    /* 8px entre as tags */
+  margin-top: var(--spacing-sm);
+}
+ 
+.tag-restricao {
+  padding: var(--spacing-sm) var(--spacing-md); /* 8px 16px */
+  border-radius: 30px;                       /* Pill shape */
+  border: var(--border-thin) solid var(--color-gray-300);
+  font-family: var(--font-body);
+  font-size: var(--font-body4);              /* 14px */
+  font-weight: var(--font-medium);
+  color: var(--color-gray-400);
+  background: var(--color-white);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+ 
+.tag-restricao.ativa {
+  color: var(--color-white);
+}
+ 
+.tag-restricao:hover:not(.ativa) {
+  border-color: var(--color-gray-400);
+}
