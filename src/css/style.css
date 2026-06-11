@@ -1420,3 +1420,42 @@ header img {
     font-size: 24px;
   }
 }
+
+@media (max-width: 768px) {
+  .resultados-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  .resultados-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+@media (max-width: 480px) {
+  .section-resultados {
+    padding: 32px 16px;
+  }
+ 
+  .section-resultados-title {
+    font-size: 32px;
+  }
+ 
+  .resultados-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+ 
+  .resultados-stat-valor {
+    font-size: 22px;
+  }
+ 
+  .resultados-grid {
+    grid-template-columns: 1fr;
+  }
+}
+ 
+@media (max-width: 360px) {
+  .resultados-stats {
+    grid-template-columns: 1fr;
+  }
+}
