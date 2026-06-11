@@ -1514,3 +1514,27 @@ header img {
     font-size: 26px;
   }
 }
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 48px 16px;
+    min-height: auto;
+  }
+ 
+  .cta-headline {
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+  }
+ 
+  .anchor-badge {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
+  }
+}
+ 
+@media (max-width: 360px) {
+  .cta-headline {
+    font-size: 1.25rem;
+  }
+}
