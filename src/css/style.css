@@ -4,52 +4,42 @@
    HEADER
 ========================= */
 
-header{
-    background-color: #f2efeb;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 100px;
-
-    padding: 12px 80px;
+header {
+  display: flex;                                    /* Logo e nav lado a lado */
+  align-items: center;                              /* Alinha verticalmente ao centro */
+  justify-content: space-between;                   /* Logo na esquerda, nav na direita */
+  padding: var(--spacing-md) var(--spacing-4xl);    /* md vertical, 4xl horizontal */
+  background: var(--color-white);                   /* Fundo branco do design system */
+  position: sticky;                                 /* Gruda no topo ao rolar a página */
+  top: 0;                                           /* Posição de fixação */
+  z-index: 100;                                     /* Fica acima de todos os outros elementos */
+  box-shadow: var(--shadow-sm);                     /* Sombra sutil para separar do conteúdo */
 }
-
-/* =========================
-   LOGO
-========================= */
-
-header img{
-    width: 65px;
-    height: auto;
-    cursor: pointer;
+ 
+header img {                                        /* Logo SVG da marca */
+  width: 48px;
+  height: 48px;
+  object-fit: contain;                              /* Mantém proporção sem cortar */
 }
-
-/* =========================
-   MENU
-========================= */
-
-.nav-header ul{
-    display: flex;
-    align-items: center;
-    gap: 100px;
-
-    list-style: none;
+ 
+.nav-header ul {                                    /* Lista de links de navegação */
+  display: flex;                                    /* Links em linha horizontal */
+  align-items: center;
+  gap: var(--spacing-2xl);                          /* Espaçamento entre cada link */
+  list-style: none;                                 /* Remove bullets padrão */
+  padding: 0;
+  margin: 0;
 }
-
-.nav-header-item{
-    font-family: var(--font-body);
-    font-size: var(--font-body1);
-    font-weight: var(--font-regular);
-
-    color: var(--color-secondary);
-
-    text-decoration: none;
-
-    transition: var(--transition-fast);
+ 
+.nav-header-item {                                  /* Links individuais do menu */
+  text-decoration: none;                            /* Remove sublinhado padrão */
+  color: var(--color-secondary);                    /* --color-secondary: #885D44 */
+  font-family: var(--font-body);                    /* Inter, sans-serif */
+  font-size: var(--font-body3);                     /* 16px */
+  font-weight: var(--font-medium);                  /* 500 */
+  transition: color var(--transition-fast);         /* 0.2s */
 }
-
-.nav-header-item:hover{
-    color: var(--color-accent);
+ 
+.nav-header-item:hover {                            /* Efeito ao passar o mouse */
+  color: var(--color-accent);                       /* --color-accent: #FCA029 */
 }
