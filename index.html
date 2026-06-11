@@ -76,58 +76,106 @@
 
     </main>
 
-    <section id="pratos"> <!-- Seção de listagem dos pratos disponíveis -->
-
-        <button class="btn-filtrar">
-            <img src="./src/assets/images/Vector.svg" alt="filtrar" />
-            Filtrar
-        </button>
-
-        <p>O que eu devo escolher?</p> <!-- Eyebrow: texto pequeno acima do título -->
-        <h2>Nossos melhores pratos</h2> <!-- Título da seção -->
-        <p>Confira nossos pratos em destaque e encontre a opção perfeita para cada momento do seu dia.</p>
-        <!-- Subtítulo da seção -->
-
-        <div> <!-- Grade de cards de pratos -->
-
-            <!-- Card 1 -->
-            <div> <!-- Card individual de prato -->
-                <img src="/src/assets/images/marmita-1.svg" alt="Marmita Sanji Fit" /> <!-- Foto do prato -->
-                <span>560 Kcal</span> <!-- Badge de calorias -->
-                <h3>Marmita Sanji Fit</h3> <!-- Nome do prato -->
-                <p>Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz integral fofinho e legumes
-                    selecionados no vapor.</p> <!-- Descrição do prato -->
-                <p>38g prot &nbsp; 45g carb &nbsp; 8g gord</p> <!-- Informações de macronutrientes -->
+    <section class="section-pratos">
+    
+        <!-- Botão Filtrar e campo de busca no canto superior direito -->
+        <div class="pratos-actions">
+            <button class="btn-filtrar">
+                <img src="./src/assets/images/Vector.svg" alt="filtrar" />
+                Filtrar
+            </button>
+            <div class="pratos-search">
+                <img src="./src/assets/images/logo pesquisa 1.svg" alt="buscar" />
+                <input type="text" placeholder="Pesquisar por alimento" />
             </div>
-
-            <!-- Card 2 -->
-            <div>
-                <img src="/src/assets/images/marmita-2.svg" alt="Marmita Sanji Fit" />
-                <span>560 Kcal</span>
-                <h3>Marmita Sanji Fit</h3>
-                <p>Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz integral fofinho e legumes
-                    selecionados no vapor.</p>
-                <p>38g prot &nbsp; 45g carb &nbsp; 8g gord</p>
-            </div>
-
-            <!-- Card 3 -->
-            <div>
-                <img src="/src/assets/images/marmita-3.svg" alt="Marmita Sanji Fit" />
-                <span>560 Kcal</span>
-                <h3>Marmita Sanji Fit</h3>
-                <p>Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz integral fofinho e legumes
-                    selecionados no vapor.</p>
-                <p>38g prot &nbsp; 45g carb &nbsp; 8g gord</p>
-            </div>
-
         </div>
-
-        <a href="#">carregar mais...</a> <!-- Link para carregar mais pratos via paginação -->
-
+    
+        <!-- Cabeçalho da seção -->
+        <p class="section-pratos-eyebrow">O que eu devo escolher?</p>
+        <h2 class="section-pratos-title">Nossos melhores pratos</h2>
+        <p class="section-pratos-subtitle">Confira nossos pratos em destaque e encontre a opção perfeita para cada
+            momento do seu dia.</p>
+    
+        <!-- Grade de cards -->
+        <div class="pratos-grid">
+    
+            <!-- Card 1 -->
+            <div class="prato-card">
+                <img class="prato-card-img" src="./src/assets/images/marmita-1.svg" alt="Marmita Sanji Fit" />
+                <span class="prato-card-kcal">560 Kcal</span>
+                <h3 class="prato-card-title">Marmita Sanji Fit</h3>
+                <p class="prato-card-desc">Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz
+                    integral fofinho e legumes selecionados no vapor.</p>
+                <div class="prato-card-macros">
+                    <div class="prato-card-macro-item">
+                        <span class="prato-card-macro-valor">38g</span>
+                        <span class="prato-card-macro-label">prot</span>
+                    </div>
+                    <div class="prato-card-macro-item">
+                        <span class="prato-card-macro-valor">45g</span>
+                        <span class="prato-card-macro-label">carb</span>
+                    </div>
+                    <div class="prato-card-macro-item">
+                        <span class="prato-card-macro-valor">8g</span>
+                        <span class="prato-card-macro-label">gord</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="prato-card">
+                <img class="prato-card-img" src="./src/assets/images/marmita-2.svg" alt="Marmita Sanji Fit" />
+                <span class="prato-card-kcal">560 Kcal</span>
+                <h3 class="prato-card-title">Marmita Sanji Fit</h3>
+                <p class="prato-card-desc">Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz
+                    integral fofinho e legumes selecionados no vapor.</p>
+                <div class="prato-card-macros">
+                    <div class="prato-card-macro-item">
+                        <span class="prato-card-macro-valor">38g</span>
+                        <span class="prato-card-macro-label">prot</span>
+                    </div>
+                    <div class="prato-card-macro-item">
+                        <span class="prato-card-macro-valor">45g</span>
+                        <span class="prato-card-macro-label">carb</span>
+                    </div>
+                    <div class="prato-card-macro-item">
+                        <span class="prato-card-macro-valor">8g</span>
+                        <span class="prato-card-macro-label">gord</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="prato-card">
+                <img class="prato-card-img" src="./src/assets/images/marmita-3.svg" alt="Marmita Sanji Fit" />
+                <span class="prato-card-kcal">560 Kcal</span>
+                <h3 class="prato-card-title">Marmita Sanji Fit</h3>
+                <p class="prato-card-desc">Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz
+                    integral fofinho e legumes selecionados no vapor.</p>
+                <div class="prato-card-macros">
+                    <div class="prato-card-macro-item">
+                        <span class="prato-card-macro-valor">38g</span>
+                        <span class="prato-card-macro-label">prot</span>
+                    </div>
+                    <div class="prato-card-macro-item">
+                        <span class="prato-card-macro-valor">45g</span>
+                        <span class="prato-card-macro-label">carb</span>
+                    </div>
+                    <div class="prato-card-macro-item">
+                        <span class="prato-card-macro-valor">8g</span>
+                        <span class="prato-card-macro-label">gord</span>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!-- Link de paginação -->
+        <a href="#" class="pratos-load-more">carregar mais...</a>
+    
     </section>
 
     
-
 </body>
 
 </html>

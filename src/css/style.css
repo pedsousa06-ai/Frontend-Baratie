@@ -125,3 +125,214 @@ header img {                                        /* Logo SVG da marca */
   clip-path: ellipse(55% 100% at 50% 100%); /* Curva ondulada na base */
 }
 
+.section-pratos {
+  background: #C9E8E3;                       /* Fundo verde-menta */
+  padding: var(--spacing-4xl) var(--spacing-4xl) var(--spacing-3xl); /* 80px 80px 64px */
+  position: relative;                        /* Necessário para o posicionamento absoluto do filtro */
+}
+ 
+/* --- Cabeçalho da seção: eyebrow, título e subtítulo --- */
+ 
+.section-pratos-eyebrow {
+  text-align: center;                        /* Centralizado */
+  font-family: var(--font-body);             /* Inter */
+  font-size: var(--font-body4);              /* 14px */
+  font-weight: var(--font-regular);
+  font-style: italic;
+  color: var(--color-accent);               /* #FCA029 laranja */
+  margin-bottom: var(--spacing-xs);          /* 4px */
+}
+ 
+.section-pratos-title {
+  text-align: center;
+  font-family: var(--font-title);            /* Alexandria */
+  font-size: var(--font-h2);                /* 45px */
+  font-weight: var(--font-bold);             /* 700 */
+  font-style: italic;
+  color: var(--color-accent);               /* #FCA029 laranja */
+  margin-bottom: var(--spacing-sm);          /* 8px */
+}
+ 
+.section-pratos-subtitle {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--font-body4);              /* 14px */
+  font-style: italic;
+  color: var(--color-gray-400);              /* #6E6E6E */
+  margin-bottom: var(--spacing-3xl);         /* 64px antes dos cards */
+}
+ 
+/* --- Barra de ações: botão Filtrar + campo de busca --- */
+ 
+.pratos-actions {
+  position: absolute;                        /* Flutua no canto superior direito */
+  top: var(--spacing-4xl);                   /* 80px do topo da section */
+  right: var(--spacing-4xl);                 /* 80px da borda direita */
+  display: flex;
+  flex-direction: column;                    /* Filtrar em cima, busca embaixo */
+  align-items: flex-end;                     /* Alinha à direita */
+  gap: var(--spacing-sm);                    /* 8px entre os dois elementos */
+}
+ 
+.btn-filtrar {
+  display: flex;                             /* Ícone e texto lado a lado */
+  align-items: center;
+  gap: var(--spacing-sm);                    /* 8px entre img e texto */
+  background: var(--color-danger);           /* #E33E4F vermelho */
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-lg); /* 16px 24px */
+  border-radius: var(--radius-lg);           /* 12px */
+  font-family: var(--font-body);
+  font-size: var(--font-body3);              /* 16px */
+  font-weight: var(--font-bold);             /* 700 */
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+ 
+.btn-filtrar:hover {
+  opacity: 0.88;
+}
+ 
+.btn-filtrar img {
+  width: 18px;                               /* Tamanho do ícone filtro */
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);           /* Força branco independente da cor do SVG */
+}
+ 
+.pratos-search {
+  display: flex;                             /* Ícone de lupa + input lado a lado */
+  align-items: center;
+  gap: var(--spacing-sm);                    /* 8px */
+  background: var(--color-white);
+  border: var(--border-thin) solid var(--color-gray-200); /* 1px #D9D9D9 */
+  border-radius: var(--radius-lg);           /* 12px */
+  padding: var(--spacing-sm) var(--spacing-md); /* 8px 16px */
+  width: 240px;
+}
+ 
+.pratos-search img {
+  width: 16px;                               /* Ícone de lupa */
+  height: 16px;
+  object-fit: contain;
+  opacity: 0.5;                              /* Tom suave igual ao placeholder */
+}
+ 
+.pratos-search input {
+  border: none;                              /* Remove borda padrão do input */
+  outline: none;                             /* Remove contorno de foco */
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: var(--font-body4);              /* 14px */
+  color: var(--color-gray-400);
+  width: 100%;
+}
+ 
+.pratos-search input::placeholder {
+  color: var(--color-gray-300);              /* #999999 */
+}
+ 
+/* --- Grade de cards --- */
+ 
+.pratos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);     /* 3 colunas iguais */
+  gap: var(--spacing-xl);                    /* 32px entre cards */
+  max-width: 1000px;
+  margin: 0 auto var(--spacing-xl);          /* Centralizado, 32px embaixo */
+}
+ 
+/* --- Card individual de prato --- */
+ 
+.prato-card {
+  background: var(--color-white);
+  border-radius: var(--radius-2xl);          /* 24px bordas bem arredondadas */
+  padding: var(--spacing-md);                /* 16px */
+  box-shadow: var(--shadow-md);              /* 0 4px 12px rgba(0,0,0,0.15) */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);                    /* 8px entre cada elemento do card */
+}
+ 
+.prato-card-img {
+  width: 100%;
+  height: 180px;
+  border-radius: var(--radius-lg);           /* 12px */
+  object-fit: cover;                         /* Preenche sem distorcer */
+}
+ 
+.prato-card-kcal {
+  display: inline-block;
+  align-self: flex-end;                      /* Badge no canto direito */
+  border: var(--border-thin) solid var(--color-gray-200);
+  border-radius: 20px;
+  padding: var(--spacing-xs) var(--spacing-md); /* 4px 16px */
+  font-family: var(--font-body);
+  font-size: var(--font-small);              /* 12px */
+  font-weight: var(--font-medium);
+  color: var(--color-gray-400);
+}
+ 
+.prato-card-title {
+  font-family: var(--font-title);            /* Alexandria */
+  font-size: var(--font-h4);                /* 21px */
+  font-weight: var(--font-bold);
+  font-style: italic;
+  color: var(--color-accent);               /* #FCA029 laranja */
+}
+ 
+.prato-card-desc {
+  font-family: var(--font-body);
+  font-size: var(--font-body4);              /* 14px */
+  font-style: italic;
+  color: var(--color-gray-400);
+  line-height: 1.55;
+  flex: 1;                                   /* Empurra os macros para o rodapé do card */
+}
+ 
+.prato-card-macros {
+  display: flex;
+  gap: var(--spacing-xl);                    /* 32px entre proteína, carb e gordura */
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: var(--border-thin) solid var(--color-gray-200); /* Linha separadora */
+}
+ 
+.prato-card-macro-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+ 
+.prato-card-macro-valor {
+  font-family: var(--font-title);
+  font-size: var(--font-body3);              /* 16px */
+  font-weight: var(--font-bold);
+  font-style: italic;
+  color: var(--color-accent);               /* #FCA029 */
+}
+ 
+.prato-card-macro-label {
+  font-family: var(--font-body);
+  font-size: var(--font-small);              /* 12px */
+  color: var(--color-gray-300);              /* #999999 */
+}
+ 
+/* --- Link carregar mais --- */
+ 
+.pratos-load-more {
+  display: block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--font-body3);              /* 16px */
+  color: var(--color-info);                  /* #006EFF azul */
+  text-decoration: none;
+  margin-top: var(--spacing-lg);             /* 24px */
+  transition: opacity var(--transition-fast);
+}
+ 
+.pratos-load-more:hover {
+  opacity: 0.7;
+}
