@@ -846,3 +846,150 @@ header img {
 .tag--purple { background: rgba(124,  77, 204, 0.12); color: #7c4dcc; }
 .tag--pink   { background: rgba(224,  71, 158, 0.12); color: #e0479e; }
  
+.section-depoimentos {
+  background-color: #fdf5f3;
+  padding: 72px 60px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+}
+ 
+/* =============================================
+   CABEÇALHO
+   ============================================= */
+ 
+.depoimentos-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  max-width: 700px;
+}
+ 
+.depoimentos-eyebrow {
+  font-size: 14px;
+  font-style: italic;
+  color: #c87941;
+  font-weight: 500;
+}
+ 
+.depoimentos-titulo {
+  font-size: 40px;
+  font-weight: 700;
+  color: #8b3a2a;
+  line-height: 1.2;
+  margin: 0;
+}
+ 
+.depoimentos-subtitulo {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+ 
+/* =============================================
+   GRID DE CARDS
+   ============================================= */
+ 
+.depoimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 960px;
+}
+ 
+/* =============================================
+   CARD
+   ============================================= */
+ 
+.depoimento-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #ede5e0;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+ 
+/* =============================================
+   ESTRELAS
+   ============================================= */
+ 
+.depoimento-estrelas {
+  display: flex;
+  gap: 4px;
+}
+ 
+.depoimento-estrelas img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+ 
+/* =============================================
+   TEXTO DO DEPOIMENTO
+   ============================================= */
+ 
+.depoimento-texto {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+ 
+/* =============================================
+   AUTOR
+   ============================================= */
+ 
+.depoimento-autor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+ 
+.depoimento-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+ 
+.depoimento-avatar--m {
+  background: #b2d8d8;
+  color: #2a6b6b;
+}
+ 
+.depoimento-avatar--n {
+  background: #b2d8d8;
+  color: #2a6b6b;
+}
+ 
+.depoimento-avatar--l {
+  background: #b2d8d8;
+  color: #2a6b6b;
+}
+ 
+.depoimento-nome {
+  font-size: 14px;
+  font-weight: 700;
+  color: #c87941;
+  margin: 0;
+}
+ 
+.depoimento-cargo {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
