@@ -1378,3 +1378,45 @@ header img {
     font-size: 24px;
   }
 }
+
+@media (max-width: 768px) {
+  .section-diferenciais {
+    padding: 48px 24px 56px;
+    border-radius: 20px;
+  }
+ 
+  .diferenciais-titulo {
+    font-size: 36px;
+  }
+ 
+  .diferenciais-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+ 
+  .diferencial-card--elevado {
+    margin-bottom: 0;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .section-diferenciais {
+    padding: 36px 16px 44px;
+    gap: 32px;
+    border-radius: 16px;
+  }
+ 
+  .diferenciais-titulo {
+    font-size: 28px;
+  }
+ 
+  .diferenciais-subtitulo {
+    font-size: 13px;
+  }
+}
+ 
+@media (max-width: 360px) {
+  .diferenciais-titulo {
+    font-size: 24px;
+  }
+}
