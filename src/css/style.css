@@ -724,3 +724,125 @@ header img {
   line-height: 1.65;
   margin: 0;
 }
+
+.section-descricao {
+  background-color: #f2ede8;
+  padding: 48px 40px 56px;
+  border-radius: 24px;
+}
+ 
+.descricao-titulo {
+  font-size: 40px;
+  font-weight: 800;
+  font-style: italic;
+  color: #b07540;
+  text-align: center;
+  margin: 0 0 40px;
+}
+ 
+/* =============================================
+   GRID
+   ============================================= */
+ 
+.descricao-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+ 
+/* =============================================
+   CARD BASE
+   ============================================= */
+ 
+.descricao-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #e8e2da;
+}
+ 
+/* =============================================
+   HEADER DO CARD (ícone + título)
+   ============================================= */
+ 
+.descricao-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+ 
+.descricao-card-header img {
+  width: 40px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+ 
+.descricao-card-titulo {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+ 
+/* =============================================
+   CORES DOS TÍTULOS
+   ============================================= */
+ 
+.descricao-card-titulo--red    { color: #fc2929; }
+.descricao-card-titulo--ciano  { color: #2ab8d4; }
+.descricao-card-titulo--yellow { color: #d4a017; }
+.descricao-card-titulo--green  { color: #3db36b; }
+.descricao-card-titulo--purple { color: #7c4dcc; }
+.descricao-card-titulo--pink   { color: #e0479e; }
+ 
+/* =============================================
+   DESCRIÇÃO
+   ============================================= */
+ 
+.descricao-card-desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+ 
+/* =============================================
+   EXEMPLOS
+   ============================================= */
+ 
+.descricao-card-exemplos {
+  font-size: 11px;
+  font-weight: 700;
+  color: #999;
+  letter-spacing: 0.04em;
+}
+ 
+/* =============================================
+   TAGS
+   ============================================= */
+ 
+.descricao-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+ 
+.tag {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+ 
+/* Cores das tags — fundo suave + texto na cor do card */
+.tag--red    { background: rgba(252,  41,  41, 0.12); color: #fc2929; }
+.tag--ciano  { background: rgba( 42, 184, 212, 0.12); color: #2ab8d4; }
+.tag--yellow { background: rgba(212, 160,  23, 0.12); color: #d4a017; }
+.tag--green  { background: rgba( 61, 179, 107, 0.12); color: #3db36b; }
+.tag--purple { background: rgba(124,  77, 204, 0.12); color: #7c4dcc; }
+.tag--pink   { background: rgba(224,  71, 158, 0.12); color: #e0479e; }
+ 
