@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <title>Baratie Fit</title>
 
-        <link rel="icon" href="/src/assets/images/favicon.ico" sizes="any">
-        <link rel="icon" href="/src/assets/images/favicon-32x32.png" type="image/png">
-        <link rel="apple-touch-icon" href="/src/assets/images/apple-touch-icon.png">
-    
-    
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-        <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    
-        <link rel="stylesheet" href="/src/css/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Baratie Fit</title>
+
+    <link rel="icon" href="/src/assets/images/favicon.ico" sizes="any">
+    <link rel="icon" href="/src/assets/images/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon" href="/src/assets/images/apple-touch-icon.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+
 <body>
-    
+
     <header>
 
         <img src="./src/assets/images/icon.svg" alt="Logo Baratie">
@@ -35,7 +39,7 @@
 
     </header>
 
-    
+
     <main>
 
         <section class="hero">
@@ -72,7 +76,58 @@
 
     </main>
 
+    <section id="pratos"> <!-- Seção de listagem dos pratos disponíveis -->
+
+        <button class="btn-filtrar">
+            <img src="./src/assets/images/Vector.svg" alt="filtrar" />
+            Filtrar
+        </button>
+
+        <p>O que eu devo escolher?</p> <!-- Eyebrow: texto pequeno acima do título -->
+        <h2>Nossos melhores pratos</h2> <!-- Título da seção -->
+        <p>Confira nossos pratos em destaque e encontre a opção perfeita para cada momento do seu dia.</p>
+        <!-- Subtítulo da seção -->
+
+        <div> <!-- Grade de cards de pratos -->
+
+            <!-- Card 1 -->
+            <div> <!-- Card individual de prato -->
+                <img src="/src/assets/images/marmita-1.svg" alt="Marmita Sanji Fit" /> <!-- Foto do prato -->
+                <span>560 Kcal</span> <!-- Badge de calorias -->
+                <h3>Marmita Sanji Fit</h3> <!-- Nome do prato -->
+                <p>Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz integral fofinho e legumes
+                    selecionados no vapor.</p> <!-- Descrição do prato -->
+                <p>38g prot &nbsp; 45g carb &nbsp; 8g gord</p> <!-- Informações de macronutrientes -->
+            </div>
+
+            <!-- Card 2 -->
+            <div>
+                <img src="/src/assets/images/marmita-2.svg" alt="Marmita Sanji Fit" />
+                <span>560 Kcal</span>
+                <h3>Marmita Sanji Fit</h3>
+                <p>Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz integral fofinho e legumes
+                    selecionados no vapor.</p>
+                <p>38g prot &nbsp; 45g carb &nbsp; 8g gord</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div>
+                <img src="/src/assets/images/marmita-3.svg" alt="Marmita Sanji Fit" />
+                <span>560 Kcal</span>
+                <h3>Marmita Sanji Fit</h3>
+                <p>Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz integral fofinho e legumes
+                    selecionados no vapor.</p>
+                <p>38g prot &nbsp; 45g carb &nbsp; 8g gord</p>
+            </div>
+
+        </div>
+
+        <a href="#">carregar mais...</a> <!-- Link para carregar mais pratos via paginação -->
+
+    </section>
+
     
-    
+
 </body>
+
 </html>
