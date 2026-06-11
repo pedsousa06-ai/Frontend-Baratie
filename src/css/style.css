@@ -1,55 +1,127 @@
 @import url(./global.css);
 
-/* =========================
-   HEADER
-========================= */
+/*HEADER*/
 
-header{
-    background-color: #f2efeb;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 100px;
-
-    padding: 12px 80px;
+header {
+  display: flex;                                    /* Logo e nav lado a lado */
+  align-items: center;                              /* Alinha verticalmente ao centro */
+  justify-content: space-between;                   /* Logo na esquerda, nav na direita */
+  padding: var(--spacing-md) var(--spacing-4xl);    /* md vertical, 4xl horizontal */
+  background: var(--color-white);                   /* Fundo branco do design system */
+  position: sticky;                                 /* Gruda no topo ao rolar a página */
+  top: 0;                                           /* Posição de fixação */
+  z-index: 100;                                     /* Fica acima de todos os outros elementos */
+  box-shadow: var(--shadow-sm);                     /* Sombra sutil para separar do conteúdo */
+}
+ 
+header img {                                        /* Logo SVG da marca */
+  width: 48px;
+  height: 48px;
+  object-fit: contain;                              /* Mantém proporção sem cortar */
+}
+ 
+.nav-header ul {                                    /* Lista de links de navegação */
+  display: flex;                                    /* Links em linha horizontal */
+  align-items: center;
+  gap: var(--spacing-2xl);                          /* Espaçamento entre cada link */
+  list-style: none;                                 /* Remove bullets padrão */
+  padding: 0;
+  margin: 0;
+}
+ 
+.nav-header-item {                                  /* Links individuais do menu */
+  text-decoration: none;                            /* Remove sublinhado padrão */
+  color: var(--color-secondary);                    /* --color-secondary: #885D44 */
+  font-family: var(--font-body);                    /* Inter, sans-serif */
+  font-size: var(--font-body3);                     /* 16px */
+  font-weight: var(--font-medium);                  /* 500 */
+  transition: color var(--transition-fast);         /* 0.2s */
+}
+ 
+.nav-header-item:hover {                            /* Efeito ao passar o mouse */
+  color: var(--color-accent);                       /* --color-accent: #FCA029 */
 }
 
-/* =========================
-   LOGO
-========================= */
 
-header img{
-    width: 65px;
-    height: auto;
-    cursor: pointer;
+/*MAIN*/
+.hero {
+  background: var(--color-white);          /* Fundo branco base */
+  position: relative;                      /* Necessário para posicionar o wave */
+  overflow: hidden;                        /* Evita scroll horizontal */
+  min-height: 88vh;                        /* Ocupa quase toda a altura da tela */
+}
+ 
+.hero-content {
+  display: grid;                           /* Layout de duas colunas */
+  grid-template-columns: 1fr 1fr;          /* Texto e imagem com peso igual */
+  align-items: center;                     /* Alinha verticalmente ao centro */
+  min-height: 88vh;                        /* Mesma altura da section */
+  padding: 0 var(--spacing-4xl);           /* Espaçamento lateral: 80px */
+}
+ 
+.hero-text {
+  display: flex;                           /* Empilha título, parágrafo e botão */
+  flex-direction: column;
+  align-items: flex-start;                 /* Alinha conteúdo à esquerda */
+  gap: var(--spacing-lg);                  /* 24px entre cada elemento */
+  padding-right: var(--spacing-xl);        /* 32px de respiro em relação à imagem */
+}
+ 
+.hero-text h1 {
+  font-family: var(--font-title);          /* Alexandria, sans-serif */
+  font-size: var(--font-h1);              /* 50px */
+  font-weight: var(--font-bold);           /* 700 */
+  color: var(--color-accent);             /* #FCA029 laranja da marca */
+  line-height: 1.15;
+}
+ 
+.hero-text p {
+  font-family: var(--font-body);           /* Inter, sans-serif */
+  font-size: var(--font-body2);            /* 18px */
+  font-weight: var(--font-regular);        /* 400 */
+  color: var(--color-gray-400);            /* #6E6E6E */
+  line-height: 1.7;
+  max-width: 480px;
+}
+ 
+.btn-primary {
+  display: inline-block;
+  background: var(--color-accent);         /* #FCA029 laranja da marca */
+  color: var(--color-white);              /* Texto branco */
+  font-family: var(--font-body);
+  font-size: var(--font-body3);            /* 16px */
+  font-weight: var(--font-semibold);       /* 600 */
+  padding: var(--spacing-md) var(--spacing-2xl); /* 16px 48px */
+  border-radius: var(--radius-lg);         /* 12px */
+  text-decoration: none;
+  transition: opacity var(--transition-fast), transform var(--transition-fast); /* 0.2s */
+}
+ 
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);             /* Leve elevação ao hover */
+}
+ 
+.hero-image {
+  width: 100%;
+  height: 88vh;
+  overflow: hidden;                        /* Garante que a imagem não vaze */
+}
+ 
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                       /* Preenche sem distorcer */
+  clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%); /* Corte diagonal na borda esquerda */
+}
+ 
+.hero-wave {
+  position: absolute;                      /* Sobrepõe o conteúdo na base da section */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: var(--color-gray-100);       /* Cor da próxima section (#F5F5F5) */
+  clip-path: ellipse(55% 100% at 50% 100%); /* Curva ondulada na base */
 }
 
-/* =========================
-   MENU
-========================= */
-
-.nav-header ul{
-    display: flex;
-    align-items: center;
-    gap: 100px;
-
-    list-style: none;
-}
-
-.nav-header-item{
-    font-family: var(--font-body);
-    font-size: var(--font-body1);
-    font-weight: var(--font-regular);
-
-    color: var(--color-secondary);
-
-    text-decoration: none;
-
-    transition: var(--transition-fast);
-}
-
-.nav-header-item:hover{
-    color: var(--color-accent);
-}
