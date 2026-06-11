@@ -1,0 +1,55 @@
+@import url(./global.css);
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background-color: #f2efeb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 100px;
+
+    padding: 12px 80px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+header img{
+    width: 65px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.nav-header ul{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+    list-style: none;
+}
+
+.nav-header-item{
+    font-family: var(--font-body);
+    font-size: var(--font-body1);
+    font-weight: var(--font-regular);
+
+    color: var(--color-secondary);
+
+    text-decoration: none;
+
+    transition: var(--transition-fast);
+}
+
+.nav-header-item:hover{
+    color: var(--color-accent);
+}
