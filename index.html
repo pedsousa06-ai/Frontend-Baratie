@@ -77,7 +77,7 @@
     </main>
 
     <section class="section-pratos">
-    
+
         <!-- Botão Filtrar e campo de busca no canto superior direito -->
         <div class="pratos-actions">
             <button class="btn-filtrar">
@@ -89,16 +89,16 @@
                 <input type="text" placeholder="Pesquisar por alimento" />
             </div>
         </div>
-    
+
         <!-- Cabeçalho da seção -->
         <p class="section-pratos-eyebrow">O que eu devo escolher?</p>
         <h2 class="section-pratos-title">Nossos melhores pratos</h2>
         <p class="section-pratos-subtitle">Confira nossos pratos em destaque e encontre a opção perfeita para cada
             momento do seu dia.</p>
-    
+
         <!-- Grade de cards -->
         <div class="pratos-grid">
-    
+
             <!-- Card 1 -->
             <div class="prato-card">
                 <img class="prato-card-img" src="./src/assets/images/marmita-1.svg" alt="Marmita Sanji Fit" />
@@ -121,7 +121,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Card 2 -->
             <div class="prato-card">
                 <img class="prato-card-img" src="./src/assets/images/marmita-2.svg" alt="Marmita Sanji Fit" />
@@ -144,7 +144,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Card 3 -->
             <div class="prato-card">
                 <img class="prato-card-img" src="./src/assets/images/marmita-3.svg" alt="Marmita Sanji Fit" />
@@ -167,23 +167,23 @@
                     </div>
                 </div>
             </div>
-    
+
         </div>
-    
+
         <!-- Link de paginação -->
         <a href="#" class="pratos-load-more">carregar mais...</a>
-    
+
     </section>
 
     <section class="section-filtrar">
-    
+
         <!-- Bloco: Calorias -->
         <div class="filtrar-bloco">
             <h3 class="filtrar-bloco-titulo">Calorias</h3>
             <span class="filtrar-kcal-valor">0 kcal</span>
             <input class="filtrar-slider" type="range" min="0" max="1000" value="250" />
         </div>
-    
+
         <!-- Bloco: Macronutrientes -->
         <div class="filtrar-bloco">
             <h3 class="filtrar-bloco-titulo">Macronutrientes</h3>
@@ -202,7 +202,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Bloco: Ordenar Por Calorias -->
         <div class="filtrar-bloco">
             <h3 class="filtrar-bloco-titulo">Ordenar Por Calorias</h3>
@@ -211,7 +211,7 @@
                 <button class="btn-ordenar">Decrescente</button>
             </div>
         </div>
-    
+
         <!-- Bloco: Restrições Alimentares -->
         <div class="filtrar-bloco">
             <h3 class="filtrar-bloco-titulo">Restrições Alimentares</h3>
@@ -223,7 +223,68 @@
                 <button class="tag-restricao">Low Carb</button>
             </div>
         </div>
-    
+
+    </section>
+
+    <section id="resultados"> <!-- Seção que exibe os pratos filtrados e estatísticas -->
+
+        <h2>Resultados</h2> <!-- Título da seção de resultados -->
+        <p>Filtrando de acordo com suas preferencias</p> <!-- Subtítulo indicando filtro ativo -->
+
+        <div> <!-- Barra de estatísticas médias dos pratos filtrados -->
+            <div><strong>506</strong><br>Media kcal</div> <!-- Média calórica dos resultados -->
+            <div><strong>37g</strong><br>Media prot</div> <!-- Média de proteínas dos resultados -->
+            <div><strong>44g</strong><br>Media carb</div> <!-- Média de carboidratos dos resultados -->
+            <div><strong>9g</strong><br>Media Gord</div> <!-- Média de gorduras dos resultados -->
+        </div>
+
+        <p>Ordenados por calorias - menor para maior</p> <!-- Indicador da ordenação aplicada -->
+
+        <div> <!-- Grade de cards dos pratos resultantes -->
+
+            <!-- Card destaque -->
+            <div> <!-- Card marcado como destaque pelo administrador -->
+                <span>⊡ Destaque</span> <!-- Badge de destaque -->
+                <img src="/src/assets/images/marmita-1.svg" alt="Marmita Sanji Fit" />
+                <span>560Kcal</span>
+                <h3>Marmita Sanji Fit</h3>
+                <p>Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz integral fofinho e legumes
+                    selecionados no vapor.</p>
+                <p>38g prot &nbsp; 45g carb &nbsp; 8g gord</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div>
+                <img src="/src/assets/images/marmita-2.svg" alt="Marmita Sanji Fit" />
+                <span>560Kcal</span>
+                <h3>Marmita Sanji Fit</h3>
+                <p>Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz integral fofinho e legumes
+                    selecionados no vapor.</p>
+                <p>38g prot &nbsp; 45g carb &nbsp; 8g gord</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div>
+                <img src="/src/assets/images/marmita-3.svg" alt="Marmita Sanji Fit" />
+                <span>560Kcal</span>
+                <h3>Marmita Sanji Fit</h3>
+                <p>Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz integral fofinho e legumes
+                    selecionados no vapor.</p>
+                <p>38g prot &nbsp; 45g carb &nbsp; 8g gord</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div>
+                <img src="/src/assets/images/marmita-1.svg" alt="Marmita Sanji Fit" />
+                <span>560Kcal</span>
+                <h3>Marmita Sanji Fit</h3>
+                <p>Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz integral fofinho e legumes
+                    selecionados no vapor.</p>
+                <p>38g prot &nbsp; 45g carb &nbsp; 8g gord</p>
+            </div>
+
+        </div>
+
     </section>
 
 </body>
