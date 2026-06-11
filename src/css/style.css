@@ -1324,3 +1324,57 @@ header img {
     font-size: 15px;
   }
 }
+
+@media (max-width: 768px) {
+  .section-pratos {
+    padding: 32px 20px 24px;
+  }
+ 
+  .pratos-actions {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+ 
+  .pratos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    gap: 14px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .section-pratos {
+    padding: 24px 16px 20px;
+  }
+ 
+  .section-pratos-title {
+    font-size: 28px;
+  }
+ 
+  .pratos-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+ 
+  .pratos-search {
+    width: 100%;
+  }
+ 
+  .pratos-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+ 
+  .prato-card-img {
+    height: 200px;
+  }
+}
+ 
+@media (max-width: 360px) {
+  .section-pratos-title {
+    font-size: 24px;
+  }
+}
