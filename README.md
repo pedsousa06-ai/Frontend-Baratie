@@ -42,7 +42,7 @@ O desafio proposto foi a criação de uma página moderna, responsiva e voltada 
 
 ## 🎨 Layout
 
-![BaratieFit](https://github.com/hugolab-0/Frontend-Baratie/blob/main/thumb.png)
+![BaratieFit](https://github.com/hugolab-0/Frontend-Baratie/blob/main/thumb%20(1).png)
 
 ---
 
