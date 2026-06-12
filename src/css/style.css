@@ -1,1594 +1,2417 @@
 @import url("./global.css");
 
 /* ---- HEADER ---- */
+html {
+    scroll-behavior: smooth;
+    /* Faz a rolagem até as âncoras ser suave (com animação) */
+}
 
 header {
-    display: flex; /* Para que o grupo fique ao lado do outro */
-    justify-content: space-between; /* Colocar nas extremidades */
-    align-items: center; /* Centraliza na vertical */
-    padding: var(--spacing-md) var(--spacing-4xl); /* Espaçamento interno */
-    background: var(--color-white); /* Cor de fundo branca */
-    position: sticky; /* Fixa o header no topo ao rolar a página */
-    top: 0; /* Posição inicial no topo */
-    z-index: 100; /* Garante que o header fique acima de outros elementos */
-    box-shadow: var(--shadow-sm); /* Sombra suave na parte inferior */
+    display: flex;
+    /* Para que o grupo fique ao lado do outro */
+    justify-content: space-between;
+    /* Colocar nas extremidades */
+    align-items: center;
+    /* Centraliza na vertical */
+    padding: var(--spacing-md) var(--spacing-4xl);
+    /* Espaçamento interno */
+    background: var(--color-white);
+    /* Cor de fundo branca */
+    position: sticky;
+    /* Fixa o header no topo ao rolar a página */
+    top: 0;
+    /* Posição inicial no topo */
+    z-index: 100;
+    /* Garante que o header fique acima de outros elementos */
+    box-shadow: var(--shadow-sm);
+    /* Sombra suave na parte inferior */
 }
 
 header img {
-    width: 48px; /* Largura fixa da logo */
-    height: 48px; /* Altura fixa da logo */
-    object-fit: contain; /* Mantém a proporção da imagem */
+    width: 48px;
+    /* Largura fixa da logo */
+    height: 48px;
+    /* Altura fixa da logo */
+    object-fit: contain;
+    /* Mantém a proporção da imagem */
 }
 
 .nav-header ul {
-    display: flex; /* Para que os itens fiquem lado a lado */
-    align-items: center; /* Centraliza na vertical */
-    gap: var(--spacing-2xl); /* Distância entre os itens do menu */
-    list-style: none; /* Remove as bolinhas da lista */
-    padding: 0; /* Remove o padding padrão */
-    margin: 0; /* Remove a margin padrão */
+    display: flex;
+    /* Para que os itens fiquem lado a lado */
+    align-items: center;
+    /* Centraliza na vertical */
+    gap: var(--spacing-2xl);
+    /* Distância entre os itens do menu */
+    list-style: none;
+    /* Remove as bolinhas da lista */
+    padding: 0;
+    /* Remove o padding padrão */
+    margin: 0;
+    /* Remove a margin padrão */
 }
 
 .nav-header-item {
-    text-decoration: none; /* Remove o sublinhado do link */
-    color: var(--color-secondary); /* Cor do texto */
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-body3); /* Tamanho da fonte */
-    font-weight: var(--font-medium); /* Espessura da fonte */
-    transition: color var(--transition-fast); /* Transição suave ao passar o mouse */
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+    color: var(--color-secondary);
+    /* Cor do texto */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-body3);
+    /* Tamanho da fonte */
+    font-weight: var(--font-medium);
+    /* Espessura da fonte */
+    transition: color var(--transition-fast);
+    /* Transição suave ao passar o mouse */
 }
 
 .nav-header-item:hover {
-    color: var(--color-accent); /* Cor do texto ao passar o mouse */
+    color: var(--color-accent);
+    /* Cor do texto ao passar o mouse */
 }
 
 /* ---- HERO ---- */
 
 .hero {
-    background: var(--color-white); /* Cor de fundo branca */
-    position: relative; /* Permite posicionar elementos filhos absolutamente */
-    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites */
-    min-height: 88vh; /* Altura mínima de 88% da viewport */
+    background: var(--color-white);
+    /* Cor de fundo branca */
+    position: relative;
+    /* Permite posicionar elementos filhos absolutamente */
+    overflow: hidden;
+    /* Esconde qualquer conteúdo que ultrapasse os limites */
+    min-height: 88vh;
+    /* Altura mínima de 88% da viewport */
 }
 
 .hero-content {
-    display: grid; /* Define layout em grade */
-    grid-template-columns: 1fr 45%; /* Duas colunas: primeira flexível, segunda 45% */
-    align-items: center; /* Centraliza os itens verticalmente */
-    min-height: 88vh; /* Altura mínima de 88% da viewport */
-    padding-left: var(--spacing-4xl); /* Espaçamento interno esquerdo */
-    padding-right: 0; /* Remove espaçamento interno direito */
+    display: grid;
+    /* Define layout em grade */
+    grid-template-columns: 1fr 45%;
+    /* Duas colunas: primeira flexível, segunda 45% */
+    align-items: center;
+    /* Centraliza os itens verticalmente */
+    min-height: 88vh;
+    /* Altura mínima de 88% da viewport */
+    padding-left: var(--spacing-4xl);
+    /* Espaçamento interno esquerdo */
+    padding-right: 0;
+    /* Remove espaçamento interno direito */
 }
 
 .hero-text {
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: flex-start; /* Alinha os itens no início (esquerda) */
-    gap: var(--spacing-lg); /* Distância entre os elementos */
-    max-width: 650px; /* Largura máxima do container */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    align-items: flex-start;
+    /* Alinha os itens no início (esquerda) */
+    gap: var(--spacing-lg);
+    /* Distância entre os elementos */
+    max-width: 650px;
+    /* Largura máxima do container */
 }
 
 .hero-text h1 {
-    font-family: var(--font-title); /* Família da fonte do título */
-    font-size: 72px; /* Tamanho da fonte */
-    font-weight: var(--font-bold); /* Espessura da fonte: negrito */
-    line-height: 1.15; /* Espaçamento entre linhas */
-    color: var(--color-accent); /* Cor do texto (destaque) */
+    font-family: var(--font-title);
+    /* Família da fonte do título */
+    font-size: 72px;
+    /* Tamanho da fonte */
+    font-weight: var(--font-bold);
+    /* Espessura da fonte: negrito */
+    line-height: 1.15;
+    /* Espaçamento entre linhas */
+    color: var(--color-accent);
+    /* Cor do texto (destaque) */
 }
 
 .hero-text p {
-    font-family: var(--font-body); /* Família da fonte do corpo */
-    font-size: 28px; /* Tamanho da fonte */
-    font-style: italic; /* Texto em itálico */
-    font-weight: var(--font-regular); /* Espessura da fonte: normal */
-    color: var(--color-l-black); /* Cor do texto */
-    line-height: 1.4; /* Espaçamento entre linhas */
-    max-width: 700px; /* Largura máxima do texto */
+    font-family: var(--font-body);
+    /* Família da fonte do corpo */
+    font-size: 28px;
+    /* Tamanho da fonte */
+    font-style: italic;
+    /* Texto em itálico */
+    font-weight: var(--font-regular);
+    /* Espessura da fonte: normal */
+    color: var(--color-l-black);
+    /* Cor do texto */
+    line-height: 1.4;
+    /* Espaçamento entre linhas */
+    max-width: 700px;
+    /* Largura máxima do texto */
 }
 
 .btn-primary {
-    display: inline-block; /* Permite definir largura/altura e margens */
-    padding: var(--spacing-md) var(--spacing-2xl); /* Espaçamento interno */
-    background: var(--color-accent); /* Cor de fundo */
-    color: var(--color-white); /* Cor do texto */
-    border-radius: var(--radius-md); /* Arredondamento das bordas */
-    text-decoration: none; /* Remove o sublinhado */
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-body1); /* Tamanho da fonte */
-    font-weight: var(--font-medium); /* Espessura da fonte */
-    font-style: italic; /* Texto em itálico */
-    transition: var(--transition-fast); /* Transição suave ao passar o mouse */
+    display: inline-block;
+    /* Permite definir largura/altura e margens */
+    padding: var(--spacing-md) var(--spacing-2xl);
+    /* Espaçamento interno */
+    background: var(--color-accent);
+    /* Cor de fundo */
+    color: var(--color-white);
+    /* Cor do texto */
+    border-radius: var(--radius-md);
+    /* Arredondamento das bordas */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-body1);
+    /* Tamanho da fonte */
+    font-weight: var(--font-medium);
+    /* Espessura da fonte */
+    font-style: italic;
+    /* Texto em itálico */
+    transition: var(--transition-fast);
+    /* Transição suave ao passar o mouse */
 }
 
 .btn-primary:hover {
-    opacity: 0.9; /* Reduz a opacidade ao passar o mouse */
-    transform: translateY(-2px); /* Move o botão 2px para cima */
+    opacity: 0.9;
+    /* Reduz a opacidade ao passar o mouse */
+    transform: translateY(-2px);
+    /* Move o botão 2px para cima */
 }
 
 .hero-image {
-    width: 100%; /* Ocupa toda a largura disponível */
-    height: 88vh; /* Altura de 88% da viewport */
-    display: flex; /* Habilita o flexbox */
-    justify-content: flex-end; /* Alinha o conteúdo no final (direita) */
-    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    /* Ocupa toda a largura disponível */
+    height: 88vh;
+    /* Altura de 88% da viewport */
+    display: flex;
+    /* Habilita o flexbox */
+    justify-content: flex-end;
+    /* Alinha o conteúdo no final (direita) */
+    align-items: center;
+    /* Centraliza verticalmente */
 }
 
 .hero-image img {
-    object-fit: cover; /* A imagem cobre todo o espaço sem distorcer */
-    display: block; /* Remove espaçamento extra abaixo da imagem */
+    object-fit: cover;
+    /* A imagem cobre todo o espaço sem distorcer */
+    display: block;
+    /* Remove espaçamento extra abaixo da imagem */
 }
 
 /* ---- SECTION PRATOS (CARDÁPIO) ---- */
 
 .section-pratos {
-    background: #C9E8E3; /* Cor de fundo verde-água claro */
-    padding: var(--spacing-4xl) var(--spacing-4xl) var(--spacing-3xl); /* Espaçamento interno */
-    position: relative; /* Permite posicionamento absoluto dos filhos */
+    background: #C9E8E3;
+    /* Cor de fundo verde-água claro */
+    padding: var(--spacing-4xl) var(--spacing-4xl) var(--spacing-3xl);
+    /* Espaçamento interno */
+    position: relative;
+    /* Permite posicionamento absoluto dos filhos */
 }
 
 .section-pratos-eyebrow {
-    text-align: center; /* Centraliza o texto */
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-body4); /* Tamanho da fonte */
-    font-weight: var(--font-regular); /* Espessura da fonte */
-    font-style: italic; /* Texto em itálico */
-    color: var(--color-accent); /* Cor do texto */
-    margin-bottom: var(--spacing-xs); /* Margem inferior */
+    text-align: center;
+    /* Centraliza o texto */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-body4);
+    /* Tamanho da fonte */
+    font-weight: var(--font-regular);
+    /* Espessura da fonte */
+    font-style: italic;
+    /* Texto em itálico */
+    color: var(--color-accent);
+    /* Cor do texto */
+    margin-bottom: var(--spacing-xs);
+    /* Margem inferior */
 }
 
 .section-pratos-title {
-    text-align: center; /* Centraliza o texto */
-    font-family: var(--font-title); /* Família da fonte */
-    font-size: var(--font-h2); /* Tamanho da fonte */
-    font-weight: var(--font-bold); /* Espessura da fonte */
-    font-style: italic; /* Texto em itálico */
-    color: var(--color-accent); /* Cor do texto */
-    margin-bottom: var(--spacing-sm); /* Margem inferior */
+    text-align: center;
+    /* Centraliza o texto */
+    font-family: var(--font-title);
+    /* Família da fonte */
+    font-size: var(--font-h2);
+    /* Tamanho da fonte */
+    font-weight: var(--font-bold);
+    /* Espessura da fonte */
+    font-style: italic;
+    /* Texto em itálico */
+    color: var(--color-accent);
+    /* Cor do texto */
+    margin-bottom: var(--spacing-sm);
+    /* Margem inferior */
 }
 
 .section-pratos-subtitle {
-    text-align: center; /* Centraliza o texto */
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-body4); /* Tamanho da fonte */
-    font-style: italic; /* Texto em itálico */
-    color: var(--color-gray-400); /* Cor do texto */
-    margin-bottom: var(--spacing-3xl); /* Margem inferior */
+    text-align: center;
+    /* Centraliza o texto */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-body4);
+    /* Tamanho da fonte */
+    font-style: italic;
+    /* Texto em itálico */
+    color: var(--color-gray-400);
+    /* Cor do texto */
+    margin-bottom: var(--spacing-3xl);
+    /* Margem inferior */
 }
 
 .pratos-actions {
-    position: absolute; /* Posicionamento absoluto em relação ao pai */
-    top: var(--spacing-4xl); /* Distância do topo */
-    right: var(--spacing-4xl); /* Distância da direita */
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: flex-end; /* Alinha os itens no final (direita) */
-    gap: var(--spacing-sm); /* Distância entre os elementos */
+    position: absolute;
+    /* Posicionamento absoluto em relação ao pai */
+    top: var(--spacing-4xl);
+    /* Distância do topo */
+    right: var(--spacing-4xl);
+    /* Distância da direita */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    align-items: flex-end;
+    /* Alinha os itens no final (direita) */
+    gap: var(--spacing-sm);
+    /* Distância entre os elementos */
 }
 
 .btn-filtrar {
-    display: flex; /* Habilita o flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    gap: var(--spacing-sm); /* Distância entre ícone e texto */
-    background: var(--color-danger); /* Cor de fundo vermelha */
-    color: var(--color-white); /* Cor do texto */
-    border: none; /* Remove a borda padrão */
-    padding: var(--spacing-md) var(--spacing-lg); /* Espaçamento interno */
-    border-radius: var(--radius-lg); /* Arredondamento das bordas */
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-body3); /* Tamanho da fonte */
-    font-weight: var(--font-bold); /* Espessura da fonte */
-    cursor: pointer; /* Cursor de mão ao passar o mouse */
-    transition: opacity var(--transition-fast); /* Transição suave da opacidade */
+    display: flex;
+    /* Habilita o flexbox */
+    align-items: center;
+    /* Centraliza verticalmente */
+    gap: var(--spacing-sm);
+    /* Distância entre ícone e texto */
+    background: var(--color-danger);
+    /* Cor de fundo vermelha */
+    color: var(--color-white);
+    /* Cor do texto */
+    border: none;
+    /* Remove a borda padrão */
+    padding: var(--spacing-md) var(--spacing-lg);
+    /* Espaçamento interno */
+    border-radius: var(--radius-lg);
+    /* Arredondamento das bordas */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-body3);
+    /* Tamanho da fonte */
+    font-weight: var(--font-bold);
+    /* Espessura da fonte */
+    cursor: pointer;
+    /* Cursor de mão ao passar o mouse */
+    transition: opacity var(--transition-fast);
+    /* Transição suave da opacidade */
 }
 
 .btn-filtrar:hover {
-    opacity: 0.88; /* Reduz a opacidade ao passar o mouse */
+    opacity: 0.88;
+    /* Reduz a opacidade ao passar o mouse */
 }
 
 .btn-filtrar img {
-    width: 18px; /* Largura do ícone */
-    height: 18px; /* Altura do ícone */
-    object-fit: contain; /* Mantém a proporção */
-    filter: brightness(0) invert(1); /* Deixa o ícone branco */
+    width: 18px;
+    /* Largura do ícone */
+    height: 18px;
+    /* Altura do ícone */
+    object-fit: contain;
+    /* Mantém a proporção */
+    filter: brightness(0) invert(1);
+    /* Deixa o ícone branco */
 }
 
 .pratos-search {
-    display: flex; /* Habilita o flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    gap: var(--spacing-sm); /* Distância entre ícone e input */
-    background: var(--color-white); /* Cor de fundo branca */
-    border: var(--border-thin) solid var(--color-gray-200); /* Borda fina cinza */
-    border-radius: var(--radius-lg); /* Arredondamento das bordas */
-    padding: var(--spacing-sm) var(--spacing-md); /* Espaçamento interno */
-    width: 240px; /* Largura fixa */
+    display: flex;
+    /* Habilita o flexbox */
+    align-items: center;
+    /* Centraliza verticalmente */
+    gap: var(--spacing-sm);
+    /* Distância entre ícone e input */
+    background: var(--color-white);
+    /* Cor de fundo branca */
+    border: var(--border-thin) solid var(--color-gray-200);
+    /* Borda fina cinza */
+    border-radius: var(--radius-lg);
+    /* Arredondamento das bordas */
+    padding: var(--spacing-sm) var(--spacing-md);
+    /* Espaçamento interno */
+    width: 240px;
+    /* Largura fixa */
 }
 
 .pratos-search img {
-    width: 16px; /* Largura do ícone de busca */
-    height: 16px; /* Altura do ícone de busca */
-    object-fit: contain; /* Mantém a proporção */
-    opacity: 0.5; /* Meia transparência */
+    width: 16px;
+    /* Largura do ícone de busca */
+    height: 16px;
+    /* Altura do ícone de busca */
+    object-fit: contain;
+    /* Mantém a proporção */
+    opacity: 0.5;
+    /* Meia transparência */
 }
 
 .pratos-search input {
-    border: none; /* Remove a borda padrão */
-    outline: none; /* Remove o contorno ao focar */
-    background: transparent; /* Fundo transparente */
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-body4); /* Tamanho da fonte */
-    color: var(--color-gray-400); /* Cor do texto */
-    width: 100%; /* Ocupa toda a largura disponível */
+    border: none;
+    /* Remove a borda padrão */
+    outline: none;
+    /* Remove o contorno ao focar */
+    background: transparent;
+    /* Fundo transparente */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-body4);
+    /* Tamanho da fonte */
+    color: var(--color-gray-400);
+    /* Cor do texto */
+    width: 100%;
+    /* Ocupa toda a largura disponível */
 }
 
 .pratos-search input::placeholder {
-    color: var(--color-gray-300); /* Cor do texto placeholder */
+    color: var(--color-gray-300);
+    /* Cor do texto placeholder */
 }
 
 .pratos-grid {
-    display: grid; /* Define layout em grade */
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas com larguras iguais */
-    gap: var(--spacing-xl); /* Distância entre os cards */
-    max-width: 780px; /* Largura máxima da grade */
-    margin: 0 auto var(--spacing-xl); /* Centraliza e adiciona margem inferior */
+    display: grid;
+    /* Define layout em grade */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas com larguras iguais */
+    gap: var(--spacing-xl);
+    /* Distância entre os cards */
+    max-width: 780px;
+    /* Largura máxima da grade */
+    margin: 0 auto var(--spacing-xl);
+    /* Centraliza e adiciona margem inferior */
 }
 
 .prato-card {
-    background: var(--color-white); /* Cor de fundo branca */
-    border-radius: var(--radius-2xl); /* Arredondamento das bordas */
-    padding: var(--spacing-md); /* Espaçamento interno */
-    box-shadow: var(--shadow-md); /* Sombra média */
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    gap: var(--spacing-sm); /* Distância entre os elementos */
-    position: relative; /* Permite posicionamento de elementos filhos */
-    cursor: pointer; /* Cursor de mão ao passar */
-    border: 2px solid transparent; /* Borda transparente (para efeito de destaque) */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transições suaves */
+    background: var(--color-white);
+    /* Cor de fundo branca */
+    border-radius: var(--radius-2xl);
+    /* Arredondamento das bordas */
+    padding: var(--spacing-md);
+    /* Espaçamento interno */
+    box-shadow: var(--shadow-md);
+    /* Sombra média */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    gap: var(--spacing-sm);
+    /* Distância entre os elementos */
+    position: relative;
+    /* Permite posicionamento de elementos filhos */
+    cursor: pointer;
+    /* Cursor de mão ao passar */
+    border: 2px solid transparent;
+    /* Borda transparente (para efeito de destaque) */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Transições suaves */
 }
 
 .prato-card:hover {
-    transform: translateY(-4px); /* Move o card 4px para cima */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* Sombra mais pronunciada */
+    transform: translateY(-4px);
+    /* Move o card 4px para cima */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    /* Sombra mais pronunciada */
 }
 
 .prato-card--destaque {
-    border: 2px solid var(--color-accent); /* Borda laranja de destaque */
-    box-shadow: 0 0 0 4px rgba(252, 160, 41, 0.15); /* Sombra externa laranja suave */
+    border: 2px solid var(--color-accent);
+    /* Borda laranja de destaque */
+    box-shadow: 0 0 0 4px rgba(252, 160, 41, 0.15);
+    /* Sombra externa laranja suave */
 }
 
 .prato-card--destaque:hover {
-    transform: translateY(-4px); /* Move o card 4px para cima */
-    box-shadow: 0 8px 24px rgba(252, 160, 41, 0.25); /* Sombra mais intensa */
+    transform: translateY(-4px);
+    /* Move o card 4px para cima */
+    box-shadow: 0 8px 24px rgba(252, 160, 41, 0.25);
+    /* Sombra mais intensa */
 }
 
 .prato-card--destaque .prato-card-kcal {
-    border-color: var(--color-accent); /* Borda laranja no elemento kcal */
-    color: var(--color-accent); /* Texto laranja no elemento kcal */
+    border-color: var(--color-accent);
+    /* Borda laranja no elemento kcal */
+    color: var(--color-accent);
+    /* Texto laranja no elemento kcal */
 }
 
 .prato-card-img {
-    width: 100%; /* Ocupa toda a largura */
-    height: 180px; /* Altura fixa */
-    border-radius: var(--radius-lg); /* Arredondamento das bordas */
-    object-fit: cover; /* A imagem cobre o espaço sem distorcer */
+    width: 100%;
+    /* Ocupa toda a largura */
+    height: 180px;
+    /* Altura fixa */
+    border-radius: var(--radius-lg);
+    /* Arredondamento das bordas */
+    object-fit: cover;
+    /* A imagem cobre o espaço sem distorcer */
 }
 
 .prato-card-kcal {
-    display: inline-block; /* Permite definir largura/altura */
-    align-self: flex-end; /* Alinha o elemento no final (direita) */
-    border: var(--border-thin) solid var(--color-gray-200); /* Borda fina cinza */
-    border-radius: 20px; /* Arredondamento das bordas */
-    padding: var(--spacing-xs) var(--spacing-md); /* Espaçamento interno */
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-small); /* Tamanho da fonte */
-    font-weight: var(--font-medium); /* Espessura da fonte */
-    color: var(--color-gray-400); /* Cor do texto */
+    display: inline-block;
+    /* Permite definir largura/altura */
+    align-self: flex-end;
+    /* Alinha o elemento no final (direita) */
+    border: var(--border-thin) solid var(--color-gray-200);
+    /* Borda fina cinza */
+    border-radius: 20px;
+    /* Arredondamento das bordas */
+    padding: var(--spacing-xs) var(--spacing-md);
+    /* Espaçamento interno */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-small);
+    /* Tamanho da fonte */
+    font-weight: var(--font-medium);
+    /* Espessura da fonte */
+    color: var(--color-gray-400);
+    /* Cor do texto */
 }
 
 .prato-card-title {
-    font-family: var(--font-title); /* Família da fonte */
-    font-size: var(--font-h4); /* Tamanho da fonte */
-    font-weight: var(--font-bold); /* Espessura da fonte */
-    font-style: italic; /* Texto em itálico */
-    color: var(--color-accent); /* Cor do texto */
+    font-family: var(--font-title);
+    /* Família da fonte */
+    font-size: var(--font-h4);
+    /* Tamanho da fonte */
+    font-weight: var(--font-bold);
+    /* Espessura da fonte */
+    font-style: italic;
+    /* Texto em itálico */
+    color: var(--color-accent);
+    /* Cor do texto */
 }
 
 .prato-card-desc {
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-body4); /* Tamanho da fonte */
-    font-style: italic; /* Texto em itálico */
-    color: var(--color-gray-400); /* Cor do texto */
-    line-height: 1.55; /* Espaçamento entre linhas */
-    flex: 1; /* Ocupa o espaço restante */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-body4);
+    /* Tamanho da fonte */
+    font-style: italic;
+    /* Texto em itálico */
+    color: var(--color-gray-400);
+    /* Cor do texto */
+    line-height: 1.55;
+    /* Espaçamento entre linhas */
+    flex: 1;
+    /* Ocupa o espaço restante */
 }
 
 .prato-card-macros {
-    display: flex; /* Habilita o flexbox */
-    gap: var(--spacing-xl); /* Distância entre os itens */
-    margin-top: var(--spacing-sm); /* Margem superior */
-    padding-top: var(--spacing-sm); /* Espaçamento interno superior */
-    border-top: var(--border-thin) solid var(--color-gray-200); /* Borda superior */
+    display: flex;
+    /* Habilita o flexbox */
+    gap: var(--spacing-xl);
+    /* Distância entre os itens */
+    margin-top: var(--spacing-sm);
+    /* Margem superior */
+    padding-top: var(--spacing-sm);
+    /* Espaçamento interno superior */
+    border-top: var(--border-thin) solid var(--color-gray-200);
+    /* Borda superior */
 }
 
 .prato-card-macro-item {
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza horizontalmente */
-    gap: 2px; /* Distância entre valor e label */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    gap: 2px;
+    /* Distância entre valor e label */
 }
 
 .prato-card-macro-valor {
-    font-family: var(--font-title); /* Família da fonte */
-    font-size: var(--font-body3); /* Tamanho da fonte */
-    font-weight: var(--font-bold); /* Espessura da fonte */
-    font-style: italic; /* Texto em itálico */
-    color: var(--color-accent); /* Cor do texto */
+    font-family: var(--font-title);
+    /* Família da fonte */
+    font-size: var(--font-body3);
+    /* Tamanho da fonte */
+    font-weight: var(--font-bold);
+    /* Espessura da fonte */
+    font-style: italic;
+    /* Texto em itálico */
+    color: var(--color-accent);
+    /* Cor do texto */
 }
 
 .prato-card-macro-label {
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-small); /* Tamanho da fonte */
-    color: var(--color-gray-300); /* Cor do texto */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-small);
+    /* Tamanho da fonte */
+    color: var(--color-gray-300);
+    /* Cor do texto */
 }
 
 .pratos-load-more {
-    display: block; /* Elemento em bloco */
-    text-align: center; /* Centraliza o texto */
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-body3); /* Tamanho da fonte */
-    color: var(--color-info); /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado */
-    margin-top: var(--spacing-lg); /* Margem superior */
-    transition: opacity var(--transition-fast); /* Transição suave da opacidade */
+    display: block;
+    /* Elemento em bloco */
+    text-align: center;
+    /* Centraliza o texto */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-body3);
+    /* Tamanho da fonte */
+    color: var(--color-info);
+    /* Cor do texto */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    margin-top: var(--spacing-lg);
+    /* Margem superior */
+    transition: opacity var(--transition-fast);
+    /* Transição suave da opacidade */
 }
 
 .pratos-load-more:hover {
-    opacity: 0.7; /* Reduz a opacidade ao passar o mouse */
+    opacity: 0.7;
+    /* Reduz a opacidade ao passar o mouse */
 }
 
 /* ---- SECTION FILTRAR (FILTROS) ---- */
 
 .section-filtrar {
-    background: var(--color-gray-100); /* Cor de fundo cinza claro */
-    padding: var(--spacing-3xl) var(--spacing-2xl); /* Espaçamento interno */
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    gap: var(--spacing-lg); /* Distância entre os blocos */
-    max-width: var(--container-md); /* Largura máxima do container */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    border-radius: var(--radius-2xl); /* Arredondamento das bordas */
+    background: var(--color-gray-100);
+    /* Cor de fundo cinza claro */
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+    /* Espaçamento interno */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    gap: var(--spacing-lg);
+    /* Distância entre os blocos */
+    max-width: var(--container-md);
+    /* Largura máxima do container */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    border-radius: var(--radius-2xl);
+    /* Arredondamento das bordas */
 }
 
 .filtrar-bloco {
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    gap: var(--spacing-sm); /* Distância entre os elementos */
-    padding-bottom: var(--spacing-lg); /* Espaçamento interno inferior */
-    border-bottom: var(--border-thin) solid var(--color-gray-200); /* Borda inferior */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    gap: var(--spacing-sm);
+    /* Distância entre os elementos */
+    padding-bottom: var(--spacing-lg);
+    /* Espaçamento interno inferior */
+    border-bottom: var(--border-thin) solid var(--color-gray-200);
+    /* Borda inferior */
 }
 
 .filtrar-bloco:last-child {
-    border-bottom: none; /* Remove a borda do último bloco */
-    padding-bottom: 0; /* Remove o padding do último bloco */
+    border-bottom: none;
+    /* Remove a borda do último bloco */
+    padding-bottom: 0;
+    /* Remove o padding do último bloco */
 }
 
 .filtrar-bloco-titulo {
-    font-family: var(--font-title); /* Família da fonte */
-    font-size: var(--font-h4); /* Tamanho da fonte */
-    font-weight: var(--font-bold); /* Espessura da fonte */
-    color: var(--color-gray-300); /* Cor do texto */
+    font-family: var(--font-title);
+    /* Família da fonte */
+    font-size: var(--font-h4);
+    /* Tamanho da fonte */
+    font-weight: var(--font-bold);
+    /* Espessura da fonte */
+    color: var(--color-gray-300);
+    /* Cor do texto */
 }
 
 .filtrar-kcal-valor {
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-body3); /* Tamanho da fonte */
-    font-weight: var(--font-semibold); /* Espessura da fonte */
-    color: var(--color-gray-400); /* Cor do texto */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-body3);
+    /* Tamanho da fonte */
+    font-weight: var(--font-semibold);
+    /* Espessura da fonte */
+    color: var(--color-gray-400);
+    /* Cor do texto */
 }
 
 .filtrar-slider {
-    width: 50%; /* Largura de 50% */
-    accent-color: #6AC8E3; /* Cor do controle (verde-água) */
-    cursor: pointer; /* Cursor de mão ao passar */
+    width: 50%;
+    /* Largura de 50% */
+    accent-color: #6AC8E3;
+    /* Cor do controle (verde-água) */
+    cursor: pointer;
+    /* Cursor de mão ao passar */
 }
 
 .filtrar-macro-row {
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    gap: var(--spacing-md); /* Distância entre os itens */
-    margin-top: var(--spacing-sm); /* Margem superior */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    gap: var(--spacing-md);
+    /* Distância entre os itens */
+    margin-top: var(--spacing-sm);
+    /* Margem superior */
 }
 
 .filtrar-macro-item {
-    display: flex; /* Habilita o flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    gap: var(--spacing-md); /* Distância entre label e slider */
+    display: flex;
+    /* Habilita o flexbox */
+    align-items: center;
+    /* Centraliza verticalmente */
+    gap: var(--spacing-md);
+    /* Distância entre label e slider */
 }
 
 .filtrar-macro-label {
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-body3); /* Tamanho da fonte */
-    font-weight: var(--font-semibold); /* Espessura da fonte */
-    color: var(--color-gray-300); /* Cor do texto */
-    width: 48px; /* Largura fixa */
-    flex-shrink: 0; /* Impede que o elemento encolha */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-body3);
+    /* Tamanho da fonte */
+    font-weight: var(--font-semibold);
+    /* Espessura da fonte */
+    color: var(--color-gray-300);
+    /* Cor do texto */
+    width: 48px;
+    /* Largura fixa */
+    flex-shrink: 0;
+    /* Impede que o elemento encolha */
 }
 
 .filtrar-ordenar-btns {
-    display: flex; /* Habilita o flexbox */
-    gap: var(--spacing-md); /* Distância entre os botões */
-    margin-top: var(--spacing-sm); /* Margem superior */
+    display: flex;
+    /* Habilita o flexbox */
+    gap: var(--spacing-md);
+    /* Distância entre os botões */
+    margin-top: var(--spacing-sm);
+    /* Margem superior */
 }
 
 .btn-ordenar {
-    flex: 1; /* Ocupa o espaço disponível igualmente */
-    padding: var(--spacing-md) var(--spacing-lg); /* Espaçamento interno */
-    border-radius: 30px; /* Arredondamento das bordas (pill shape) */
-    border: var(--border-thin) solid var(--color-gray-200); /* Borda fina cinza */
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-body3); /* Tamanho da fonte */
-    font-weight: var(--font-medium); /* Espessura da fonte */
-    color: var(--color-gray-300); /* Cor do texto */
-    background: var(--color-white); /* Cor de fundo branca */
-    cursor: pointer; /* Cursor de mão ao passar */
-    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease; /* Transições suaves */
+    flex: 1;
+    /* Ocupa o espaço disponível igualmente */
+    padding: var(--spacing-md) var(--spacing-lg);
+    /* Espaçamento interno */
+    border-radius: 30px;
+    /* Arredondamento das bordas (pill shape) */
+    border: var(--border-thin) solid var(--color-gray-200);
+    /* Borda fina cinza */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-body3);
+    /* Tamanho da fonte */
+    font-weight: var(--font-medium);
+    /* Espessura da fonte */
+    color: var(--color-gray-300);
+    /* Cor do texto */
+    background: var(--color-white);
+    /* Cor de fundo branca */
+    cursor: pointer;
+    /* Cursor de mão ao passar */
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+    /* Transições suaves */
 }
 
 .btn-ordenar:hover:not(.ativo) {
-    border-color: #6AC8E3; /* Cor da borda ao passar o mouse */
-    color: #6AC8E3; /* Cor do texto ao passar o mouse */
-    background: #f0fafd; /* Cor de fundo ao passar o mouse */
+    border-color: #6AC8E3;
+    /* Cor da borda ao passar o mouse */
+    color: #6AC8E3;
+    /* Cor do texto ao passar o mouse */
+    background: #f0fafd;
+    /* Cor de fundo ao passar o mouse */
 }
 
 .btn-ordenar.ativo {
-    border-color: #6AC8E3; /* Cor da borda do botão ativo */
-    color: #6AC8E3; /* Cor do texto do botão ativo */
-    background: #e6f7fb; /* Cor de fundo do botão ativo */
-    font-weight: var(--font-semibold); /* Espessura da fonte mais grossa */
+    border-color: #6AC8E3;
+    /* Cor da borda do botão ativo */
+    color: #6AC8E3;
+    /* Cor do texto do botão ativo */
+    background: #e6f7fb;
+    /* Cor de fundo do botão ativo */
+    font-weight: var(--font-semibold);
+    /* Espessura da fonte mais grossa */
 }
 
 .filtrar-restricoes {
-    display: flex; /* Habilita o flexbox */
-    flex-wrap: wrap; /* Permite quebra de linha */
-    gap: var(--spacing-sm); /* Distância entre as tags */
-    margin-top: var(--spacing-sm); /* Margem superior */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-wrap: wrap;
+    /* Permite quebra de linha */
+    gap: var(--spacing-sm);
+    /* Distância entre as tags */
+    margin-top: var(--spacing-sm);
+    /* Margem superior */
 }
 
 .tag-restricao {
-    padding: var(--spacing-sm) var(--spacing-md); /* Espaçamento interno */
-    border-radius: 30px; /* Arredondamento das bordas (pill shape) */
-    border: var(--border-thin) solid var(--color-gray-300); /* Borda fina cinza */
-    font-family: var(--font-body); /* Família da fonte */
-    font-size: var(--font-body4); /* Tamanho da fonte */
-    font-weight: var(--font-medium); /* Espessura da fonte */
-    color: var(--color-gray-400); /* Cor do texto */
-    background: var(--color-white); /* Cor de fundo branca */
-    cursor: pointer; /* Cursor de mão ao passar */
-    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease; /* Transições suaves */
+    padding: var(--spacing-sm) var(--spacing-md);
+    /* Espaçamento interno */
+    border-radius: 30px;
+    /* Arredondamento das bordas (pill shape) */
+    border: var(--border-thin) solid var(--color-gray-300);
+    /* Borda fina cinza */
+    font-family: var(--font-body);
+    /* Família da fonte */
+    font-size: var(--font-body4);
+    /* Tamanho da fonte */
+    font-weight: var(--font-medium);
+    /* Espessura da fonte */
+    color: var(--color-gray-400);
+    /* Cor do texto */
+    background: var(--color-white);
+    /* Cor de fundo branca */
+    cursor: pointer;
+    /* Cursor de mão ao passar */
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+    /* Transições suaves */
 }
 
 .tag-restricao.ativa {
-    border-color: #6AC8E3; /* Cor da borda da tag ativa */
-    color: #6AC8E3; /* Cor do texto da tag ativa */
-    background: #e6f7fb; /* Cor de fundo da tag ativa */
-    font-weight: var(--font-semibold); /* Espessura da fonte mais grossa */
+    border-color: #6AC8E3;
+    /* Cor da borda da tag ativa */
+    color: #6AC8E3;
+    /* Cor do texto da tag ativa */
+    background: #e6f7fb;
+    /* Cor de fundo da tag ativa */
+    font-weight: var(--font-semibold);
+    /* Espessura da fonte mais grossa */
 }
 
 .tag-restricao:hover:not(.ativa) {
-    border-color: #6AC8E3; /* Cor da borda ao passar o mouse */
-    color: #6AC8E3; /* Cor do texto ao passar o mouse */
-    background: #f0fafd; /* Cor de fundo ao passar o mouse */
+    border-color: #6AC8E3;
+    /* Cor da borda ao passar o mouse */
+    color: #6AC8E3;
+    /* Cor do texto ao passar o mouse */
+    background: #f0fafd;
+    /* Cor de fundo ao passar o mouse */
 }
 
 /* ---- SECTION RESULTADOS ---- */
 
 .section-resultados {
-    background-color: #f0faf5; /* Cor de fundo verde claro suave */
-    padding: 48px 40px; /* Espaçamento interno */
-    font-family: sans-serif; /* Família da fonte fallback */
+    background-color: #f0faf5;
+    /* Cor de fundo verde claro suave */
+    padding: 48px 40px;
+    /* Espaçamento interno */
+    font-family: sans-serif;
+    /* Família da fonte fallback */
 }
 
 .section-resultados-title {
-    font-size: 48px; /* Tamanho da fonte */
-    font-weight: 800; /* Espessura da fonte (extra bold) */
-    font-style: italic; /* Texto em itálico */
-    color: #e07b30; /* Cor do texto (laranja) */
-    margin: 0 0 6px; /* Margem: 0 topo, 0 laterais, 6px inferior */
-    line-height: 1.1; /* Espaçamento entre linhas */
+    font-size: 48px;
+    /* Tamanho da fonte */
+    font-weight: 800;
+    /* Espessura da fonte (extra bold) */
+    font-style: italic;
+    /* Texto em itálico */
+    color: #e07b30;
+    /* Cor do texto (laranja) */
+    margin: 0 0 6px;
+    /* Margem: 0 topo, 0 laterais, 6px inferior */
+    line-height: 1.1;
+    /* Espaçamento entre linhas */
 }
 
 .section-resultados-subtitle {
-    font-size: 15px; /* Tamanho da fonte */
-    font-style: italic; /* Texto em itálico */
-    color: #555; /* Cor do texto (cinza escuro) */
-    margin: 0 0 28px; /* Margem: 0 topo, 0 laterais, 28px inferior */
+    font-size: 15px;
+    /* Tamanho da fonte */
+    font-style: italic;
+    /* Texto em itálico */
+    color: #555;
+    /* Cor do texto (cinza escuro) */
+    margin: 0 0 28px;
+    /* Margem: 0 topo, 0 laterais, 28px inferior */
 }
 
 .resultados-stats {
-    display: grid; /* Define layout em grade */
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas com larguras iguais */
-    gap: 12px; /* Distância entre os cards de estatística */
-    margin-bottom: 20px; /* Margem inferior */
+    display: grid;
+    /* Define layout em grade */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colunas com larguras iguais */
+    gap: 12px;
+    /* Distância entre os cards de estatística */
+    margin-bottom: 20px;
+    /* Margem inferior */
 }
 
 .resultados-stat-item {
-    background: #ffffff; /* Cor de fundo branca */
-    border: 1px solid #e0e0e0; /* Borda fina cinza claro */
-    border-radius: 12px; /* Arredondamento das bordas */
-    padding: 18px 20px; /* Espaçamento interno */
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza horizontalmente */
-    gap: 4px; /* Distância entre valor e label */
+    background: #ffffff;
+    /* Cor de fundo branca */
+    border: 1px solid #e0e0e0;
+    /* Borda fina cinza claro */
+    border-radius: 12px;
+    /* Arredondamento das bordas */
+    padding: 18px 20px;
+    /* Espaçamento interno */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    gap: 4px;
+    /* Distância entre valor e label */
 }
 
 .resultados-stat-valor {
-    font-size: 28px; /* Tamanho da fonte */
-    font-weight: 700; /* Espessura da fonte (negrito) */
-    color: #1a1a1a; /* Cor do texto (quase preto) */
-    line-height: 1.1; /* Espaçamento entre linhas */
+    font-size: 28px;
+    /* Tamanho da fonte */
+    font-weight: 700;
+    /* Espessura da fonte (negrito) */
+    color: #1a1a1a;
+    /* Cor do texto (quase preto) */
+    line-height: 1.1;
+    /* Espaçamento entre linhas */
 }
 
 .resultados-stat-label {
-    font-size: 13px; /* Tamanho da fonte */
-    color: #888; /* Cor do texto (cinza médio) */
-    font-weight: 400; /* Espessura da fonte (normal) */
+    font-size: 13px;
+    /* Tamanho da fonte */
+    color: #888;
+    /* Cor do texto (cinza médio) */
+    font-weight: 400;
+    /* Espessura da fonte (normal) */
 }
 
 .resultados-ordenacao {
-    font-size: 14px; /* Tamanho da fonte */
-    font-weight: 600; /* Espessura da fonte (semi-bold) */
-    color: #e07b30; /* Cor do texto (laranja) */
-    margin: 0 0 24px; /* Margem: 0 topo, 0 laterais, 24px inferior */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    font-weight: 600;
+    /* Espessura da fonte (semi-bold) */
+    color: #e07b30;
+    /* Cor do texto (laranja) */
+    margin: 0 0 24px;
+    /* Margem: 0 topo, 0 laterais, 24px inferior */
 }
 
 .resultados-grid {
-    display: grid; /* Define layout em grade */
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas com larguras iguais */
-    gap: 16px; /* Distância entre os cards */
+    display: grid;
+    /* Define layout em grade */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colunas com larguras iguais */
+    gap: 16px;
+    /* Distância entre os cards */
 }
 
 .resultado-card {
-    background: #fdf8f4; /* Cor de fundo bege claro */
-    border: 1px solid #e8e0d8; /* Borda fina bege escuro */
-    border-radius: 16px; /* Arredondamento das bordas */
-    padding: 14px; /* Espaçamento interno */
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    gap: 10px; /* Distância entre os elementos */
-    position: relative; /* Permite posicionamento de elementos filhos */
-    cursor: pointer; /* Cursor de mão ao passar */
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; /* Transições suaves */
+    background: #fdf8f4;
+    /* Cor de fundo bege claro */
+    border: 1px solid #e8e0d8;
+    /* Borda fina bege escuro */
+    border-radius: 16px;
+    /* Arredondamento das bordas */
+    padding: 14px;
+    /* Espaçamento interno */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    gap: 10px;
+    /* Distância entre os elementos */
+    position: relative;
+    /* Permite posicionamento de elementos filhos */
+    cursor: pointer;
+    /* Cursor de mão ao passar */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    /* Transições suaves */
 }
 
 .resultado-card:hover {
-    transform: translateY(-4px); /* Move o card 4px para cima */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Sombra mais pronunciada */
-    border-color: #c8bdb0; /* Cor da borda ao passar o mouse */
+    transform: translateY(-4px);
+    /* Move o card 4px para cima */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    /* Sombra mais pronunciada */
+    border-color: #c8bdb0;
+    /* Cor da borda ao passar o mouse */
 }
 
 .resultado-card--destaque {
-    border: 2px solid #f0a080; /* Borda laranja suave de destaque */
-    background: #fff8f5; /* Fundo ligeiramente mais claro */
+    border: 2px solid #f0a080;
+    /* Borda laranja suave de destaque */
+    background: #fff8f5;
+    /* Fundo ligeiramente mais claro */
 }
 
 .resultado-card--destaque:hover {
-    transform: translateY(-4px); /* Move o card 4px para cima */
-    box-shadow: 0 8px 24px rgba(240, 120, 80, 0.25); /* Sombra laranja suave */
-    border-color: #f87c55; /* Cor da borda ao passar o mouse */
+    transform: translateY(-4px);
+    /* Move o card 4px para cima */
+    box-shadow: 0 8px 24px rgba(240, 120, 80, 0.25);
+    /* Sombra laranja suave */
+    border-color: #f87c55;
+    /* Cor da borda ao passar o mouse */
 }
 
 .resultado-card-badge {
-    display: inline-flex; /* Flex inline para o badge */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 5px; /* Distância entre ícone e texto */
-    background: #f87c55; /* Cor de fundo laranja */
-    color: #ffffff; /* Cor do texto branca */
-    font-size: 12px; /* Tamanho da fonte */
-    font-weight: 600; /* Espessura da fonte */
-    padding: 4px 10px; /* Espaçamento interno */
-    border-radius: 8px; /* Arredondamento das bordas */
-    width: fit-content; /* Largura ajustada ao conteúdo */
+    display: inline-flex;
+    /* Flex inline para o badge */
+    align-items: center;
+    /* Centraliza verticalmente */
+    gap: 5px;
+    /* Distância entre ícone e texto */
+    background: #f87c55;
+    /* Cor de fundo laranja */
+    color: #ffffff;
+    /* Cor do texto branca */
+    font-size: 12px;
+    /* Tamanho da fonte */
+    font-weight: 600;
+    /* Espessura da fonte */
+    padding: 4px 10px;
+    /* Espaçamento interno */
+    border-radius: 8px;
+    /* Arredondamento das bordas */
+    width: fit-content;
+    /* Largura ajustada ao conteúdo */
 }
 
 /* ---- SECTION DIFERENCIAIS ---- */
 
 .section-diferenciais {
-    background-color: #e8e4db; /* Cor de fundo bege acinzentado */
-    border-radius: 32px; /* Arredondamento das bordas */
-    padding: 72px 64px 80px; /* Espaçamento interno */
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    gap: 48px; /* Distância entre cabeçalho e grade */
+    background-color: #e8e4db;
+    /* Cor de fundo bege acinzentado */
+    border-radius: 32px;
+    /* Arredondamento das bordas */
+    padding: 72px 64px 80px;
+    /* Espaçamento interno */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    gap: 48px;
+    /* Distância entre cabeçalho e grade */
 }
 
 .diferenciais-header {
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza o texto */
-    gap: 10px; /* Distância entre os elementos */
-    max-width: 820px; /* Largura máxima */
-    margin: 0 auto; /* Centraliza horizontalmente */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    text-align: center;
+    /* Centraliza o texto */
+    gap: 10px;
+    /* Distância entre os elementos */
+    max-width: 820px;
+    /* Largura máxima */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
 }
 
 .diferenciais-eyebrow {
-    font-size: 14px; /* Tamanho da fonte */
-    font-style: italic; /* Texto em itálico */
-    color: #c87941; /* Cor do texto (laranja queimado) */
-    font-weight: 500; /* Espessura da fonte */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    font-style: italic;
+    /* Texto em itálico */
+    color: #c87941;
+    /* Cor do texto (laranja queimado) */
+    font-weight: 500;
+    /* Espessura da fonte */
 }
 
 .diferenciais-titulo {
-    font-size: 48px; /* Tamanho da fonte */
-    font-weight: 800; /* Espessura da fonte (extra bold) */
-    font-style: italic; /* Texto em itálico */
-    color: #c87941; /* Cor do texto (laranja queimado) */
-    line-height: 1.1; /* Espaçamento entre linhas */
-    margin: 0; /* Remove a margem padrão */
+    font-size: 48px;
+    /* Tamanho da fonte */
+    font-weight: 800;
+    /* Espessura da fonte (extra bold) */
+    font-style: italic;
+    /* Texto em itálico */
+    color: #c87941;
+    /* Cor do texto (laranja queimado) */
+    line-height: 1.1;
+    /* Espaçamento entre linhas */
+    margin: 0;
+    /* Remove a margem padrão */
 }
 
 .diferenciais-subtitulo {
-    font-size: 14px; /* Tamanho da fonte */
-    color: #7a7268; /* Cor do texto (cinza acastanhado) */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    margin: 0; /* Remove a margem padrão */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    color: #7a7268;
+    /* Cor do texto (cinza acastanhado) */
+    line-height: 1.6;
+    /* Espaçamento entre linhas */
+    margin: 0;
+    /* Remove a margem padrão */
 }
 
 .diferenciais-grid {
-    display: grid; /* Define layout em grade */
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas com larguras iguais */
-    gap: 20px; /* Distância entre os cards */
-    width: 100%; /* Ocupa toda a largura */
-    align-items: end; /* Alinha os cards na parte inferior */
+    display: grid;
+    /* Define layout em grade */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas com larguras iguais */
+    gap: 20px;
+    /* Distância entre os cards */
+    width: 100%;
+    /* Ocupa toda a largura */
+    align-items: end;
+    /* Alinha os cards na parte inferior */
 }
 
 .diferencial-card {
-    background: rgba(190, 230, 216, 0.2); /* Fundo verde-água transparente */
-    border-radius: 20px; /* Arredondamento das bordas */
-    padding: 28px 24px; /* Espaçamento interno */
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    gap: 12px; /* Distância entre os elementos */
-    cursor: pointer; /* Cursor de mão ao passar */
-    transition: background 0.2s ease; /* Transição suave da cor de fundo */
+    background: rgba(190, 230, 216, 0.2);
+    /* Fundo verde-água transparente */
+    border-radius: 20px;
+    /* Arredondamento das bordas */
+    padding: 28px 24px;
+    /* Espaçamento interno */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    gap: 12px;
+    /* Distância entre os elementos */
+    cursor: pointer;
+    /* Cursor de mão ao passar */
+    transition: background 0.2s ease;
+    /* Transição suave da cor de fundo */
 }
 
 .diferencial-card--elevado {
-    margin-bottom: 32px; /* Margem inferior para destacar o card */
+    margin-bottom: 32px;
+    /* Margem inferior para destacar o card */
 }
 
 .diferencial-card--vermelho:hover,
 .diferencial-card--verde:hover,
 .diferencial-card--amarelo:hover {
-    background: rgba(190, 230, 216, 0.2); /* Cor base padrão */
+    background: rgba(190, 230, 216, 0.2);
+    /* Cor base padrão */
 }
 
 .diferencial-card--vermelho:hover {
-    background: #f5ddd6; /* Fundo vermelho claro ao passar o mouse */
+    background: #f5ddd6;
+    /* Fundo vermelho claro ao passar o mouse */
 }
 
 .diferencial-card--vermelho:active {
-    background: #f0c4b0; /* Fundo mais escuro ao clicar */
+    background: #f0c4b0;
+    /* Fundo mais escuro ao clicar */
 }
 
 .diferencial-card--verde:hover {
-    background: #c8ecd8; /* Fundo verde claro ao passar o mouse */
+    background: #c8ecd8;
+    /* Fundo verde claro ao passar o mouse */
 }
 
 .diferencial-card--verde:active {
-    background: #a8dfc0; /* Fundo mais escuro ao clicar */
+    background: #a8dfc0;
+    /* Fundo mais escuro ao clicar */
 }
 
 .diferencial-card--amarelo:hover {
-    background: #f5f0c8; /* Fundo amarelo claro ao passar o mouse */
+    background: #f5f0c8;
+    /* Fundo amarelo claro ao passar o mouse */
 }
 
 .diferencial-card--amarelo:active {
-    background: #ece880; /* Fundo mais escuro ao clicar */
+    background: #ece880;
+    /* Fundo mais escuro ao clicar */
 }
 
 .diferencial-card-icone {
-    width: 52px; /* Largura fixa */
-    height: 52px; /* Altura fixa */
-    border-radius: 14px; /* Arredondamento das bordas */
-    display: flex; /* Habilita o flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    width: 52px;
+    /* Largura fixa */
+    height: 52px;
+    /* Altura fixa */
+    border-radius: 14px;
+    /* Arredondamento das bordas */
+    display: flex;
+    /* Habilita o flexbox */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
 }
 
 .diferencial-card-icone img {
-    width: 28px; /* Largura do ícone */
-    height: 28px; /* Altura do ícone */
-    object-fit: contain; /* Mantém a proporção */
+    width: 28px;
+    /* Largura do ícone */
+    height: 28px;
+    /* Altura do ícone */
+    object-fit: contain;
+    /* Mantém a proporção */
 }
 
 .diferencial-card-icone--vermelho {
-    background: #f28b72; /* Fundo vermelho coral */
+    background: #f28b72;
+    /* Fundo vermelho coral */
 }
 
 .diferencial-card-icone--verde {
-    background: #7dd9a0; /* Fundo verde menta */
+    background: #7dd9a0;
+    /* Fundo verde menta */
 }
 
 .diferencial-card-icone--amarelo {
-    background: #f0e060; /* Fundo amarelo */
+    background: #f0e060;
+    /* Fundo amarelo */
 }
 
 .diferencial-card-titulo {
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: 700; /* Espessura da fonte (negrito) */
-    font-style: italic; /* Texto em itálico */
-    margin: 0; /* Remove a margem padrão */
-    line-height: 1.3; /* Espaçamento entre linhas */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    font-weight: 700;
+    /* Espessura da fonte (negrito) */
+    font-style: italic;
+    /* Texto em itálico */
+    margin: 0;
+    /* Remove a margem padrão */
+    line-height: 1.3;
+    /* Espaçamento entre linhas */
 }
 
 .diferencial-card-titulo--vermelho {
-    color: #d45c2e; /* Cor do título vermelho */
+    color: #d45c2e;
+    /* Cor do título vermelho */
 }
 
 .diferencial-card-titulo--verde {
-    color: #2e9e60; /* Cor do título verde */
+    color: #2e9e60;
+    /* Cor do título verde */
 }
 
 .diferencial-card-titulo--amarelo {
-    color: #a08800; /* Cor do título amarelo */
+    color: #a08800;
+    /* Cor do título amarelo */
 }
 
 .diferencial-card-desc {
-    font-size: 14px; /* Tamanho da fonte */
-    font-style: italic; /* Texto em itálico */
-    color: #5a5550; /* Cor do texto (cinza escuro) */
-    line-height: 1.65; /* Espaçamento entre linhas */
-    margin: 0; /* Remove a margem padrão */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    font-style: italic;
+    /* Texto em itálico */
+    color: #5a5550;
+    /* Cor do texto (cinza escuro) */
+    line-height: 1.65;
+    /* Espaçamento entre linhas */
+    margin: 0;
+    /* Remove a margem padrão */
 }
 
 /* ---- SECTION DESCRICAO (DESCRIÇÃO DOS PRATOS) ---- */
 
 .section-descricao {
-    background-color: #f2ede8; /* Cor de fundo bege claro */
-    padding: 48px 40px 56px; /* Espaçamento interno */
-    border-radius: 24px; /* Arredondamento das bordas */
+    background-color: #f2ede8;
+    /* Cor de fundo bege claro */
+    padding: 48px 40px 56px;
+    /* Espaçamento interno */
+    border-radius: 24px;
+    /* Arredondamento das bordas */
 }
 
 .descricao-titulo {
-    font-size: 40px; /* Tamanho da fonte */
-    font-weight: 800; /* Espessura da fonte (extra bold) */
-    font-style: italic; /* Texto em itálico */
-    color: #b07540; /* Cor do texto (laranja terroso) */
-    text-align: center; /* Centraliza o texto */
-    margin: 0 0 40px; /* Margem: 0 topo, 0 laterais, 40px inferior */
+    font-size: 40px;
+    /* Tamanho da fonte */
+    font-weight: 800;
+    /* Espessura da fonte (extra bold) */
+    font-style: italic;
+    /* Texto em itálico */
+    color: #b07540;
+    /* Cor do texto (laranja terroso) */
+    text-align: center;
+    /* Centraliza o texto */
+    margin: 0 0 40px;
+    /* Margem: 0 topo, 0 laterais, 40px inferior */
 }
 
 .descricao-grid {
-    display: grid; /* Define layout em grade */
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas com larguras iguais */
-    gap: 20px; /* Distância entre os cards */
+    display: grid;
+    /* Define layout em grade */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas com larguras iguais */
+    gap: 20px;
+    /* Distância entre os cards */
 }
 
 .descricao-card {
-    background: #ffffff; /* Cor de fundo branca */
-    border-radius: 16px; /* Arredondamento das bordas */
-    padding: 20px; /* Espaçamento interno */
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    gap: 10px; /* Distância entre os elementos */
-    border: 1px solid #e8e2da; /* Borda fina bege */
+    background: #ffffff;
+    /* Cor de fundo branca */
+    border-radius: 16px;
+    /* Arredondamento das bordas */
+    padding: 20px;
+    /* Espaçamento interno */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    gap: 10px;
+    /* Distância entre os elementos */
+    border: 1px solid #e8e2da;
+    /* Borda fina bege */
 }
 
 .descricao-card-header {
-    display: flex; /* Habilita o flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 10px; /* Distância entre ícone e título */
+    display: flex;
+    /* Habilita o flexbox */
+    align-items: center;
+    /* Centraliza verticalmente */
+    gap: 10px;
+    /* Distância entre ícone e título */
 }
 
 .descricao-card-header img {
-    width: 40px; /* Largura do ícone */
-    height: 32px; /* Altura do ícone */
-    object-fit: contain; /* Mantém a proporção */
-    flex-shrink: 0; /* Impede que o ícone encolha */
+    width: 40px;
+    /* Largura do ícone */
+    height: 32px;
+    /* Altura do ícone */
+    object-fit: contain;
+    /* Mantém a proporção */
+    flex-shrink: 0;
+    /* Impede que o ícone encolha */
 }
 
 .descricao-card-titulo {
-    font-size: 15px; /* Tamanho da fonte */
-    font-weight: 700; /* Espessura da fonte (negrito) */
-    margin: 0; /* Remove a margem padrão */
+    font-size: 15px;
+    /* Tamanho da fonte */
+    font-weight: 700;
+    /* Espessura da fonte (negrito) */
+    margin: 0;
+    /* Remove a margem padrão */
 }
 
 .descricao-card-titulo--red {
-    color: #fc2929; /* Cor vermelha */
+    color: #fc2929;
+    /* Cor vermelha */
 }
 
 .descricao-card-titulo--ciano {
-    color: #2ab8d4; /* Cor ciano */
+    color: #2ab8d4;
+    /* Cor ciano */
 }
 
 .descricao-card-titulo--yellow {
-    color: #d4a017; /* Cor amarela */
+    color: #d4a017;
+    /* Cor amarela */
 }
 
 .descricao-card-titulo--green {
-    color: #3db36b; /* Cor verde */
+    color: #3db36b;
+    /* Cor verde */
 }
 
 .descricao-card-titulo--purple {
-    color: #7c4dcc; /* Cor roxa */
+    color: #7c4dcc;
+    /* Cor roxa */
 }
 
 .descricao-card-titulo--pink {
-    color: #e0479e; /* Cor rosa */
+    color: #e0479e;
+    /* Cor rosa */
 }
 
 .descricao-card-desc {
-    font-size: 13px; /* Tamanho da fonte */
-    color: #555; /* Cor do texto (cinza escuro) */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    margin: 0; /* Remove a margem padrão */
-    flex: 1; /* Ocupa o espaço restante */
+    font-size: 13px;
+    /* Tamanho da fonte */
+    color: #555;
+    /* Cor do texto (cinza escuro) */
+    line-height: 1.6;
+    /* Espaçamento entre linhas */
+    margin: 0;
+    /* Remove a margem padrão */
+    flex: 1;
+    /* Ocupa o espaço restante */
 }
 
 .descricao-card-exemplos {
-    font-size: 11px; /* Tamanho da fonte */
-    font-weight: 700; /* Espessura da fonte (negrito) */
-    color: #999; /* Cor do texto (cinza claro) */
-    letter-spacing: 0.04em; /* Espaçamento entre letras */
+    font-size: 11px;
+    /* Tamanho da fonte */
+    font-weight: 700;
+    /* Espessura da fonte (negrito) */
+    color: #999;
+    /* Cor do texto (cinza claro) */
+    letter-spacing: 0.04em;
+    /* Espaçamento entre letras */
 }
 
 .descricao-card-tags {
-    display: flex; /* Habilita o flexbox */
-    flex-wrap: wrap; /* Permite quebra de linha */
-    gap: 6px; /* Distância entre as tags */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-wrap: wrap;
+    /* Permite quebra de linha */
+    gap: 6px;
+    /* Distância entre as tags */
 }
 
 .tag {
-    font-size: 12px; /* Tamanho da fonte */
-    font-weight: 600; /* Espessura da fonte (semi-bold) */
-    padding: 4px 12px; /* Espaçamento interno */
-    border-radius: 20px; /* Arredondamento das bordas (pill shape) */
+    font-size: 12px;
+    /* Tamanho da fonte */
+    font-weight: 600;
+    /* Espessura da fonte (semi-bold) */
+    padding: 4px 12px;
+    /* Espaçamento interno */
+    border-radius: 20px;
+    /* Arredondamento das bordas (pill shape) */
 }
 
 .tag--red {
-    background: rgba(252, 41, 41, 0.12); /* Fundo vermelho transparente */
-    color: #fc2929; /* Cor do texto vermelha */
+    background: rgba(252, 41, 41, 0.12);
+    /* Fundo vermelho transparente */
+    color: #fc2929;
+    /* Cor do texto vermelha */
 }
 
 .tag--ciano {
-    background: rgba(42, 184, 212, 0.12); /* Fundo ciano transparente */
-    color: #2ab8d4; /* Cor do texto ciano */
+    background: rgba(42, 184, 212, 0.12);
+    /* Fundo ciano transparente */
+    color: #2ab8d4;
+    /* Cor do texto ciano */
 }
 
 .tag--yellow {
-    background: rgba(212, 160, 23, 0.12); /* Fundo amarelo transparente */
-    color: #d4a017; /* Cor do texto amarela */
+    background: rgba(212, 160, 23, 0.12);
+    /* Fundo amarelo transparente */
+    color: #d4a017;
+    /* Cor do texto amarela */
 }
 
 .tag--green {
-    background: rgba(61, 179, 107, 0.12); /* Fundo verde transparente */
-    color: #3db36b; /* Cor do texto verde */
+    background: rgba(61, 179, 107, 0.12);
+    /* Fundo verde transparente */
+    color: #3db36b;
+    /* Cor do texto verde */
 }
 
 .tag--purple {
-    background: rgba(124, 77, 204, 0.12); /* Fundo roxo transparente */
-    color: #7c4dcc; /* Cor do texto roxa */
+    background: rgba(124, 77, 204, 0.12);
+    /* Fundo roxo transparente */
+    color: #7c4dcc;
+    /* Cor do texto roxa */
 }
 
 .tag--pink {
-    background: rgba(224, 71, 158, 0.12); /* Fundo rosa transparente */
-    color: #e0479e; /* Cor do texto rosa */
+    background: rgba(224, 71, 158, 0.12);
+    /* Fundo rosa transparente */
+    color: #e0479e;
+    /* Cor do texto rosa */
 }
 
 /* ---- SECTION DEPOIMENTOS ---- */
 
 .section-depoimentos {
-    background-color: #fdf5f3; /* Cor de fundo rosa muito claro */
-    padding: 72px 60px 80px; /* Espaçamento interno */
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza horizontalmente */
-    gap: 52px; /* Distância entre cabeçalho e grade */
+    background-color: #fdf5f3;
+    /* Cor de fundo rosa muito claro */
+    padding: 72px 60px 80px;
+    /* Espaçamento interno */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    gap: 52px;
+    /* Distância entre cabeçalho e grade */
 }
 
 .depoimentos-header {
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza o texto */
-    gap: 12px; /* Distância entre os elementos */
-    max-width: 700px; /* Largura máxima */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    text-align: center;
+    /* Centraliza o texto */
+    gap: 12px;
+    /* Distância entre os elementos */
+    max-width: 700px;
+    /* Largura máxima */
 }
 
 .depoimentos-eyebrow {
-    font-size: 14px; /* Tamanho da fonte */
-    font-style: italic; /* Texto em itálico */
-    color: #c87941; /* Cor do texto (laranja queimado) */
-    font-weight: 500; /* Espessura da fonte */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    font-style: italic;
+    /* Texto em itálico */
+    color: #c87941;
+    /* Cor do texto (laranja queimado) */
+    font-weight: 500;
+    /* Espessura da fonte */
 }
 
 .depoimentos-titulo {
-    font-size: 40px; /* Tamanho da fonte */
-    font-weight: 700; /* Espessura da fonte (negrito) */
-    color: #8b3a2a; /* Cor do texto (vermelho terroso) */
-    line-height: 1.2; /* Espaçamento entre linhas */
-    margin: 0; /* Remove a margem padrão */
+    font-size: 40px;
+    /* Tamanho da fonte */
+    font-weight: 700;
+    /* Espessura da fonte (negrito) */
+    color: #8b3a2a;
+    /* Cor do texto (vermelho terroso) */
+    line-height: 1.2;
+    /* Espaçamento entre linhas */
+    margin: 0;
+    /* Remove a margem padrão */
 }
 
 .depoimentos-subtitulo {
-    font-size: 15px; /* Tamanho da fonte */
-    color: #666; /* Cor do texto (cinza médio) */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    margin: 0; /* Remove a margem padrão */
+    font-size: 15px;
+    /* Tamanho da fonte */
+    color: #666;
+    /* Cor do texto (cinza médio) */
+    line-height: 1.6;
+    /* Espaçamento entre linhas */
+    margin: 0;
+    /* Remove a margem padrão */
 }
 
 .depoimentos-grid {
-    display: grid; /* Define layout em grade */
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas com larguras iguais */
-    gap: 20px; /* Distância entre os cards */
-    width: 100%; /* Ocupa toda a largura */
-    max-width: 960px; /* Largura máxima */
+    display: grid;
+    /* Define layout em grade */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas com larguras iguais */
+    gap: 20px;
+    /* Distância entre os cards */
+    width: 100%;
+    /* Ocupa toda a largura */
+    max-width: 960px;
+    /* Largura máxima */
 }
 
 .depoimento-card {
-    background: #ffffff; /* Cor de fundo branca */
-    border-radius: 16px; /* Arredondamento das bordas */
-    border: 1px solid #ede5e0; /* Borda fina bege */
-    padding: 28px 24px; /* Espaçamento interno */
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    gap: 16px; /* Distância entre os elementos */
+    background: #ffffff;
+    /* Cor de fundo branca */
+    border-radius: 16px;
+    /* Arredondamento das bordas */
+    border: 1px solid #ede5e0;
+    /* Borda fina bege */
+    padding: 28px 24px;
+    /* Espaçamento interno */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    gap: 16px;
+    /* Distância entre os elementos */
 }
 
 .depoimento-estrelas {
-    display: flex; /* Habilita o flexbox */
-    gap: 4px; /* Distância entre as estrelas */
+    display: flex;
+    /* Habilita o flexbox */
+    gap: 4px;
+    /* Distância entre as estrelas */
 }
 
 .depoimento-estrelas img {
-    width: 22px; /* Largura da estrela */
-    height: 22px; /* Altura da estrela */
-    object-fit: contain; /* Mantém a proporção */
+    width: 22px;
+    /* Largura da estrela */
+    height: 22px;
+    /* Altura da estrela */
+    object-fit: contain;
+    /* Mantém a proporção */
 }
 
 .depoimento-texto {
-    font-size: 14px; /* Tamanho da fonte */
-    color: #444; /* Cor do texto (cinza escuro) */
-    line-height: 1.65; /* Espaçamento entre linhas */
-    margin: 0; /* Remove a margem padrão */
-    flex: 1; /* Ocupa o espaço restante */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    color: #444;
+    /* Cor do texto (cinza escuro) */
+    line-height: 1.65;
+    /* Espaçamento entre linhas */
+    margin: 0;
+    /* Remove a margem padrão */
+    flex: 1;
+    /* Ocupa o espaço restante */
 }
 
 .depoimento-autor {
-    display: flex; /* Habilita o flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 12px; /* Distância entre avatar e texto */
-    margin-top: 4px; /* Margem superior */
+    display: flex;
+    /* Habilita o flexbox */
+    align-items: center;
+    /* Centraliza verticalmente */
+    gap: 12px;
+    /* Distância entre avatar e texto */
+    margin-top: 4px;
+    /* Margem superior */
 }
 
 .depoimento-avatar {
-    width: 44px; /* Largura do avatar */
-    height: 44px; /* Altura do avatar */
-    border-radius: 50%; /* Deixa o avatar redondo */
-    display: flex; /* Habilita o flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: 700; /* Espessura da fonte (negrito) */
-    flex-shrink: 0; /* Impede que o avatar encolha */
+    width: 44px;
+    /* Largura do avatar */
+    height: 44px;
+    /* Altura do avatar */
+    border-radius: 50%;
+    /* Deixa o avatar redondo */
+    display: flex;
+    /* Habilita o flexbox */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    font-weight: 700;
+    /* Espessura da fonte (negrito) */
+    flex-shrink: 0;
+    /* Impede que o avatar encolha */
 }
 
 .depoimento-avatar--m,
 .depoimento-avatar--n,
 .depoimento-avatar--l {
-    background: #b2d8d8; /* Fundo verde-água */
-    color: #2a6b6b; /* Cor do texto verde escuro */
+    background: #b2d8d8;
+    /* Fundo verde-água */
+    color: #2a6b6b;
+    /* Cor do texto verde escuro */
 }
 
 .depoimento-nome {
-    font-size: 14px; /* Tamanho da fonte */
-    font-weight: 700; /* Espessura da fonte (negrito) */
-    color: #c87941; /* Cor do texto (laranja queimado) */
-    margin: 0; /* Remove a margem padrão */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    font-weight: 700;
+    /* Espessura da fonte (negrito) */
+    color: #c87941;
+    /* Cor do texto (laranja queimado) */
+    margin: 0;
+    /* Remove a margem padrão */
 }
 
 .depoimento-cargo {
-    font-size: 12px; /* Tamanho da fonte */
-    color: #999; /* Cor do texto (cinza claro) */
-    margin: 0; /* Remove a margem padrão */
+    font-size: 12px;
+    /* Tamanho da fonte */
+    color: #999;
+    /* Cor do texto (cinza claro) */
+    margin: 0;
+    /* Remove a margem padrão */
 }
 
 /* ---- CTA SECTION (CHAMADA PARA AÇÃO) ---- */
 
 .cta-section {
-    position: relative; /* Permite posicionamento do pseudo-elemento */
-    width: 100%; /* Ocupa toda a largura */
-    min-height: 560px; /* Altura mínima */
-    background-color: #d6ece8; /* Cor de fundo verde-água */
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    overflow: hidden; /* Esconde o conteúdo que ultrapassa */
-    padding: 60px 20px; /* Espaçamento interno */
+    position: relative;
+    /* Permite posicionamento do pseudo-elemento */
+    width: 100%;
+    /* Ocupa toda a largura */
+    min-height: 560px;
+    /* Altura mínima */
+    background-color: #d6ece8;
+    /* Cor de fundo verde-água */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    overflow: hidden;
+    /* Esconde o conteúdo que ultrapassa */
+    padding: 60px 20px;
+    /* Espaçamento interno */
 }
 
 .cta-section::before {
-    content: ''; /* Pseudo-elemento para o padrão de fundo */
-    position: absolute; /* Posicionamento absoluto */
-    inset: 0; /* Ocupa todo o espaço do pai (top/right/bottom/left = 0) */
-    background-image: url("../assets/images/Intersect.svg"); /* Imagem de padrão */
-    background-size: cover; /* Cobre todo o espaço */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Não repete a imagem */
-    pointer-events: none; /* Permite clicar nos elementos sobrepostos */
+    content: '';
+    /* Pseudo-elemento para o padrão de fundo */
+    position: absolute;
+    /* Posicionamento absoluto */
+    inset: 0;
+    /* Ocupa todo o espaço do pai (top/right/bottom/left = 0) */
+    background-image: url("../assets/images/Intersect.svg");
+    /* Imagem de padrão */
+    background-size: cover;
+    /* Cobre todo o espaço */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Não repete a imagem */
+    pointer-events: none;
+    /* Permite clicar nos elementos sobrepostos */
 }
 
 .anchor-badge {
-    position: relative; /* Posicionamento relativo para ficar acima do pseudo-elemento */
-    z-index: 1; /* Garante que fique acima do fundo */
-    width: 72px; /* Largura fixa */
-    height: 72px; /* Altura fixa */
-    margin-bottom: 28px; /* Margem inferior */
+    position: relative;
+    /* Posicionamento relativo para ficar acima do pseudo-elemento */
+    z-index: 1;
+    /* Garante que fique acima do fundo */
+    width: 72px;
+    /* Largura fixa */
+    height: 72px;
+    /* Altura fixa */
+    margin-bottom: 28px;
+    /* Margem inferior */
 }
 
 .anchor-badge img {
-    width: 100%; /* Ocupa toda a largura */
-    height: 100%; /* Ocupa toda a altura */
+    width: 100%;
+    /* Ocupa toda a largura */
+    height: 100%;
+    /* Ocupa toda a altura */
 }
 
 .cta-headline {
-    position: relative; /* Posicionamento relativo */
-    z-index: 1; /* Garante que fique acima do fundo */
-    font-family: 'Georgia', serif; /* Família da fonte serifada */
-    font-size: clamp(1.8rem, 4vw, 2.8rem); /* Tamanho responsivo: mínimo 1.8rem, preferencial 4vw, máximo 2.8rem */
-    font-weight: 700; /* Espessura da fonte (negrito) */
-    color: #2e2e3a; /* Cor do texto (azul escuro acinzentado) */
-    text-align: center; /* Centraliza o texto */
-    max-width: 680px; /* Largura máxima */
-    line-height: 1.25; /* Espaçamento entre linhas */
-    margin-bottom: 40px; /* Margem inferior */
+    position: relative;
+    /* Posicionamento relativo */
+    z-index: 1;
+    /* Garante que fique acima do fundo */
+    font-family: 'Georgia', serif;
+    /* Família da fonte serifada */
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    /* Tamanho responsivo: mínimo 1.8rem, preferencial 4vw, máximo 2.8rem */
+    font-weight: 700;
+    /* Espessura da fonte (negrito) */
+    color: #2e2e3a;
+    /* Cor do texto (azul escuro acinzentado) */
+    text-align: center;
+    /* Centraliza o texto */
+    max-width: 680px;
+    /* Largura máxima */
+    line-height: 1.25;
+    /* Espaçamento entre linhas */
+    margin-bottom: 40px;
+    /* Margem inferior */
 }
 
 .cta-button {
-    position: relative; /* Posicionamento relativo */
-    z-index: 1; /* Garante que fique acima do fundo */
-    display: inline-flex; /* Flex inline para alinhar ícone e texto */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 10px; /* Distância entre texto e seta */
-    background-color: #f0a832; /* Cor de fundo laranja */
-    color: #2e2e3a; /* Cor do texto */
-    font-family: 'Georgia', serif; /* Família da fonte serifada */
-    font-size: 1rem; /* Tamanho da fonte */
-    font-weight: 700; /* Espessura da fonte (negrito) */
-    text-decoration: none; /* Remove o sublinhado */
-    padding: 14px 32px; /* Espaçamento interno */
-    border-radius: 6px; /* Arredondamento das bordas */
-    border: none; /* Remove a borda padrão */
-    cursor: pointer; /* Cursor de mão ao passar */
-    transition: background-color 0.2s ease, transform 0.15s ease; /* Transições suaves */
-    letter-spacing: 0.02em; /* Espaçamento entre letras */
+    position: relative;
+    /* Posicionamento relativo */
+    z-index: 1;
+    /* Garante que fique acima do fundo */
+    display: inline-flex;
+    /* Flex inline para alinhar ícone e texto */
+    align-items: center;
+    /* Centraliza verticalmente */
+    gap: 10px;
+    /* Distância entre texto e seta */
+    background-color: #f0a832;
+    /* Cor de fundo laranja */
+    color: #2e2e3a;
+    /* Cor do texto */
+    font-family: 'Georgia', serif;
+    /* Família da fonte serifada */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    font-weight: 700;
+    /* Espessura da fonte (negrito) */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    padding: 14px 32px;
+    /* Espaçamento interno */
+    border-radius: 6px;
+    /* Arredondamento das bordas */
+    border: none;
+    /* Remove a borda padrão */
+    cursor: pointer;
+    /* Cursor de mão ao passar */
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    /* Transições suaves */
+    letter-spacing: 0.02em;
+    /* Espaçamento entre letras */
 }
 
 .cta-button:hover {
-    background-color: #e09820; /* Cor de fundo mais escura ao passar o mouse */
-    transform: translateY(-1px); /* Move o botão 1px para cima */
+    background-color: #e09820;
+    /* Cor de fundo mais escura ao passar o mouse */
+    transform: translateY(-1px);
+    /* Move o botão 1px para cima */
 }
 
 .cta-button:active {
-    transform: translateY(0); /* Volta à posição original ao clicar */
+    transform: translateY(0);
+    /* Volta à posição original ao clicar */
 }
 
 .cta-button .arrow {
-    font-size: 1.1em; /* Tamanho da seta ligeiramente maior */
-    line-height: 1; /* Espaçamento entre linhas normalizado */
+    font-size: 1.1em;
+    /* Tamanho da seta ligeiramente maior */
+    line-height: 1;
+    /* Espaçamento entre linhas normalizado */
 }
 
 /* ---- FOOTER (BARATIEFIT) ---- */
 
 .footer {
-    background: #7a5c3a; /* Cor de fundo terrosa, remetendo ao mar e à culinária */
-    color: #f5ede0; /* Cor do texto clara para contraste */
-    font-family: Georgia, 'Times New Roman', serif; /* Família da fonte serifada para tom rústico/restaurante */
-    padding: 28px 40px; /* Espaçamento interno: 28px top/bottom, 40px left/right */
-    display: grid; /* Define layout em grade (grid) */
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 colunas com larguras iguais (1 fração cada) */
-    gap: 32px; /* Distância de 32px entre as colunas */
-    align-items: start; /* Alinha os itens no topo da coluna (início vertical) */
-    width: 100%; /* Ocupa toda a largura disponível */
+    background: #7a5c3a;
+    /* Cor de fundo terrosa, remetendo ao mar e à culinária */
+    color: #f5ede0;
+    /* Cor do texto clara para contraste */
+    font-family: Georgia, 'Times New Roman', serif;
+    /* Família da fonte serifada para tom rústico/restaurante */
+    padding: 28px 40px;
+    /* Espaçamento interno: 28px top/bottom, 40px left/right */
+    display: grid;
+    /* Define layout em grade (grid) */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* 4 colunas com larguras iguais (1 fração cada) */
+    gap: 32px;
+    /* Distância de 32px entre as colunas */
+    align-items: start;
+    /* Alinha os itens no topo da coluna (início vertical) */
+    width: 100%;
+    /* Ocupa toda a largura disponível */
 }
 
 /* ---- BRAND SECTION (LOGO + DESCRIÇÃO) ---- */
 
 .brand-section {
-    display: flex; /* Habilita o flexbox para organizar os elementos */
-    flex-direction: column; /* Organiza os elementos em coluna (vertical) */
-    gap: 10px; /* Distância de 10px entre os elementos filhos */
+    display: flex;
+    /* Habilita o flexbox para organizar os elementos */
+    flex-direction: column;
+    /* Organiza os elementos em coluna (vertical) */
+    gap: 10px;
+    /* Distância de 10px entre os elementos filhos */
 }
 
 .brand-logo {
-    display: flex; /* Habilita o flexbox */
-    align-items: center; /* Centraliza os itens na vertical */
-    gap: 10px; /* Distância de 10px entre logo e nome */
-    margin-bottom: 4px; /* Margem inferior de 4px */
+    display: flex;
+    /* Habilita o flexbox */
+    align-items: center;
+    /* Centraliza os itens na vertical */
+    gap: 10px;
+    /* Distância de 10px entre logo e nome */
+    margin-bottom: 4px;
+    /* Margem inferior de 4px */
 }
 
 .logo-img {
-    width: 36px; /* Largura fixa de 36px */
-    height: 36px; /* Altura fixa de 36px */
-    object-fit: contain; /* Mantém a proporção da imagem sem cortar */
+    width: 36px;
+    /* Largura fixa de 36px */
+    height: 36px;
+    /* Altura fixa de 36px */
+    object-fit: contain;
+    /* Mantém a proporção da imagem sem cortar */
 }
 
 .brand-name {
-    font-size: 22px; /* Tamanho da fonte */
-    font-weight: 700; /* Peso da fonte: negrito (bold) */
-    letter-spacing: 0.5px; /* Espaçamento entre letras */
-    color: #f5ede0; /* Cor do texto */
+    font-size: 22px;
+    /* Tamanho da fonte */
+    font-weight: 700;
+    /* Peso da fonte: negrito (bold) */
+    letter-spacing: 0.5px;
+    /* Espaçamento entre letras */
+    color: #f5ede0;
+    /* Cor do texto */
 }
 
 .brand-name span {
-    color: #d4a041; /* Cor dourada para destaque no nome */
+    color: #d4a041;
+    /* Cor dourada para destaque no nome */
 }
 
 .brand-tagline {
-    font-size: 14px; /* Tamanho da fonte */
-    color: #e0cdb8; /* Cor do texto mais suave */
-    line-height: 1.6; /* Espaçamento entre linhas (1.6x o tamanho da fonte) */
-    max-width: 200px; /* Largura máxima do container */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    color: #e0cdb8;
+    /* Cor do texto mais suave */
+    line-height: 1.6;
+    /* Espaçamento entre linhas (1.6x o tamanho da fonte) */
+    max-width: 200px;
+    /* Largura máxima do container */
 }
 
 /* ---- FOOTER COLUMN (NAVEGAÇÃO) ---- */
 
 .footer-col h4 {
-    font-size: 17px; /* Tamanho da fonte do título */
-    font-weight: 700; /* Peso da fonte: negrito */
-    margin-bottom: 12px; /* Margem inferior de 12px */
-    color: #f5ede0; /* Cor do texto */
-    letter-spacing: 0.3px; /* Espaçamento entre letras */
+    font-size: 17px;
+    /* Tamanho da fonte do título */
+    font-weight: 700;
+    /* Peso da fonte: negrito */
+    margin-bottom: 12px;
+    /* Margem inferior de 12px */
+    color: #f5ede0;
+    /* Cor do texto */
+    letter-spacing: 0.3px;
+    /* Espaçamento entre letras */
 }
 
 .footer-col ul {
-    list-style: none; /* Remove as bolinhas padrão da lista */
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os itens em coluna */
-    gap: 7px; /* Distância de 7px entre cada item da lista */
+    list-style: none;
+    /* Remove as bolinhas padrão da lista */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    gap: 7px;
+    /* Distância de 7px entre cada item da lista */
 }
 
 .footer-col ul li a {
-    color: #e0cdb8; /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado padrão */
-    font-size: 15px; /* Tamanho da fonte */
-    transition: color 0.2s; /* Transição suave ao mudar a cor (0.2 segundos) */
+    color: #e0cdb8;
+    /* Cor do link */
+    text-decoration: none;
+    /* Remove o sublinhado padrão */
+    font-size: 15px;
+    /* Tamanho da fonte */
+    transition: color 0.2s;
+    /* Transição suave ao mudar a cor (0.2 segundos) */
 }
 
 .footer-col ul li a:hover {
-    color: #f5ede0; /* Cor do link ao passar o mouse (mais clara) */
+    color: #f5ede0;
+    /* Cor do link ao passar o mouse (mais clara) */
 }
 
 .footer-col ul li.bold-item a {
-    font-weight: 700; /* Peso da fonte: negrito para itens destacados */
+    font-weight: 700;
+    /* Peso da fonte: negrito para itens destacados */
 }
 
 /* ---- SOCIAL ICONS ---- */
 
 .social-icons {
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os ícones em coluna */
-    gap: 10px; /* Distância de 10px entre os ícones */
-    margin-top: 4px; /* Margem superior de 4px */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os ícones em coluna */
+    gap: 10px;
+    /* Distância de 10px entre os ícones */
+    margin-top: 4px;
+    /* Margem superior de 4px */
 }
 
 .social-icons a {
-    display: inline-block; /* Permite definir largura/altura */
-    transition: opacity 0.2s; /* Transição suave da opacidade */
+    display: inline-block;
+    /* Permite definir largura/altura */
+    transition: opacity 0.2s;
+    /* Transição suave da opacidade */
 }
 
 .social-icons a:hover {
-    opacity: 0.75; /* Reduz a opacidade ao passar o mouse */
+    opacity: 0.75;
+    /* Reduz a opacidade ao passar o mouse */
 }
 
 .social-icons img {
-    width: 31px; /* Largura fixa do ícone social */
-    height: 31px; /* Altura fixa do ícone social */
-    object-fit: contain; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaçamento extra abaixo da imagem */
+    width: 31px;
+    /* Largura fixa do ícone social */
+    height: 31px;
+    /* Altura fixa do ícone social */
+    object-fit: contain;
+    /* Mantém a proporção da imagem */
+    display: block;
+    /* Remove espaçamento extra abaixo da imagem */
 }
 
 /* ---- HELP COLUMN (SUPORTE) ---- */
 
 .help-col {
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    gap: 10px; /* Distância de 10px entre os elementos */
+    display: flex;
+    /* Habilita o flexbox */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    gap: 10px;
+    /* Distância de 10px entre os elementos */
 }
 
 .help-col h4 {
-    font-size: 17px; /* Tamanho da fonte do título */
-    font-weight: 700; /* Peso da fonte: negrito */
-    color: #f5ede0; /* Cor do texto */
+    font-size: 17px;
+    /* Tamanho da fonte do título */
+    font-weight: 700;
+    /* Peso da fonte: negrito */
+    color: #f5ede0;
+    /* Cor do texto */
 }
 
 .help-col p {
-    font-size: 14px; /* Tamanho da fonte */
-    color: #e0cdb8; /* Cor do texto mais suave */
-    line-height: 1.6; /* Espaçamento entre linhas */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    color: #e0cdb8;
+    /* Cor do texto mais suave */
+    line-height: 1.6;
+    /* Espaçamento entre linhas */
 }
 
 .btn-suporte {
-    background: #9b7e5e; /* Cor de fundo do botão (marrom claro) */
-    color: #f5ede0; /* Cor do texto */
-    border: none; /* Remove a borda padrão */
-    border-radius: 4px; /* Arredondamento das bordas */
-    padding: 8px 18px; /* Espaçamento interno: 8px top/bottom, 18px left/right */
-    font-size: 15px; /* Tamanho da fonte */
-    font-family: inherit; /* Herda a fonte do elemento pai */
-    cursor: pointer; /* Cursor de mão ao passar */
-    width: fit-content; /* Largura ajustada ao conteúdo */
-    letter-spacing: 0.2px; /* Espaçamento entre letras */
-    transition: background 0.2s; /* Transição suave da cor de fundo */
+    background: #9b7e5e;
+    /* Cor de fundo do botão (marrom claro) */
+    color: #f5ede0;
+    /* Cor do texto */
+    border: none;
+    /* Remove a borda padrão */
+    border-radius: 4px;
+    /* Arredondamento das bordas */
+    padding: 8px 18px;
+    /* Espaçamento interno: 8px top/bottom, 18px left/right */
+    font-size: 15px;
+    /* Tamanho da fonte */
+    font-family: inherit;
+    /* Herda a fonte do elemento pai */
+    cursor: pointer;
+    /* Cursor de mão ao passar */
+    width: fit-content;
+    /* Largura ajustada ao conteúdo */
+    letter-spacing: 0.2px;
+    /* Espaçamento entre letras */
+    transition: background 0.2s;
+    /* Transição suave da cor de fundo */
 }
 
 .btn-suporte:hover {
-    background: #b09070; /* Cor de fundo mais clara ao passar o mouse */
+    background: #b09070;
+    /* Cor de fundo mais clara ao passar o mouse */
 }
 
 /* ---- MEDIA QUERIES (RESPONSIVIDADE) ---- */
 
 /* Tablets e telas médias (até 768px) */
 @media (max-width: 768px) {
+
     /* HEADER RESPONSIVO */
     header {
-        padding: 12px 20px; /* Reduz o padding do header */
+        padding: 12px 20px;
+        /* Reduz o padding do header */
     }
 
     header img {
-        width: 38px; /* Reduz a largura da logo */
-        height: 38px; /* Reduz a altura da logo */
+        width: 38px;
+        /* Reduz a largura da logo */
+        height: 38px;
+        /* Reduz a altura da logo */
     }
 
     .nav-header ul {
-        gap: 16px; /* Reduz a distância entre os itens do menu */
+        gap: 16px;
+        /* Reduz a distância entre os itens do menu */
     }
 
     /* HERO RESPONSIVO */
     .hero-content {
-        grid-template-columns: 1fr; /* Muda para uma coluna (empilha os elementos) */
-        padding: 40px 20px; /* Reduz o padding */
-        min-height: auto; /* Altura automática */
-        gap: 32px; /* Distância entre os elementos */
+        grid-template-columns: 1fr;
+        /* Muda para uma coluna (empilha os elementos) */
+        padding: 40px 20px;
+        /* Reduz o padding */
+        min-height: auto;
+        /* Altura automática */
+        gap: 32px;
+        /* Distância entre os elementos */
     }
 
     .hero-text h1 {
-        font-size: 48px; /* Reduz o tamanho do título */
+        font-size: 48px;
+        /* Reduz o tamanho do título */
     }
 
     .hero-text p {
-        font-size: 20px; /* Reduz o tamanho do parágrafo */
+        font-size: 20px;
+        /* Reduz o tamanho do parágrafo */
     }
 
     .hero-image {
-        height: 280px; /* Altura fixa para a imagem */
-        justify-content: center; /* Centraliza a imagem */
-        overflow: hidden; /* Esconde o excesso */
+        height: 280px;
+        /* Altura fixa para a imagem */
+        justify-content: center;
+        /* Centraliza a imagem */
+        overflow: hidden;
+        /* Esconde o excesso */
     }
 
     .hero-image img {
-        width: 100%; /* Largura total */
-        height: 100%; /* Altura total */
-        object-fit: cover; /* Cobre o espaço sem distorcer */
-        object-position: center top; /* Foco no topo da imagem */
+        width: 100%;
+        /* Largura total */
+        height: 100%;
+        /* Altura total */
+        object-fit: cover;
+        /* Cobre o espaço sem distorcer */
+        object-position: center top;
+        /* Foco no topo da imagem */
     }
 
     /* SECTION PRATOS RESPONSIVO */
     .section-pratos {
-        padding: 32px 20px 24px; /* Reduz o padding */
+        padding: 32px 20px 24px;
+        /* Reduz o padding */
     }
 
     .pratos-actions {
-        position: static; /* Remove o posicionamento absoluto */
-        flex-direction: row; /* Alinha os botões em linha */
-        align-items: center; /* Centraliza verticalmente */
-        justify-content: flex-end; /* Alinha no final (direita) */
-        margin-bottom: 20px; /* Margem inferior */
+        position: static;
+        /* Remove o posicionamento absoluto */
+        flex-direction: row;
+        /* Alinha os botões em linha */
+        align-items: center;
+        /* Centraliza verticalmente */
+        justify-content: flex-end;
+        /* Alinha no final (direita) */
+        margin-bottom: 20px;
+        /* Margem inferior */
     }
 
     .pratos-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em vez de 3 */
-        max-width: 100%; /* Largura máxima total */
-        gap: 14px; /* Reduz a distância entre os cards */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas em vez de 3 */
+        max-width: 100%;
+        /* Largura máxima total */
+        gap: 14px;
+        /* Reduz a distância entre os cards */
     }
 
     /* SECTION DIFERENCIAIS RESPONSIVO */
     .section-diferenciais {
-        padding: 48px 24px 56px; /* Reduz o padding */
-        border-radius: 20px; /* Reduz o arredondamento */
+        padding: 48px 24px 56px;
+        /* Reduz o padding */
+        border-radius: 20px;
+        /* Reduz o arredondamento */
     }
 
     .diferenciais-titulo {
-        font-size: 36px; /* Reduz o tamanho do título */
+        font-size: 36px;
+        /* Reduz o tamanho do título */
     }
 
     .diferenciais-grid {
-        grid-template-columns: 1fr; /* 1 coluna em vez de 3 (empilha) */
-        gap: 16px; /* Reduz a distância */
+        grid-template-columns: 1fr;
+        /* 1 coluna em vez de 3 (empilha) */
+        gap: 16px;
+        /* Reduz a distância */
     }
 
     .diferencial-card--elevado {
-        margin-bottom: 0; /* Remove a margem inferior extra */
+        margin-bottom: 0;
+        /* Remove a margem inferior extra */
     }
 
     /* SECTION RESULTADOS RESPONSIVO */
     .resultados-stats {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em vez de 4 */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas em vez de 4 */
     }
 
     .resultados-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em vez de 4 */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas em vez de 4 */
     }
 
     /* SECTION DESCRICAO RESPONSIVO */
     .section-descricao {
-        padding: 32px 20px 40px; /* Reduz o padding */
-        border-radius: 16px; /* Reduz o arredondamento */
+        padding: 32px 20px 40px;
+        /* Reduz o padding */
+        border-radius: 16px;
+        /* Reduz o arredondamento */
     }
 
     .descricao-titulo {
-        font-size: 30px; /* Reduz o tamanho do título */
-        margin-bottom: 28px; /* Reduz a margem inferior */
+        font-size: 30px;
+        /* Reduz o tamanho do título */
+        margin-bottom: 28px;
+        /* Reduz a margem inferior */
     }
 
     .descricao-grid {
-        grid-template-columns: 1fr; /* 1 coluna em vez de 3 (empilha) */
+        grid-template-columns: 1fr;
+        /* 1 coluna em vez de 3 (empilha) */
     }
 
     /* SECTION DEPOIMENTOS RESPONSIVO */
     .section-depoimentos {
-        padding: 48px 24px 56px; /* Reduz o padding */
-        gap: 36px; /* Reduz a distância */
+        padding: 48px 24px 56px;
+        /* Reduz o padding */
+        gap: 36px;
+        /* Reduz a distância */
     }
 
     .depoimentos-titulo {
-        font-size: 30px; /* Reduz o tamanho do título */
+        font-size: 30px;
+        /* Reduz o tamanho do título */
     }
 
     .depoimentos-grid {
-        grid-template-columns: 1fr; /* 1 coluna em vez de 3 (empilha) */
-        max-width: 100%; /* Largura máxima total */
+        grid-template-columns: 1fr;
+        /* 1 coluna em vez de 3 (empilha) */
+        max-width: 100%;
+        /* Largura máxima total */
     }
 
     /* FOOTER RESPONSIVO */
     .footer {
-        grid-template-columns: 1fr 1fr; /* 2 colunas em vez de 4 */
-        gap: 28px; /* Reduz a distância */
-        padding: 32px 24px; /* Reduz o padding */
+        grid-template-columns: 1fr 1fr;
+        /* 2 colunas em vez de 4 */
+        gap: 28px;
+        /* Reduz a distância */
+        padding: 32px 24px;
+        /* Reduz o padding */
     }
 
     .brand-section {
-        grid-column: 1 / -1; /* Ocupa todas as colunas (largura total) */
+        grid-column: 1 / -1;
+        /* Ocupa todas as colunas (largura total) */
     }
 
     .brand-tagline {
-        max-width: 100%; /* Largura máxima total */
+        max-width: 100%;
+        /* Largura máxima total */
     }
 }
 
 /* Celulares grandes (até 480px) */
 @media (max-width: 480px) {
+
     /* HEADER RESPONSIVO */
     header {
-        padding: 10px 16px; /* Reduz ainda mais o padding */
+        padding: 10px 16px;
+        /* Reduz ainda mais o padding */
     }
 
     .nav-header ul {
-        gap: 10px; /* Reduz a distância entre os itens */
+        gap: 10px;
+        /* Reduz a distância entre os itens */
     }
 
     .nav-header-item {
-        font-size: 13px; /* Reduz o tamanho da fonte */
+        font-size: 13px;
+        /* Reduz o tamanho da fonte */
     }
 
     /* HERO RESPONSIVO */
     .hero-content {
-        padding: 32px 16px; /* Reduz o padding */
-        gap: 24px; /* Reduz a distância */
+        padding: 32px 16px;
+        /* Reduz o padding */
+        gap: 24px;
+        /* Reduz a distância */
     }
 
     .hero-text {
-        gap: 16px; /* Reduz a distância entre os elementos */
+        gap: 16px;
+        /* Reduz a distância entre os elementos */
     }
 
     .hero-text h1 {
-        font-size: 36px; /* Reduz ainda mais o título */
+        font-size: 36px;
+        /* Reduz ainda mais o título */
     }
 
     .hero-text p {
-        font-size: 17px; /* Reduz o tamanho do parágrafo */
+        font-size: 17px;
+        /* Reduz o tamanho do parágrafo */
     }
 
     .hero-image {
-        height: 220px; /* Altura menor para a imagem */
-        overflow: hidden; /* Esconde o excesso */
+        height: 220px;
+        /* Altura menor para a imagem */
+        overflow: hidden;
+        /* Esconde o excesso */
     }
 
     .hero-image img {
-        width: 100%; /* Largura total */
-        height: 100%; /* Altura total */
-        object-fit: cover; /* Cobre o espaço */
-        object-position: center top; /* Foco no topo */
+        width: 100%;
+        /* Largura total */
+        height: 100%;
+        /* Altura total */
+        object-fit: cover;
+        /* Cobre o espaço */
+        object-position: center top;
+        /* Foco no topo */
     }
 
     /* SECTION PRATOS RESPONSIVO */
     .section-pratos {
-        padding: 24px 16px 20px; /* Reduz o padding */
+        padding: 24px 16px 20px;
+        /* Reduz o padding */
     }
 
     .section-pratos-title {
-        font-size: 28px; /* Reduz o tamanho do título */
+        font-size: 28px;
+        /* Reduz o tamanho do título */
     }
 
     .pratos-actions {
-        flex-direction: column; /* Empilha os botões */
-        align-items: stretch; /* Estica para a largura total */
+        flex-direction: column;
+        /* Empilha os botões */
+        align-items: stretch;
+        /* Estica para a largura total */
     }
 
     .pratos-search {
-        width: 100%; /* Largura total */
+        width: 100%;
+        /* Largura total */
     }
 
     .pratos-grid {
-        grid-template-columns: 1fr; /* 1 coluna (empilha) */
-        gap: 12px; /* Reduz a distância */
+        grid-template-columns: 1fr;
+        /* 1 coluna (empilha) */
+        gap: 12px;
+        /* Reduz a distância */
     }
 
     .prato-card-img {
-        height: 200px; /* Altura fixa para a imagem */
+        height: 200px;
+        /* Altura fixa para a imagem */
     }
 
     /* SECTION DIFERENCIAIS RESPONSIVO */
     .section-diferenciais {
-        padding: 36px 16px 44px; /* Reduz o padding */
-        gap: 32px; /* Reduz a distância */
-        border-radius: 16px; /* Reduz o arredondamento */
+        padding: 36px 16px 44px;
+        /* Reduz o padding */
+        gap: 32px;
+        /* Reduz a distância */
+        border-radius: 16px;
+        /* Reduz o arredondamento */
     }
 
     .diferenciais-titulo {
-        font-size: 28px; /* Reduz o tamanho do título */
+        font-size: 28px;
+        /* Reduz o tamanho do título */
     }
 
     .diferenciais-subtitulo {
-        font-size: 13px; /* Reduz o tamanho da fonte */
+        font-size: 13px;
+        /* Reduz o tamanho da fonte */
     }
 
     /* SECTION RESULTADOS RESPONSIVO */
     .section-resultados {
-        padding: 32px 16px; /* Reduz o padding */
+        padding: 32px 16px;
+        /* Reduz o padding */
     }
 
     .section-resultados-title {
-        font-size: 32px; /* Reduz o tamanho do título */
+        font-size: 32px;
+        /* Reduz o tamanho do título */
     }
 
     .resultados-stats {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-        gap: 8px; /* Reduz a distância */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas */
+        gap: 8px;
+        /* Reduz a distância */
     }
 
     .resultados-stat-valor {
-        font-size: 22px; /* Reduz o tamanho do valor */
+        font-size: 22px;
+        /* Reduz o tamanho do valor */
     }
 
     .resultados-grid {
-        grid-template-columns: 1fr; /* 1 coluna (empilha) */
+        grid-template-columns: 1fr;
+        /* 1 coluna (empilha) */
     }
 
     /* SECTION DESCRICAO RESPONSIVO */
     .section-descricao {
-        padding: 24px 16px 32px; /* Reduz o padding */
-        border-radius: 12px; /* Reduz o arredondamento */
+        padding: 24px 16px 32px;
+        /* Reduz o padding */
+        border-radius: 12px;
+        /* Reduz o arredondamento */
     }
 
     .descricao-titulo {
-        font-size: 24px; /* Reduz o tamanho do título */
-        margin-bottom: 20px; /* Reduz a margem inferior */
+        font-size: 24px;
+        /* Reduz o tamanho do título */
+        margin-bottom: 20px;
+        /* Reduz a margem inferior */
     }
 
     /* SECTION DEPOIMENTOS RESPONSIVO */
     .section-depoimentos {
-        padding: 36px 16px 44px; /* Reduz o padding */
-        gap: 28px; /* Reduz a distância */
+        padding: 36px 16px 44px;
+        /* Reduz o padding */
+        gap: 28px;
+        /* Reduz a distância */
     }
 
     .depoimentos-titulo {
-        font-size: 26px; /* Reduz o tamanho do título */
+        font-size: 26px;
+        /* Reduz o tamanho do título */
     }
 
     /* CTA SECTION RESPONSIVO */
     .cta-section {
-        padding: 48px 16px; /* Reduz o padding */
-        min-height: auto; /* Altura automática */
+        padding: 48px 16px;
+        /* Reduz o padding */
+        min-height: auto;
+        /* Altura automática */
     }
 
     .cta-headline {
-        font-size: 1.5rem; /* Reduz o tamanho da fonte */
-        margin-bottom: 28px; /* Reduz a margem inferior */
+        font-size: 1.5rem;
+        /* Reduz o tamanho da fonte */
+        margin-bottom: 28px;
+        /* Reduz a margem inferior */
     }
 
     .anchor-badge {
-        width: 56px; /* Reduz a largura */
-        height: 56px; /* Reduz a altura */
-        margin-bottom: 20px; /* Reduz a margem inferior */
+        width: 56px;
+        /* Reduz a largura */
+        height: 56px;
+        /* Reduz a altura */
+        margin-bottom: 20px;
+        /* Reduz a margem inferior */
     }
 
     /* FOOTER RESPONSIVO */
     .footer {
-        grid-template-columns: 1fr; /* 1 coluna (empilha tudo) */
-        gap: 24px; /* Reduz a distância */
-        padding: 28px 16px; /* Reduz o padding */
+        grid-template-columns: 1fr;
+        /* 1 coluna (empilha tudo) */
+        gap: 24px;
+        /* Reduz a distância */
+        padding: 28px 16px;
+        /* Reduz o padding */
     }
 
     .brand-section {
-        grid-column: auto; /* Remove a ocupação de todas as colunas */
+        grid-column: auto;
+        /* Remove a ocupação de todas as colunas */
     }
 
     .brand-name {
-        font-size: 20px; /* Reduz o tamanho da fonte */
+        font-size: 20px;
+        /* Reduz o tamanho da fonte */
     }
 
     .brand-tagline {
-        font-size: 13px; /* Reduz o tamanho da fonte */
+        font-size: 13px;
+        /* Reduz o tamanho da fonte */
     }
 
     .footer-col h4,
     .help-col h4 {
-        font-size: 15px; /* Reduz o tamanho da fonte do título */
+        font-size: 15px;
+        /* Reduz o tamanho da fonte do título */
     }
 
     .footer-col ul li a {
-        font-size: 14px; /* Reduz o tamanho da fonte do link */
+        font-size: 14px;
+        /* Reduz o tamanho da fonte do link */
     }
 
     .help-col p {
-        font-size: 13px; /* Reduz o tamanho da fonte */
+        font-size: 13px;
+        /* Reduz o tamanho da fonte */
     }
 
     .btn-suporte {
-        width: 100%; /* Botão ocupa toda a largura */
-        text-align: center; /* Centraliza o texto */
-        font-size: 14px; /* Reduz o tamanho da fonte */
-        padding: 10px 18px; /* Ajusta o padding */
+        width: 100%;
+        /* Botão ocupa toda a largura */
+        text-align: center;
+        /* Centraliza o texto */
+        font-size: 14px;
+        /* Reduz o tamanho da fonte */
+        padding: 10px 18px;
+        /* Ajusta o padding */
     }
 
     .social-icons {
-        flex-direction: row; /* Ícones em linha (horizontal) */
-        gap: 14px; /* Distância entre os ícones */
+        flex-direction: row;
+        /* Ícones em linha (horizontal) */
+        gap: 14px;
+        /* Distância entre os ícones */
     }
 }
 
 /* Celulares muito pequenos (até 360px) */
 @media (max-width: 360px) {
+
     /* HERO RESPONSIVO */
     .hero-text h1 {
-        font-size: 30px; /* Reduz ainda mais o título */
+        font-size: 30px;
+        /* Reduz ainda mais o título */
     }
 
     .hero-text p {
-        font-size: 15px; /* Reduz ainda mais o parágrafo */
+        font-size: 15px;
+        /* Reduz ainda mais o parágrafo */
     }
 
     /* SECTION PRATOS RESPONSIVO */
     .section-pratos-title {
-        font-size: 24px; /* Reduz o tamanho do título */
+        font-size: 24px;
+        /* Reduz o tamanho do título */
     }
 
     /* SECTION DIFERENCIAIS RESPONSIVO */
     .diferenciais-titulo {
-        font-size: 24px; /* Reduz o tamanho do título */
+        font-size: 24px;
+        /* Reduz o tamanho do título */
     }
 
     /* CTA SECTION RESPONSIVO */
     .cta-headline {
-        font-size: 1.25rem; /* Reduz o tamanho da fonte */
+        font-size: 1.25rem;
+        /* Reduz o tamanho da fonte */
     }
 
     /* SECTION RESULTADOS RESPONSIVO */
     .resultados-stats {
-        grid-template-columns: 1fr; /* 1 coluna (empilha) */
+        grid-template-columns: 1fr;
+        /* 1 coluna (empilha) */
     }
 }
