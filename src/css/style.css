@@ -705,7 +705,8 @@ header img {
     /* Transições suaves */
 }
 
-.btn-ordenar:hover {
+.btn-ordenar:hover,
+.btn-ordenar.ativo:hover {
     border-color: #6AC8E3;
     /* Cor da borda ao passar o mouse */
     color: #6AC8E3;
