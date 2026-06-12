@@ -79,9 +79,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ---
 
-## 🦸 Autor
+## 🦸 Autores
 
 <a href="https://www.linkedin.com/in/pedro-sousa-gomes/">Pedro Sousa</a>
+<a href="https://github.com/hugolab-0/">Hugo</a>
+
 
 ---
 
