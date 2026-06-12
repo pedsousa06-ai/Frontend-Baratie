@@ -42,6 +42,14 @@
     <link rel="stylesheet" href="/src/css/style.css">
     <!-- Link para o arquivo CSS principal da página -->
 
+    <!-- ---- SCROLL BEHAVIOR SUAVE (PARA ÂNCORAS) ---- -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+            /* Faz a rolagem até as âncoras ser suave com animação */
+        }
+    </style>
+
 </head>
 <!-- Fim do cabeçalho -->
 
@@ -59,14 +67,14 @@
             <!-- Navegação principal do site -->
             <ul>
                 <!-- Lista não ordenada com os links do menu -->
-                <li><a href="" class="nav-header-item">inicio</a></li>
-                <!-- Link para a página inicial (href vazio - placeholder) -->
-                <li><a href="" class="nav-header-item">pratos</a></li>
-                <!-- Link para a seção de pratos -->
-                <li><a href="" class="nav-header-item">Sobre Nós</a></li>
-                <!-- Link para a página Sobre Nós -->
-                <li><a href="" class="nav-header-item">Contatos</a></li>
-                <!-- Link para a página de contatos -->
+                <li><a href="#inicio" class="nav-header-item">inicio</a></li>
+                <!-- Link para a seção início (âncora #inicio) -->
+                <li><a href="#pratos" class="nav-header-item">pratos</a></li>
+                <!-- Link para a seção de pratos (âncora #pratos) -->
+                <li><a href="#sobre-nos" class="nav-header-item">Sobre Nós</a></li>
+                <!-- Link para a seção Sobre Nós (âncora #sobre-nos) -->
+                <li><a href="#contatos" class="nav-header-item">Contatos</a></li>
+                <!-- Link para a seção de contatos (âncora #contatos) -->
             </ul>
         </nav>
 
@@ -77,8 +85,9 @@
         <!-- Tag semântica para o conteúdo principal da página -->
 
         <!-- ---- SECTION HERO (SEÇÃO DE DESTAQUE PRINCIPAL) ---- -->
-        <section class="hero">
-            <!-- Seção do herói: primeira impressão do site -->
+        <!-- Seção do herói: primeira impressão do site -->
+        <section class="hero" id="inicio">
+            <!-- ID "inicio" para âncora do menu -->
 
             <div class="hero-content">
                 <!-- Container do conteúdo do hero (texto e imagem lado a lado) -->
@@ -98,8 +107,8 @@
                         praticidade que o seu dia a dia exige.
                     </p>
 
-                    <a href="#" class="btn-primary">
-                        <!-- Botão de call-to-action primário -->
+                    <a href="#pratos" class="btn-primary">
+                        <!-- Botão de call-to-action primário - leva para a seção de pratos -->
                         Conheça o cardápio
                     </a>
 
@@ -125,7 +134,8 @@
     <!-- Fim do main -->
 
     <!-- ---- SECTION PRATOS (CARDÁPIO DE MARMITAS) ---- -->
-    <section class="section-pratos">
+    <section class="section-pratos" id="pratos">
+        <!-- ID "pratos" para âncora do menu -->
         <!-- Seção que exibe os pratos em destaque -->
 
         <!-- ---- BOTÃO FILTRAR E CAMPO DE BUSCA ---- -->
@@ -497,8 +507,9 @@
     </section>
     <!-- Fim da seção de resultados -->
 
-    <!-- ---- SECTION DIFERENCIAIS (POR QUE ESCOLHER) ---- -->
-    <section class="section-diferenciais">
+    <!-- ---- SECTION DIFERENCIAIS (POR QUE ESCOLHER) / SOBRE NÓS ---- -->
+    <section class="section-diferenciais" id="sobre-nos">
+        <!-- ID "sobre-nos" para âncora do menu -->
         <!-- Seção que destaca os diferenciais do serviço -->
 
         <!-- ---- CABEÇALHO DA SEÇÃO ---- -->
@@ -585,7 +596,7 @@
         <!-- Fim da grade de diferenciais -->
 
     </section>
-    <!-- Fim da seção de diferenciais -->
+    <!-- Fim da seção de diferenciais (Sobre Nós) -->
 
     <!-- ---- SECTION DESCRICAO (EXPLICAÇÃO DE NUTRIENTES) ---- -->
     <section class="section-descricao">
@@ -736,7 +747,7 @@
     <!-- Fim da seção de descrição -->
 
     <!-- ---- SECTION DEPOIMENTOS (FEEDBACK DOS CLIENTES) ---- -->
-    <section class="section-depoimentos">
+    <section class="section-depoimentos" id="avaliacao">
         <!-- Seção de depoimentos de clientes satisfeitos -->
 
         <!-- ---- CABEÇALHO DOS DEPOIMENTOS ---- -->
@@ -859,7 +870,7 @@
         <!-- Título persuasivo (H2) -->
 
         <!-- ---- BOTÃO DA CTA ---- -->
-        <a href="#" class="cta-button">
+        <a href="#pratos" class="cta-button">
             Quero Minhas Marmitas
             <!-- Texto do botão -->
             <span class="arrow">›</span>
@@ -870,7 +881,8 @@
     <!-- Fim da seção CTA -->
 
     <!-- ---- FOOTER (RODAPÉ) ---- -->
-    <footer class="footer">
+    <footer class="footer" id="contatos">
+        <!-- ID "contatos" para âncora do menu -->
         <!-- Tag semântica para o rodapé da página -->
 
         <!-- ---- BRAND SECTION (LOGO E DESCRIÇÃO) ---- -->
@@ -898,11 +910,14 @@
 
             <ul>
                 <!-- Lista de links -->
-                <li><a href="#">inicio</a></li>
-                <li><a href="#">avaliação</a></li>
-                <li class="bold-item"><a href="#">nossos melhores pratos</a></li>
-                <!-- Item em negrito (bold-item) -->
-                <li class="bold-item"><a href="#">Sobre nós</a></li>
+                <li><a href="#inicio">inicio</a></li>
+                <!-- Link para a seção início -->
+                <li><a href="#avaliacao">avaliação</a></li>
+                <!-- Link para a seção de pratos -->
+                <li class="bold-item"><a href="#pratos">nossos melhores pratos</a></li>
+                <!-- Link para a seção de pratos (em negrito) -->
+                <li class="bold-item"><a href="#sobre-nos">Sobre nós</a></li>
+                <!-- Link para a seção sobre nós (em negrito) -->
             </ul>
         </div>
 
