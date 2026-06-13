@@ -2510,6 +2510,53 @@ header img {
         margin: 0 auto;
     }
 }
+
+/* Notebook: Grids and Layouts */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    /* Dishes Section */
+    .pratos-grid {
+        gap: var(--spacing-lg);
+        max-width: 1000px;
+    }
+    
+    .prato-card-img {
+        height: 170px;
+    }
+    
+    /* Results Section */
+    .resultados-grid {
+        gap: 20px;
+    }
+    
+    .resultados-stat-valor {
+        font-size: 26px;
+    }
+    
+    /* Differentiators Section */
+    .diferenciais-grid {
+        gap: 24px;
+    }
+    
+    .diferencial-card {
+        padding: 24px 20px;
+    }
+    
+    /* Testimonials Section */
+    .depoimentos-grid {
+        gap: 24px;
+    }
+    
+    /* Description Section */
+    .descricao-grid {
+        gap: 24px;
+    }
+    
+    .descricao-card {
+        padding: 18px;
+    }
+}
+
+
 /* Celulares grandes (até 480px) */
 @media (max-width: 480px) {
 
