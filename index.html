@@ -1,225 +1,92 @@
 <!DOCTYPE html>
-<!-- Declaração do tipo de documento - HTML5 -->
-
 <html lang="en">
-<!-- Tag raiz do documento com idioma definido como inglês -->
 
 <head>
-    <!-- Início do cabeçalho da página (informações não visíveis) -->
-
     <meta charset="UTF-8">
-    <!-- Define a codificação de caracteres como UTF-8 (suporte a acentos e caracteres especiais) -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Configura a viewport para responsividade em dispositivos móveis: largura igual à tela do dispositivo e escala inicial 1.0 -->
-
     <title>Baratie Fit</title>
-    <!-- Título da página que aparece na aba do navegador -->
 
-    <!-- ---- FAVICONS (ÍCONES DA ABA) ---- -->
-    <link rel="icon" href="/src/assets/images/favicon.ico" sizes="any">
-    <!-- Favicon no formato .ico (compatível com todos os navegadores) -->
+    <!-- FAVICONS -->
+    <link rel="icon" href="src/assets/images/favicon.ico" sizes="any">
+    <link rel="icon" href="src/assets/images/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon" href="src/assets/images/apple-touch-icon.png">
 
-    <link rel="icon" href="/src/assets/images/favicon-32x32.png" type="image/png">
-    <!-- Favicon alternativo no formato PNG 32x32 pixels -->
-
-    <link rel="apple-touch-icon" href="/src/assets/images/apple-touch-icon.png">
-    <!-- Ícone para dispositivos Apple (iOS, iPadOS) ao adicionar à tela inicial -->
-
-    <!-- ---- FONTES DO GOOGLE FONTS ---- -->
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- Pré-conexão com o servidor do Google Fonts para melhor performance -->
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Pré-conexão com o servidor de assets estáticos do Google Fonts com atributo crossorigin -->
-
     <link
         href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:wght@100..900&display=swap"
         rel="stylesheet">
-    <!-- Importa as fontes Alexandria e Inter do Google Fonts com variações de peso de 100 a 900 -->
 
-    <!-- ---- ESTILOS CSS ---- -->
-    <link rel="stylesheet" href="./src/css/style.css">
-    <!-- Link para o arquivo CSS principal da página -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/style.css">
 
-    <!-- ---- SCROLL BEHAVIOR SUAVE (PARA ÂNCORAS) ---- -->
     <style>
         html {
             scroll-behavior: smooth;
-            /* Faz a rolagem até as âncoras ser suave com animação */
         }
     </style>
-
 </head>
-<!-- Fim do cabeçalho -->
 
 <body>
-    <!-- Início do corpo da página (conteúdo visível) -->
 
-    <!-- ---- HEADER (BARRA DE NAVEGAÇÃO SUPERIOR) ---- -->
+    <!-- HEADER -->
     <header>
-        <!-- Tag semântica para o cabeçalho da página -->
-
-        <img src="./src/assets/images/icon.svg" alt="Logo Baratie">
-        <!-- Logo da BaratieFit: imagem SVG com texto alternativo para acessibilidade -->
-
+        <img src="src/assets/images/icon.svg" alt="Logo Baratie">
         <nav class="nav-header">
-            <!-- Navegação principal do site -->
             <ul>
-                <!-- Lista não ordenada com os links do menu -->
                 <li><a href="#inicio" class="nav-header-item">inicio</a></li>
-                <!-- Link para a seção início (âncora #inicio) -->
                 <li><a href="#pratos" class="nav-header-item">pratos</a></li>
-                <!-- Link para a seção de pratos (âncora #pratos) -->
                 <li><a href="#sobre-nos" class="nav-header-item">Sobre Nós</a></li>
-                <!-- Link para a seção Sobre Nós (âncora #sobre-nos) -->
                 <li><a href="#contatos" class="nav-header-item">Contatos</a></li>
-                <!-- Link para a seção de contatos (âncora #contatos) -->
             </ul>
         </nav>
-
     </header>
-    <!-- Fim do header -->
 
     <main>
-        <!-- Tag semântica para o conteúdo principal da página -->
 
-        <!-- ---- SECTION HERO (SEÇÃO DE DESTAQUE PRINCIPAL) ---- -->
-        <!-- Seção do herói: primeira impressão do site -->
+        <!-- HERO -->
         <section class="hero" id="inicio">
-            <!-- ID "inicio" para âncora do menu -->
-
             <div class="hero-content">
-                <!-- Container do conteúdo do hero (texto e imagem lado a lado) -->
-
                 <div class="hero-text">
-                    <!-- Container da parte textual do hero -->
-
-                    <h1>
-                        <!-- Título principal da página (H1 - mais importante) -->
-                        Navegue rumo à sua melhor forma com a BaratieFit
-                    </h1>
-
-                    <p>
-                        <!-- Parágrafo de descrição do serviço -->
-                        Marmitas fitness preparadas com ingredientes altamente
+                    <h1>Navegue rumo à sua melhor forma com a BaratieFit</h1>
+                    <p>Marmitas fitness preparadas com ingredientes altamente
                         selecionados, sabor digno de restaurante estrelado e a
-                        praticidade que o seu dia a dia exige.
-                    </p>
-
-                    <a href="#pratos" class="btn-primary">
-                        <!-- Botão de call-to-action primário - leva para a seção de pratos -->
-                        Conheça o cardápio
-                    </a>
-
+                        praticidade que o seu dia a dia exige.</p>
+                    <a href="#pratos" class="btn-primary">Conheça o cardápio</a>
                 </div>
-                <!-- Fim do hero-text -->
-
                 <div class="hero-image">
-                    <!-- Container da imagem do hero -->
-                    <img src="./src/assets/images/item-main.svg" alt="Marmita Fitness">
-                    <!-- Imagem ilustrativa de uma marmita fitness em formato SVG -->
+                    <img src="src/assets/images/item-main.svg" alt="Marmita Fitness">
                 </div>
-
             </div>
-            <!-- Fim do hero-content -->
-
             <div class="hero-wave"></div>
-            <!-- Elemento decorativo de onda na parte inferior do hero -->
-
         </section>
-        <!-- Fim do hero -->
 
     </main>
-    <!-- Fim do main -->
 
-    <!-- ---- SECTION PRATOS (CARDÁPIO DE MARMITAS) ---- -->
+    <!-- SECTION PRATOS -->
     <section class="section-pratos" id="pratos">
-        <!-- ID "pratos" para âncora do menu -->
-        <!-- Seção que exibe os pratos em destaque -->
 
-        <!-- ---- BOTÃO FILTRAR E CAMPO DE BUSCA ---- -->
         <div class="pratos-actions">
-            <!-- Container dos controles de ação (filtro e busca) -->
-
             <button class="btn-filtrar">
-                <!-- Botão para abrir opções de filtro -->
-                <img src="./src/assets/images/Vector.svg" alt="filtrar" />
-                <!-- Ícone de filtro (SVG) -->
+                <img src="src/assets/images/Vector.svg" alt="filtrar" />
                 Filtrar
             </button>
-
             <div class="pratos-search">
-                <!-- Container do campo de busca -->
-                <img src="./src/assets/images/logo pesquisa 1.svg" alt="buscar" />
-                <!-- Ícone de lupa para busca -->
+                <img src="src/assets/images/logo pesquisa 1.svg" alt="buscar" />
                 <input type="text" placeholder="Pesquisar por alimento" />
-                <!-- Campo de texto para digitar o termo de busca -->
             </div>
         </div>
 
-        <!-- ---- CABEÇALHO DA SEÇÃO DE PRATOS ---- -->
         <p class="section-pratos-eyebrow">O que eu devo escolher?</p>
-        <!-- Subtítulo pequeno acima do título principal (eyebrow) -->
-
         <h2 class="section-pratos-title">Nossos melhores pratos</h2>
-        <!-- Título da seção (H2) -->
-
         <p class="section-pratos-subtitle">Confira nossos pratos em destaque e encontre a opção perfeita para cada
             momento do seu dia.</p>
-        <!-- Subtítulo descritivo abaixo do título -->
 
-        <!-- ---- GRADE DE CARDS (PRATOS) ---- -->
         <div class="pratos-grid">
-            <!-- Container em grid para os cards de pratos -->
 
-            <!-- ---- CARD 1 (COM DESTAQUE) ---- -->
             <div class="prato-card prato-card--destaque">
-                <!-- Card do prato com modificador de destaque -->
-
-                <img class="prato-card-img" src="./src/assets/images/marmita-1.svg" alt="Marmita Sanji Fit" />
-                <!-- Imagem ilustrativa da marmita -->
-
-                <span class="prato-card-kcal">560 Kcal</span>
-                <!-- Badge com informação calórica -->
-
-                <h3 class="prato-card-title">Marmita Sanji Fit</h3>
-                <!-- Título do prato (H3) -->
-
-                <p class="prato-card-desc">Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz
-                    integral fofinho e legumes selecionados no vapor.</p>
-                <!-- Descrição detalhada do prato -->
-
-                <div class="prato-card-macros">
-                    <!-- Container dos macronutrientes -->
-
-                    <div class="prato-card-macro-item">
-                        <!-- Item individual de macro (proteína) -->
-                        <span class="prato-card-macro-valor">38g</span>
-                        <!-- Valor do macronutriente -->
-                        <span class="prato-card-macro-label">prot</span>
-                        <!-- Label do macronutriente (proteína) -->
-                    </div>
-
-                    <div class="prato-card-macro-item">
-                        <!-- Item individual de macro (carboidrato) -->
-                        <span class="prato-card-macro-valor">45g</span>
-                        <span class="prato-card-macro-label">carb</span>
-                    </div>
-
-                    <div class="prato-card-macro-item">
-                        <!-- Item individual de macro (gordura) -->
-                        <span class="prato-card-macro-valor">8g</span>
-                        <span class="prato-card-macro-label">gord</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Fim do card 1 -->
-
-            <!-- ---- CARD 2 (COM DESTAQUE) ---- -->
-            <div class="prato-card prato-card--destaque">
-                <!-- Estrutura idêntica ao card 1 com imagem diferente -->
-                <img class="prato-card-img" src="./src/assets/images/marmita-2.svg" alt="Marmita Sanji Fit" />
+                <img class="prato-card-img" src="src/assets/images/marmita-1.svg" alt="Marmita Sanji Fit" />
                 <span class="prato-card-kcal">560 Kcal</span>
                 <h3 class="prato-card-title">Marmita Sanji Fit</h3>
                 <p class="prato-card-desc">Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz
@@ -239,12 +106,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Fim do card 2 -->
 
-            <!-- ---- CARD 3 (COM DESTAQUE) ---- -->
             <div class="prato-card prato-card--destaque">
-                <!-- Estrutura idêntica ao card 1 com imagem diferente -->
-                <img class="prato-card-img" src="./src/assets/images/marmita-3.svg" alt="Marmita Sanji Fit" />
+                <img class="prato-card-img" src="src/assets/images/marmita-2.svg" alt="Marmita Sanji Fit" />
                 <span class="prato-card-kcal">560 Kcal</span>
                 <h3 class="prato-card-title">Marmita Sanji Fit</h3>
                 <p class="prato-card-desc">Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz
@@ -264,151 +128,114 @@
                     </div>
                 </div>
             </div>
-            <!-- Fim do card 3 -->
+
+            <div class="prato-card prato-card--destaque">
+                <img class="prato-card-img" src="src/assets/images/marmita-3.svg" alt="Marmita Sanji Fit" />
+                <span class="prato-card-kcal">560 Kcal</span>
+                <h3 class="prato-card-title">Marmita Sanji Fit</h3>
+                <p class="prato-card-desc">Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz
+                    integral fofinho e legumes selecionados no vapor.</p>
+                <div class="prato-card-macros">
+                    <div class="prato-card-macro-item">
+                        <span class="prato-card-macro-valor">38g</span>
+                        <span class="prato-card-macro-label">prot</span>
+                    </div>
+                    <div class="prato-card-macro-item">
+                        <span class="prato-card-macro-valor">45g</span>
+                        <span class="prato-card-macro-label">carb</span>
+                    </div>
+                    <div class="prato-card-macro-item">
+                        <span class="prato-card-macro-valor">8g</span>
+                        <span class="prato-card-macro-label">gord</span>
+                    </div>
+                </div>
+            </div>
 
         </div>
-        <!-- Fim da grade de pratos -->
 
         <a href="#" class="pratos-load-more">carregar mais...</a>
-        <!-- Link para carregar mais pratos (paginação) -->
 
     </section>
-    <!-- Fim da seção de pratos -->
 
-    <!-- ---- SECTION FILTRAR (SISTEMA DE FILTROS) ---- -->
+    <!-- SECTION FILTRAR -->
     <section class="section-filtrar">
-        <!-- Seção com controles de filtro para os pratos -->
 
-        <!-- ---- BLOCO: CALORIAS ---- -->
         <div class="filtrar-bloco">
             <h3 class="filtrar-bloco-titulo">Calorias</h3>
-            <!-- Título do bloco de calorias -->
             <span class="filtrar-kcal-valor">0 kcal</span>
-            <!-- Exibição do valor atual selecionado -->
             <input class="filtrar-slider" type="range" min="0" max="1000" value="250" />
-            <!-- Slider (controle deslizante) para selecionar calorias: mínimo 0, máximo 1000, valor inicial 250 -->
         </div>
 
-        <!-- ---- BLOCO: MACRONUTRIENTES ---- -->
         <div class="filtrar-bloco">
             <h3 class="filtrar-bloco-titulo">Macronutrientes</h3>
-            <!-- Título do bloco de macronutrientes -->
-
             <div class="filtrar-macro-row">
-                <!-- Container dos sliders de macros -->
-
                 <div class="filtrar-macro-item">
-                    <!-- Item: Proteína -->
                     <span class="filtrar-macro-label">Prot.</span>
                     <input class="filtrar-slider" type="range" min="0" max="100" value="18" />
-                    <!-- Slider para proteína: 0-100g, valor inicial 18 -->
                 </div>
-
                 <div class="filtrar-macro-item">
-                    <!-- Item: Carboidrato -->
                     <span class="filtrar-macro-label">Carb.</span>
                     <input class="filtrar-slider" type="range" min="0" max="100" value="28" />
-                    <!-- Slider para carboidrato: 0-100g, valor inicial 28 -->
                 </div>
-
                 <div class="filtrar-macro-item">
-                    <!-- Item: Gordura -->
                     <span class="filtrar-macro-label">Gord.</span>
                     <input class="filtrar-slider" type="range" min="0" max="100" value="36" />
-                    <!-- Slider para gordura: 0-100g, valor inicial 36 -->
                 </div>
             </div>
         </div>
 
-        <!-- ---- BLOCO: ORDENAR POR CALORIAS ---- -->
         <div class="filtrar-bloco">
             <h3 class="filtrar-bloco-titulo">Ordenar Por Calorias</h3>
-            <!-- Título do bloco de ordenação -->
-
             <div class="filtrar-ordenar-btns">
-                <!-- Container dos botões de ordenação -->
                 <button class="btn-ordenar ativo">Crescente</button>
-                <!-- Botão para ordenar crescente (menor para maior) - estado ativo -->
                 <button class="btn-ordenar">Decrescente</button>
-                <!-- Botão para ordenar decrescente (maior para menor) -->
             </div>
         </div>
 
-        <!-- ---- BLOCO: RESTRIÇÕES ALIMENTARES ---- -->
         <div class="filtrar-bloco">
             <h3 class="filtrar-bloco-titulo">Restrições Alimentares</h3>
-            <!-- Título do bloco de restrições -->
-
             <div class="filtrar-restricoes">
-                <!-- Container das tags de restrição -->
                 <button class="tag-restricao">Sem lactose</button>
                 <button class="tag-restricao">Sem Glúten</button>
                 <button class="tag-restricao">Vegetariano</button>
                 <button class="tag-restricao">Vegano</button>
                 <button class="tag-restricao">Low Carb</button>
-                <!-- Botões para selecionar restrições alimentares -->
             </div>
         </div>
 
     </section>
-    <!-- Fim da seção de filtros -->
 
-    <!-- ---- SECTION RESULTADOS (RESULTADOS FILTRADOS) ---- -->
+    <!-- SECTION RESULTADOS -->
     <section class="section-resultados">
-        <!-- Seção que exibe os resultados após aplicação dos filtros -->
 
-        <!-- ---- TÍTULO E SUBTÍTULO ---- -->
         <h2 class="section-resultados-title">Resultados</h2>
-        <!-- Título da seção de resultados (H2) -->
-
         <p class="section-resultados-subtitle">Filtrando de acordo com suas preferencias</p>
-        <!-- Subtítulo descritivo -->
 
-        <!-- ---- BARRA DE ESTATÍSTICAS MÉDIAS ---- -->
         <div class="resultados-stats">
-            <!-- Container das estatísticas em grid -->
-
             <div class="resultados-stat-item">
-                <!-- Item: média de calorias -->
                 <strong class="resultados-stat-valor">506</strong>
-                <!-- Valor da estatística em negrito -->
                 <span class="resultados-stat-label">Media kcal</span>
-                <!-- Label da estatística -->
             </div>
-
             <div class="resultados-stat-item">
-                <!-- Item: média de proteínas -->
                 <strong class="resultados-stat-valor">37g</strong>
                 <span class="resultados-stat-label">Media prot</span>
             </div>
-
             <div class="resultados-stat-item">
-                <!-- Item: média de carboidratos -->
                 <strong class="resultados-stat-valor">44g</strong>
                 <span class="resultados-stat-label">Media carb</span>
             </div>
-
             <div class="resultados-stat-item">
-                <!-- Item: média de gorduras -->
                 <strong class="resultados-stat-valor">9g</strong>
                 <span class="resultados-stat-label">Media Gord</span>
             </div>
         </div>
 
-        <!-- ---- INDICADOR DE ORDENAÇÃO ---- -->
         <p class="resultados-ordenacao">Ordenados por calorias - menor para maior</p>
-        <!-- Texto indicando como os resultados estão ordenados -->
 
-        <!-- ---- GRADE DE CARDS (MESMA ESTRUTURA DOS PRATOS) ---- -->
         <div class="pratos-grid">
-            <!-- Reutiliza a mesma classe de grid da seção de pratos -->
 
-            <!-- ---- CARD DESTAQUE COM BADGE ---- -->
             <div class="prato-card prato-card--destaque">
-                <!-- Card de resultado com destaque -->
-                <!-- Badge adicional indicando destaque (notar: classe não definida no CSS) -->
-
-                <img class="prato-card-img" src="./src/assets/images/marmita-1.svg" alt="Marmita Sanji Fit" />
+                <img class="prato-card-img" src="src/assets/images/marmita-1.svg" alt="Marmita Sanji Fit" />
                 <span class="prato-card-kcal">560 Kcal</span>
                 <h3 class="prato-card-title">Marmita Sanji Fit</h3>
                 <p class="prato-card-desc">Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz
@@ -429,10 +256,8 @@
                 </div>
             </div>
 
-            <!-- ---- CARD 2 (SEM DESTAQUE) ---- -->
             <div class="prato-card">
-                <!-- Card sem a classe de destaque -->
-                <img class="prato-card-img" src="./src/assets/images/marmita-2.svg" alt="Marmita Sanji Fit" />
+                <img class="prato-card-img" src="src/assets/images/marmita-2.svg" alt="Marmita Sanji Fit" />
                 <span class="prato-card-kcal">560 Kcal</span>
                 <h3 class="prato-card-title">Marmita Sanji Fit</h3>
                 <p class="prato-card-desc">Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz
@@ -453,9 +278,8 @@
                 </div>
             </div>
 
-            <!-- ---- CARD 3 (SEM DESTAQUE) ---- -->
             <div class="prato-card">
-                <img class="prato-card-img" src="./src/assets/images/marmita-3.svg" alt="Marmita Sanji Fit" />
+                <img class="prato-card-img" src="src/assets/images/marmita-3.svg" alt="Marmita Sanji Fit" />
                 <span class="prato-card-kcal">560 Kcal</span>
                 <h3 class="prato-card-title">Marmita Sanji Fit</h3>
                 <p class="prato-card-desc">Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz
@@ -476,9 +300,8 @@
                 </div>
             </div>
 
-            <!-- ---- CARD 4 (SEM DESTAQUE) ---- -->
             <div class="prato-card">
-                <img class="prato-card-img" src="./src/assets/images/marmita-1.svg" alt="Marmita Sanji Fit" />
+                <img class="prato-card-img" src="src/assets/images/marmita-1.svg" alt="Marmita Sanji Fit" />
                 <span class="prato-card-kcal">560 Kcal</span>
                 <h3 class="prato-card-title">Marmita Sanji Fit</h3>
                 <p class="prato-card-desc">Saboroso peito de frango grelhado marinado com ervas finas do mar, arroz
@@ -500,147 +323,91 @@
             </div>
 
         </div>
-        <!-- Fim da grade de resultados -->
 
     </section>
-    <!-- Fim da seção de resultados -->
 
-    <!-- ---- SECTION DIFERENCIAIS (POR QUE ESCOLHER) / SOBRE NÓS ---- -->
+    <!-- SECTION DIFERENCIAIS / SOBRE NÓS -->
     <section class="section-diferenciais" id="sobre-nos">
-        <!-- ID "sobre-nos" para âncora do menu -->
-        <!-- Seção que destaca os diferenciais do serviço -->
 
-        <!-- ---- CABEÇALHO DA SEÇÃO ---- -->
         <div class="diferenciais-header">
             <span class="diferenciais-eyebrow">Por que nos escolher?</span>
-            <!-- Eyebrow acima do título -->
-
             <h2 class="diferenciais-titulo">Nossos diferenciais dignos da Grand Line</h2>
-            <!-- Título principal com referência a One Piece -->
-
             <p class="diferenciais-subtitulo">
                 Levamos comida de verdade até você, unindo técnicas de alta cozinha com as recomendações de
                 nutricionistas experientes.
             </p>
-            <!-- Subtítulo descritivo -->
         </div>
 
-        <!-- ---- GRADE DE CARDS DOS DIFERENCIAIS ---- -->
         <div class="diferenciais-grid">
 
-            <!-- ---- CARD 1: SABOR DE RESTAURANTE (VERMELHO) ---- -->
             <div class="diferencial-card diferencial-card--vermelho">
-                <!-- Card com tema vermelho -->
-
                 <div class="diferencial-card-icone diferencial-card-icone--vermelho">
-                    <!-- Container do ícone com fundo vermelho -->
-                    <img src="./src/assets/images/icon-Chef-Hat.svg" alt="Ícone chef" />
-                    <!-- Ícone de chapéu de chef -->
+                    <img src="src/assets/images/icon-Chef-Hat.svg" alt="Ícone chef" />
                 </div>
-
                 <h3 class="diferencial-card-titulo diferencial-card-titulo--vermelho">
-                    <!-- Título do card com cor vermelha -->
                     <em>Sabor de Restaurante</em>
-                    <!-- Texto em itálico (ênfase) -->
                 </h3>
-
                 <p class="diferencial-card-desc">
                     Receitas inspiradas no requinte do Baratie. Esqueça comidas fitness sem graça e sem tempero!
                 </p>
-                <!-- Descrição do diferencial -->
             </div>
 
-            <!-- ---- CARD 2: NUTRIÇÃO EQUILIBRADA (VERDE - ELEVADO) ---- -->
             <div class="diferencial-card diferencial-card--verde diferencial-card--elevado">
-                <!-- Card com tema verde e classe elevado (maior altura/destaque) -->
-
                 <div class="diferencial-card-icone diferencial-card-icone--verde">
-                    <!-- Ícone com fundo verde -->
-                    <img src="./src/assets/images/icon-Salad.svg" alt="Ícone nutrição" />
-                    <!-- Ícone de salada/nutrição -->
+                    <img src="src/assets/images/icon-Salad.svg" alt="Ícone nutrição" />
                 </div>
-
                 <h3 class="diferencial-card-titulo diferencial-card-titulo--verde">
-                    <!-- Título com cor verde -->
                     <em>Nutrição Equilibrada</em>
                 </h3>
-
                 <p class="diferencial-card-desc">
                     Macros milimétricamente pesados: proteínas limpas, carboidratos complexos e vegetais frescos.
                 </p>
             </div>
 
-            <!-- ---- CARD 3: OBJETIVOS REAIS (AMARELO) ---- -->
             <div class="diferencial-card diferencial-card--amarelo">
-                <!-- Card com tema amarelo -->
-
                 <div class="diferencial-card-icone diferencial-card-icone--amarelo">
-                    <!-- Ícone com fundo amarelo -->
-                    <img src="./src/assets/images/icon-Trophy.svg" alt="Ícone objetivo" />
-                    <!-- Ícone de troféu/objetivo -->
+                    <img src="src/assets/images/icon-Trophy.svg" alt="Ícone objetivo" />
                 </div>
-
                 <h3 class="diferencial-card-titulo diferencial-card-titulo--amarelo">
-                    <!-- Título com cor amarela -->
                     <em>Objetivos Reais</em>
                 </h3>
-
                 <p class="diferencial-card-desc">
                     Seja para emagrecimento, ganho de massa magra ou manter a energia no pico do dia, nós te ajudamos.
                 </p>
             </div>
 
         </div>
-        <!-- Fim da grade de diferenciais -->
 
     </section>
-    <!-- Fim da seção de diferenciais (Sobre Nós) -->
 
-    <!-- ---- SECTION DESCRICAO (EXPLICAÇÃO DE NUTRIENTES) ---- -->
+    <!-- SECTION DESCRICAO -->
     <section class="section-descricao">
-        <!-- Seção educativa sobre nutrientes -->
 
         <h2 class="descricao-titulo">Descrição</h2>
-        <!-- Título da seção de descrição (H2) -->
 
         <div class="descricao-grid">
-            <!-- Grade de cards explicativos -->
 
-            <!-- ---- CARD 1: MACRONUTRIENTES (VERMELHO) ---- -->
             <div class="descricao-card descricao-card--red">
-                <!-- Card com tema vermelho -->
-
                 <div class="descricao-card-header">
-                    <!-- Cabeçalho do card com ícone e título -->
-                    <img src="./src/assets/images/icon-red.svg" alt="Macronutrientes" />
-                    <!-- Ícone vermelho -->
+                    <img src="src/assets/images/icon-red.svg" alt="Macronutrientes" />
                     <h3 class="descricao-card-titulo descricao-card-titulo--red">Macronutrientes</h3>
-                    <!-- Título com cor vermelha -->
                 </div>
-
                 <p class="descricao-card-desc">
                     São nutrientes necessários em grandes quantidades que fornecem energia para o corpo. Incluem
                     proteínas, carboidratos e gorduras, sendo essenciais para o crescimento, reparação celular e função
                     metabólica.
                 </p>
-                <!-- Descrição detalhada do conceito -->
-
                 <span class="descricao-card-exemplos">EXEMPLOS:</span>
-                <!-- Label de exemplos -->
-
                 <div class="descricao-card-tags">
-                    <!-- Container das tags de exemplo -->
                     <span class="tag tag--red">Proteínas</span>
                     <span class="tag tag--red">Carboidratos</span>
                     <span class="tag tag--red">Gorduras</span>
                 </div>
             </div>
 
-            <!-- ---- CARD 2: MICRONUTRIENTES (CIANO) ---- -->
             <div class="descricao-card descricao-card--ciano">
-                <!-- Card com tema ciano -->
                 <div class="descricao-card-header">
-                    <img src="./src/assets/images/icon-ciano.svg" alt="Micronutrientes" />
+                    <img src="src/assets/images/icon-ciano.svg" alt="Micronutrientes" />
                     <h3 class="descricao-card-titulo descricao-card-titulo--ciano">Micronutrientes</h3>
                 </div>
                 <p class="descricao-card-desc">
@@ -657,11 +424,9 @@
                 </div>
             </div>
 
-            <!-- ---- CARD 3: LIPÍDIOS (AMARELO) ---- -->
             <div class="descricao-card descricao-card--yellow">
-                <!-- Card com tema amarelo -->
                 <div class="descricao-card-header">
-                    <img src="./src/assets/images/icon-yellow.svg" alt="Lipídios" />
+                    <img src="src/assets/images/icon-yellow.svg" alt="Lipídios" />
                     <h3 class="descricao-card-titulo descricao-card-titulo--yellow">Lipídios</h3>
                 </div>
                 <p class="descricao-card-desc">
@@ -677,11 +442,9 @@
                 </div>
             </div>
 
-            <!-- ---- CARD 4: CALORIAS (VERDE) ---- -->
             <div class="descricao-card descricao-card--green">
-                <!-- Card com tema verde -->
                 <div class="descricao-card-header">
-                    <img src="./src/assets/images/icon-green.svg" alt="Calorias" />
+                    <img src="src/assets/images/icon-green.svg" alt="Calorias" />
                     <h3 class="descricao-card-titulo descricao-card-titulo--green">Calorias</h3>
                 </div>
                 <p class="descricao-card-desc">
@@ -697,11 +460,9 @@
                 </div>
             </div>
 
-            <!-- ---- CARD 5: GORDURAS SAUDÁVEIS (ROXO) ---- -->
             <div class="descricao-card descricao-card--purple">
-                <!-- Card com tema roxo -->
                 <div class="descricao-card-header">
-                    <img src="./src/assets/images/icon-purple.svg" alt="Gorduras Saudáveis" />
+                    <img src="src/assets/images/icon-purple.svg" alt="Gorduras Saudáveis" />
                     <h3 class="descricao-card-titulo descricao-card-titulo--purple">Gorduras Saudáveis</h3>
                 </div>
                 <p class="descricao-card-desc">
@@ -717,11 +478,9 @@
                 </div>
             </div>
 
-            <!-- ---- CARD 6: FUNÇÃO DOS NUTRIENTES (ROSA) ---- -->
             <div class="descricao-card descricao-card--pink">
-                <!-- Card com tema rosa -->
                 <div class="descricao-card-header">
-                    <img src="./src/assets/images/icon-pink.svg" alt="Função dos Nutrientes" />
+                    <img src="src/assets/images/icon-pink.svg" alt="Função dos Nutrientes" />
                     <h3 class="descricao-card-titulo descricao-card-titulo--pink">Função dos Nutrientes</h3>
                 </div>
                 <p class="descricao-card-desc">
@@ -739,75 +498,48 @@
             </div>
 
         </div>
-        <!-- Fim da grade de descrição -->
 
     </section>
-    <!-- Fim da seção de descrição -->
 
-    <!-- ---- SECTION DEPOIMENTOS (FEEDBACK DOS CLIENTES) ---- -->
+    <!-- SECTION DEPOIMENTOS -->
     <section class="section-depoimentos" id="avaliacao">
-        <!-- Seção de depoimentos de clientes satisfeitos -->
 
-        <!-- ---- CABEÇALHO DOS DEPOIMENTOS ---- -->
         <div class="depoimentos-header">
             <span class="depoimentos-eyebrow">Tripulação Satisfeita</span>
-            <!-- Eyebrow com tema de navegadores -->
-
             <h2 class="depoimentos-titulo">Quem experimenta, aprova a viagem</h2>
-            <!-- Título principal (H2) -->
-
-            <p class="depoimentos-subtitulo">Veja o feedback honesto de quem revolucionou a rotina com sabor e saúde.
-            </p>
-            <!-- Subtítulo descritivo -->
+            <p class="depoimentos-subtitulo">Veja o feedback honesto de quem revolucionou a rotina com sabor e saúde.</p>
         </div>
 
-        <!-- ---- GRADE DE CARDS DE DEPOIMENTOS ---- -->
         <div class="depoimentos-grid">
 
-            <!-- ---- DEPOIMENTO 1 (MARCOS) ---- -->
             <div class="depoimento-card">
-                <!-- Card de depoimento -->
-
                 <div class="depoimento-estrelas">
-                    <!-- Container das estrelas de avaliação -->
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <!-- 5 estrelas (avaliação máxima) -->
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
                 </div>
-
                 <p class="depoimento-texto">
-                    <!-- Texto do depoimento -->
                     "Finalmente encontrei marmitas saudáveis que realmente têm sabor de comida de verdade! O frango é
                     suculento e os vegetais são perfeitamente cozidos. Sanji orgulharia desse tempero."
                 </p>
-
                 <div class="depoimento-autor">
-                    <!-- Container do autor do depoimento -->
                     <div class="depoimento-avatar depoimento-avatar--m">M</div>
-                    <!-- Avatar circular com inicial do nome -->
-
                     <div>
-                        <!-- Informações do autor -->
                         <p class="depoimento-nome">Marcos Roronoa</p>
-                        <!-- Nome do autor (referência a Zoro de One Piece) -->
                         <p class="depoimento-cargo">Marujo Fitness</p>
-                        <!-- Cargo/ocupação do autor -->
                     </div>
                 </div>
             </div>
 
-            <!-- ---- DEPOIMENTO 2 (NAMI) ---- -->
             <div class="depoimento-card">
-                <!-- Estrutura idêntica ao depoimento 1 -->
                 <div class="depoimento-estrelas">
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
                 </div>
                 <p class="depoimento-texto">
                     "Praticidade total para a minha rotina pesada de treinos e trabalho. Só preciso descongelar e tenho
@@ -817,21 +549,18 @@
                     <div class="depoimento-avatar depoimento-avatar--n">N</div>
                     <div>
                         <p class="depoimento-nome">Nami Alvida</p>
-                        <!-- Referência a Nami de One Piece -->
                         <p class="depoimento-cargo">Nutricionista Esportiva</p>
                     </div>
                 </div>
             </div>
 
-            <!-- ---- DEPOIMENTO 3 (LUFFY) ---- -->
             <div class="depoimento-card">
-                <!-- Estrutura idêntica ao depoimento 1 -->
                 <div class="depoimento-estrelas">
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
-                    <img src="/src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
+                    <img src="src/assets/images/Star_1.svg" alt="estrela" />
                 </div>
                 <p class="depoimento-texto">
                     "O tempero é absurdo de bom. A Grand Line Protein me salvou nessa transição alimentar para ganho de
@@ -841,117 +570,69 @@
                     <div class="depoimento-avatar depoimento-avatar--l">L</div>
                     <div>
                         <p class="depoimento-nome">Luffy Garp</p>
-                        <!-- Referência a Luffy de One Piece -->
                         <p class="depoimento-cargo">Lutador de boxe</p>
                     </div>
                 </div>
             </div>
 
         </div>
-        <!-- Fim da grade de depoimentos -->
 
     </section>
-    <!-- Fim da seção de depoimentos -->
 
-    <!-- ---- SECTION CTA (CHAMADA PARA AÇÃO FINAL) ---- -->
+    <!-- SECTION CTA -->
     <section class="cta-section">
-        <!-- Seção de call-to-action (conversão final) -->
-
-        <!-- ---- ANCHOR BADGE (ÂNCORA DECORATIVA) ---- -->
         <div class="anchor-badge">
-            <img src="/src/assets/images/Group 44.svg" alt="Âncora" />
-            <!-- Imagem decorativa de âncora (tema marítimo) -->
+            <img src="src/assets/images/Group 44.svg" alt="Âncora" />
         </div>
-
-        <!-- ---- HEADLINE DA CTA ---- -->
         <h2 class="cta-headline">Pronto para embarcar nessa jornada?</h2>
-        <!-- Título persuasivo (H2) -->
-
-        <!-- ---- BOTÃO DA CTA ---- -->
         <a href="#pratos" class="cta-button">
             Quero Minhas Marmitas
-            <!-- Texto do botão -->
             <span class="arrow">›</span>
-            <!-- Seta decorativa ao lado do texto -->
         </a>
-
     </section>
-    <!-- Fim da seção CTA -->
 
-    <!-- ---- FOOTER (RODAPÉ) ---- -->
+    <!-- FOOTER -->
     <footer class="footer" id="contatos">
-        <!-- ID "contatos" para âncora do menu -->
-        <!-- Tag semântica para o rodapé da página -->
 
-        <!-- ---- BRAND SECTION (LOGO E DESCRIÇÃO) ---- -->
         <div class="brand-section">
-            <!-- Container da marca -->
-
             <div class="brand-logo">
-                <!-- Logo e nome lado a lado -->
-                <img src="/src/assets/images/logo-baratie.svg" alt="Logo BaratieFit" class="logo-img" />
-                <!-- Logomarca em SVG -->
+                <img src="src/assets/images/logo-baratie.svg" alt="Logo BaratieFit" class="logo-img" />
                 <div class="brand-name">Baratie<span>Fit</span></div>
-                <!-- Nome da marca com span para destaque da palavra "Fit" -->
             </div>
-
             <p class="brand-tagline">Sua melhor forma física com o melhor tempero dos mares. Alta culinária saudável
                 planejada especialmente para o seu bem-estar.</p>
-            <!-- Slogan/tagline da empresa -->
         </div>
 
-        <!-- ---- FOOTER COLUMN: NAVEGAÇÃO ---- -->
         <div class="footer-col">
-            <!-- Coluna de links de navegação -->
             <h4>Navegação</h4>
-            <!-- Título da coluna -->
-
             <ul>
-                <!-- Lista de links -->
                 <li><a href="#inicio">inicio</a></li>
-                <!-- Link para a seção início -->
                 <li><a href="#avaliacao">avaliação</a></li>
-                <!-- Link para a seção de pratos -->
                 <li class="bold-item"><a href="#pratos">nossos melhores pratos</a></li>
-                <!-- Link para a seção de pratos (em negrito) -->
                 <li class="bold-item"><a href="#sobre-nos">Sobre nós</a></li>
-                <!-- Link para a seção sobre nós (em negrito) -->
             </ul>
         </div>
 
-        <!-- ---- FOOTER COLUMN: CONTATO E REDES SOCIAIS ---- -->
         <div class="footer-col">
-            <!-- Coluna de contato -->
             <h4>contato</h4>
-
             <div class="social-icons">
-                <!-- Container dos ícones de redes sociais -->
                 <a href="#" aria-label="Instagram">
-                    <!-- Link para Instagram com aria-label para acessibilidade -->
-                    <img src="/src/assets/images/Instagram.svg" alt="Instagram" />
+                    <img src="src/assets/images/Instagram.svg" alt="Instagram" />
                 </a>
                 <a href="#" aria-label="GitHub">
-                    <!-- Link para GitHub -->
-                    <img src="/src/assets/images/GitHub.svg" alt="GitHub" />
+                    <img src="src/assets/images/GitHub.svg" alt="GitHub" />
                 </a>
             </div>
         </div>
 
-        <!-- ---- HELP COLUMN (CENTRAL DE AJUDA) ---- -->
         <div class="help-col">
-            <!-- Coluna de ajuda/suporte -->
             <h4>central de ajuda</h4>
             <p>Entre em contato direto pelo canal de comunicação do restaurante.</p>
-            <!-- Texto informativo sobre contato -->
             <button class="btn-suporte">fale com Suporte</button>
-            <!-- Botão para falar com o suporte -->
         </div>
 
     </footer>
-    <!-- Fim do footer -->
 
 </body>
-<!-- Fim do corpo da página -->
 
 </html>
-<!-- Fim do documento HTML -->
