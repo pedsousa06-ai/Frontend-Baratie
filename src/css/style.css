@@ -1937,59 +1937,90 @@ header img {
 /* ---- RESPONSIVIDADE TABLET (768px - 1024px) ---- */
 
 /* Tablet: Header e Hero */
+/* ---- CORREÇÃO TABLET (768px - 1024px) ---- */
+
 @media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CORREÇÃO 1: Header - evitar overflow */
     header {
-        padding: var(--spacing-md) var(--spacing-2xl);
+        padding: var(--spacing-md) var(--spacing-xl);
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
     }
     
     .nav-header ul {
-        gap: var(--spacing-xl);
+        gap: var(--spacing-lg);
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .nav-header-item {
         font-size: var(--font-body4);
+        white-space: nowrap;
+    }
+    
+    /* CORREÇÃO 2: Hero - texto não estava responsivo */
+    .hero {
+        min-height: auto;
+        overflow-x: hidden;
     }
     
     .hero-content {
-        grid-template-columns: 1fr 40%;
-        padding-left: var(--spacing-2xl);
-        min-height: 70vh;
+        grid-template-columns: 1fr;
+        padding: var(--spacing-3xl) var(--spacing-xl);
+        min-height: auto;
+        gap: var(--spacing-2xl);
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
     }
     
     .hero-text h1 {
-        font-size: 52px;
+        font-size: 48px;
+        text-align: center;
     }
     
     .hero-text p {
-        font-size: 22px;
-        max-width: 500px;
+        font-size: 20px;
+        text-align: center;
+        max-width: 100%;
     }
     
     .hero-image {
-        height: 70vh;
+        height: auto;
+        justify-content: center;
     }
     
-    .btn-primary {
-        padding: var(--spacing-sm) var(--spacing-xl);
-        font-size: var(--font-body3);
+    .hero-image img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
     }
-}
-
-/* Tablet: Seção Pratos (Cardápio) */
-@media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CORREÇÃO 3: Pratos - botões flutuantes quebrados */
     .section-pratos {
-        padding: var(--spacing-3xl) var(--spacing-2xl);
-    }
-    
-    .section-pratos-title {
-        font-size: var(--font-h3);
+        padding: var(--spacing-3xl) var(--spacing-xl);
+        position: relative;
     }
     
     .pratos-actions {
         position: static;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-end;
         margin-bottom: var(--spacing-xl);
+        gap: var(--spacing-md);
+    }
+    
+    .btn-filtrar {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: var(--font-body4);
+    }
+    
+    .pratos-search {
+        width: 200px;
     }
     
     .pratos-grid {
@@ -1998,24 +2029,31 @@ header img {
         max-width: 100%;
     }
     
+    .prato-card {
+        padding: var(--spacing-sm);
+    }
+    
     .prato-card-img {
-        height: 160px;
+        height: 150px;
     }
     
     .prato-card-title {
         font-size: var(--font-h5);
     }
     
-    .prato-card-macros {
-        gap: var(--spacing-lg);
+    .prato-card-desc {
+        font-size: var(--font-small);
     }
-}
-
-/* Tablet: Seção Filtrar */
-@media (min-width: 768px) and (max-width: 1024px) {
+    
+    .prato-card-macros {
+        gap: var(--spacing-md);
+    }
+    
+    /* CORREÇÃO 4: Filtros - slider e inputs quebrados */
     .section-filtrar {
         padding: var(--spacing-2xl) var(--spacing-xl);
-        margin: 0 var(--spacing-lg);
+        margin: 0 var(--spacing-md);
+        max-width: calc(100% - var(--spacing-md) * 2);
     }
     
     .filtrar-bloco-titulo {
@@ -2023,101 +2061,139 @@ header img {
     }
     
     .filtrar-slider {
-        width: 70%;
+        width: 100%;
+        max-width: 300px;
     }
     
     .filtrar-macro-row {
-        gap: var(--spacing-sm);
+        gap: var(--spacing-md);
     }
     
     .filtrar-macro-item {
         flex-wrap: wrap;
+        gap: var(--spacing-sm);
     }
     
     .filtrar-macro-label {
-        width: 40px;
-        font-size: var(--font-body4);
+        width: auto;
+        min-width: 45px;
+    }
+    
+    input[type="range"] {
+        flex: 1;
+        min-width: 150px;
+    }
+    
+    .filtrar-ordenar-btns {
+        flex-wrap: wrap;
     }
     
     .btn-ordenar {
-        padding: var(--spacing-sm) var(--spacing-md);
-        font-size: var(--font-body4);
+        flex: auto;
+        min-width: 120px;
+    }
+    
+    .filtrar-restricoes {
+        gap: var(--spacing-xs);
     }
     
     .tag-restricao {
         padding: var(--spacing-xs) var(--spacing-sm);
         font-size: var(--font-small);
     }
-}
-
-/* Tablet: Seção Resultados */
-@media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CORREÇÃO 5: Resultados - grid responsivo */
     .section-resultados {
-        padding: 40px 24px;
+        padding: 40px var(--spacing-xl);
     }
     
     .section-resultados-title {
-        font-size: 40px;
+        font-size: 36px;
+    }
+    
+    .section-resultados-subtitle {
+        font-size: 14px;
+        margin-bottom: 24px;
     }
     
     .resultados-stats {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        gap: var(--spacing-md);
+    }
+    
+    .resultados-stat-item {
+        padding: var(--spacing-md);
     }
     
     .resultados-stat-valor {
         font-size: 24px;
     }
     
+    .resultados-stat-label {
+        font-size: 12px;
+    }
+    
+    .resultados-ordenacao {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    
     .resultados-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: var(--spacing-md);
     }
     
     .resultado-card {
-        padding: 12px;
+        padding: var(--spacing-sm);
     }
     
     .resultado-card-badge {
-        font-size: 11px;
+        font-size: 10px;
         padding: 3px 8px;
     }
-}
-
-/* Tablet: Seção Diferenciais */
-@media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CORREÇÃO 6: Diferenciais - cards desalinhados */
     .section-diferenciais {
-        padding: 48px 32px 56px;
-        gap: 32px;
-        border-radius: 24px;
+        padding: 48px var(--spacing-xl);
         margin: 0 var(--spacing-md);
+        border-radius: 24px;
+    }
+    
+    .diferenciais-header {
+        gap: var(--spacing-sm);
     }
     
     .diferenciais-titulo {
-        font-size: 38px;
+        font-size: 36px;
+    }
+    
+    .diferenciais-subtitulo {
+        font-size: 13px;
     }
     
     .diferenciais-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
+        gap: var(--spacing-md);
+        align-items: stretch;
     }
     
     .diferencial-card {
-        padding: 20px 16px;
+        padding: var(--spacing-md);
     }
     
     .diferencial-card--elevado {
-        margin-bottom: 20px;
+        margin-bottom: 0;
+        transform: translateY(-8px);
     }
     
     .diferencial-card-icone {
-        width: 44px;
-        height: 44px;
+        width: 40px;
+        height: 40px;
     }
     
     .diferencial-card-icone img {
-        width: 24px;
-        height: 24px;
+        width: 22px;
+        height: 22px;
     }
     
     .diferencial-card-titulo {
@@ -2126,28 +2202,29 @@ header img {
     
     .diferencial-card-desc {
         font-size: 12px;
+        line-height: 1.5;
     }
-}
-
-/* Tablet: Seção Depoimentos */
-@media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CORREÇÃO 7: Depoimentos - estrelas e cards */
     .section-depoimentos {
-        padding: 48px 32px 56px;
-        gap: 36px;
+        padding: 48px var(--spacing-xl);
     }
     
     .depoimentos-titulo {
-        font-size: 34px;
+        font-size: 32px;
+    }
+    
+    .depoimentos-subtitulo {
+        font-size: 14px;
     }
     
     .depoimentos-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        max-width: 100%;
+        gap: var(--spacing-lg);
     }
     
     .depoimento-card {
-        padding: 20px;
+        padding: var(--spacing-lg);
     }
     
     .depoimento-estrelas img {
@@ -2160,55 +2237,244 @@ header img {
     }
     
     .depoimento-avatar {
-        width: 38px;
-        height: 38px;
+        width: 40px;
+        height: 40px;
         font-size: 14px;
     }
-}
-
-/* Tablet: Footer */
-@media (min-width: 768px) and (max-width: 1024px) {
+    
+    .depoimento-nome {
+        font-size: 13px;
+    }
+    
+    .depoimento-cargo {
+        font-size: 11px;
+    }
+    
+    /* CORREÇÃO 8: Descrição - grid responsivo */
+    .section-descricao {
+        padding: 40px var(--spacing-xl);
+        margin: 0 var(--spacing-md);
+        border-radius: 20px;
+    }
+    
+    .descricao-titulo {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+    
+    .descricao-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .descricao-card {
+        padding: var(--spacing-md);
+    }
+    
+    .descricao-card-header img {
+        width: 32px;
+        height: 28px;
+    }
+    
+    .descricao-card-titulo {
+        font-size: 14px;
+    }
+    
+    .descricao-card-desc {
+        font-size: 12px;
+    }
+    
+    .descricao-card-exemplos {
+        font-size: 10px;
+    }
+    
+    .tag {
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+    
+    /* CORREÇÃO 9: CTA Section - texto responsivo */
+    .cta-section {
+        min-height: auto;
+        padding: 60px var(--spacing-xl);
+    }
+    
+    .anchor-badge {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 24px;
+    }
+    
+    .cta-headline {
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        max-width: 500px;
+        margin-bottom: 32px;
+    }
+    
+    .cta-button {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+    }
+    
+    /* CORREÇÃO 10: Footer - grid responsivo */
     .footer {
         grid-template-columns: repeat(2, 1fr);
-        gap: 32px 40px;
-        padding: 32px 32px;
+        gap: var(--spacing-xl) var(--spacing-2xl);
+        padding: var(--spacing-xl);
     }
     
     .brand-section {
         grid-column: span 1;
     }
     
+    .brand-name {
+        font-size: 20px;
+    }
+    
     .brand-tagline {
+        font-size: 12px;
         max-width: 100%;
     }
     
     .footer-col h4 {
-        font-size: 16px;
+        font-size: 15px;
         margin-bottom: 10px;
     }
     
+    .footer-col ul {
+        gap: 5px;
+    }
+    
     .footer-col ul li a {
-        font-size: 14px;
+        font-size: 13px;
     }
     
     .social-icons {
         flex-direction: row;
-        gap: 16px;
-        margin-top: 8px;
+        gap: var(--spacing-md);
+        margin-top: 0;
+    }
+    
+    .social-icons a {
+        padding: 4px;
     }
     
     .social-icons img {
-        width: 28px;
-        height: 28px;
+        width: 26px;
+        height: 26px;
     }
     
     .help-col p {
-        font-size: 13px;
+        font-size: 12px;
     }
     
     .btn-suporte {
-        padding: 6px 16px;
-        font-size: 14px;
+        padding: 6px 14px;
+        font-size: 13px;
+    }
+}
+
+/* CORREÇÃO ADICIONAL: Landscape tablet (modo paisagem) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .hero {
+        min-height: 90vh;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        padding: var(--spacing-2xl);
+    }
+    
+    .hero-text h1 {
+        font-size: 42px;
+    }
+    
+    .hero-text p {
+        font-size: 18px;
+    }
+    
+    .hero-image img {
+        max-width: 100%;
+    }
+    
+    .pratos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .resultados-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .diferenciais-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* CORREÇÃO ADICIONAL: Tablet pequeno (entre 768px e 900px) */
+@media (min-width: 768px) and (max-width: 900px) {
+    .pratos-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .resultados-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .descricao-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .diferencial-card--elevado {
+        transform: translateY(0);
+    }
+    
+    .footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .brand-section {
+        align-items: center;
+    }
+    
+    .brand-logo {
+        justify-content: center;
+    }
+    
+    .footer-col ul {
+        align-items: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .help-col {
+        align-items: center;
     }
 }
 /* Celulares grandes (até 480px) */
