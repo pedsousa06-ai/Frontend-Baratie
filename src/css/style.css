@@ -3268,3 +3268,42 @@ header img {
         font-size: 12px;
     }
 }
+
+@media (max-height: 480px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 20px 16px;
+        gap: 16px;
+    }
+
+    .hero-image {
+        height: 150px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .section-pratos,
+    .section-resultados,
+    .section-diferenciais {
+        padding: 24px 16px;
+    }
+
+    .pratos-grid,
+    .resultados-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .cta-section {
+        padding: 32px 16px;
+    }
+}
