@@ -1934,192 +1934,44 @@ header img {
 }
 
 /* ---- MEDIA QUERIES (RESPONSIVIDADE) ---- */
+/* ---- RESPONSIVIDADE TABLET (768px - 1024px) ---- */
 
-/* Tablets e telas médias (até 768px) */
-@media (max-width: 768px) {
-
-    /* HEADER RESPONSIVO */
+/* Tablet: Header e Hero */
+@media (min-width: 768px) and (max-width: 1024px) {
     header {
-        padding: 12px 20px;
-        /* Reduz o padding do header */
+        padding: var(--spacing-md) var(--spacing-2xl);
     }
-
-    header img {
-        width: 38px;
-        /* Reduz a largura da logo */
-        height: 38px;
-        /* Reduz a altura da logo */
-    }
-
+    
     .nav-header ul {
-        gap: 16px;
-        /* Reduz a distância entre os itens do menu */
+        gap: var(--spacing-xl);
     }
-
-    /* HERO RESPONSIVO */
+    
+    .nav-header-item {
+        font-size: var(--font-body4);
+    }
+    
     .hero-content {
-        grid-template-columns: 1fr;
-        /* Muda para uma coluna (empilha os elementos) */
-        padding: 40px 20px;
-        /* Reduz o padding */
-        min-height: auto;
-        /* Altura automática */
-        gap: 32px;
-        /* Distância entre os elementos */
+        grid-template-columns: 1fr 40%;
+        padding-left: var(--spacing-2xl);
+        min-height: 70vh;
     }
-
+    
     .hero-text h1 {
-        font-size: 48px;
-        /* Reduz o tamanho do título */
+        font-size: 52px;
     }
-
+    
     .hero-text p {
-        font-size: 20px;
-        /* Reduz o tamanho do parágrafo */
+        font-size: 22px;
+        max-width: 500px;
     }
-
+    
     .hero-image {
-        height: 280px;
-        /* Altura fixa para a imagem */
-        justify-content: center;
-        /* Centraliza a imagem */
-        overflow: hidden;
-        /* Esconde o excesso */
+        height: 70vh;
     }
-
-    .hero-image img {
-        width: 100%;
-        /* Largura total */
-        height: 100%;
-        /* Altura total */
-        object-fit: cover;
-        /* Cobre o espaço sem distorcer */
-        object-position: center top;
-        /* Foco no topo da imagem */
-    }
-
-    /* SECTION PRATOS RESPONSIVO */
-    .section-pratos {
-        padding: 32px 20px 24px;
-        /* Reduz o padding */
-    }
-
-    .pratos-actions {
-        position: static;
-        /* Remove o posicionamento absoluto */
-        flex-direction: row;
-        /* Alinha os botões em linha */
-        align-items: center;
-        /* Centraliza verticalmente */
-        justify-content: flex-end;
-        /* Alinha no final (direita) */
-        margin-bottom: 20px;
-        /* Margem inferior */
-    }
-
-    .pratos-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 colunas em vez de 3 */
-        max-width: 100%;
-        /* Largura máxima total */
-        gap: 14px;
-        /* Reduz a distância entre os cards */
-    }
-
-    /* SECTION DIFERENCIAIS RESPONSIVO */
-    .section-diferenciais {
-        padding: 48px 24px 56px;
-        /* Reduz o padding */
-        border-radius: 20px;
-        /* Reduz o arredondamento */
-    }
-
-    .diferenciais-titulo {
-        font-size: 36px;
-        /* Reduz o tamanho do título */
-    }
-
-    .diferenciais-grid {
-        grid-template-columns: 1fr;
-        /* 1 coluna em vez de 3 (empilha) */
-        gap: 16px;
-        /* Reduz a distância */
-    }
-
-    .diferencial-card--elevado {
-        margin-bottom: 0;
-        /* Remove a margem inferior extra */
-    }
-
-    /* SECTION RESULTADOS RESPONSIVO */
-    .resultados-stats {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 colunas em vez de 4 */
-    }
-
-    .resultados-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 colunas em vez de 4 */
-    }
-
-    /* SECTION DESCRICAO RESPONSIVO */
-    .section-descricao {
-        padding: 32px 20px 40px;
-        /* Reduz o padding */
-        border-radius: 16px;
-        /* Reduz o arredondamento */
-    }
-
-    .descricao-titulo {
-        font-size: 30px;
-        /* Reduz o tamanho do título */
-        margin-bottom: 28px;
-        /* Reduz a margem inferior */
-    }
-
-    .descricao-grid {
-        grid-template-columns: 1fr;
-        /* 1 coluna em vez de 3 (empilha) */
-    }
-
-    /* SECTION DEPOIMENTOS RESPONSIVO */
-    .section-depoimentos {
-        padding: 48px 24px 56px;
-        /* Reduz o padding */
-        gap: 36px;
-        /* Reduz a distância */
-    }
-
-    .depoimentos-titulo {
-        font-size: 30px;
-        /* Reduz o tamanho do título */
-    }
-
-    .depoimentos-grid {
-        grid-template-columns: 1fr;
-        /* 1 coluna em vez de 3 (empilha) */
-        max-width: 100%;
-        /* Largura máxima total */
-    }
-
-    /* FOOTER RESPONSIVO */
-    .footer {
-        grid-template-columns: 1fr 1fr;
-        /* 2 colunas em vez de 4 */
-        gap: 28px;
-        /* Reduz a distância */
-        padding: 32px 24px;
-        /* Reduz o padding */
-    }
-
-    .brand-section {
-        grid-column: 1 / -1;
-        /* Ocupa todas as colunas (largura total) */
-    }
-
-    .brand-tagline {
-        max-width: 100%;
-        /* Largura máxima total */
+    
+    .btn-primary {
+        padding: var(--spacing-sm) var(--spacing-xl);
+        font-size: var(--font-body3);
     }
 }
 
