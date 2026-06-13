@@ -2964,4 +2964,97 @@ header img {
     .diferencial-card-desc {
         font-size: 13px;
     }
+
+        /* TESTIMONIALS SECTION RESPONSIVE */
+    .section-depoimentos {
+        padding: 40px 16px;
+        gap: 28px;
+    }
+
+    .depoimentos-eyebrow {
+        font-size: 12px;
+    }
+
+    .depoimentos-titulo {
+        font-size: 26px;
+    }
+
+    .depoimentos-subtitulo {
+        font-size: 13px;
+    }
+
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .depoimento-card {
+        padding: 20px;
+    }
+
+    .depoimento-estrelas img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .depoimento-texto {
+        font-size: 13px;
+    }
+
+    .depoimento-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .depoimento-nome {
+        font-size: 14px;
+    }
+
+    .depoimento-cargo {
+        font-size: 11px;
+    }
+
+    /* DESCRIPTION SECTION RESPONSIVE */
+    .section-descricao {
+        padding: 32px 16px;
+        margin: 0 12px;
+        border-radius: 16px;
+    }
+
+    .descricao-titulo {
+        font-size: 26px;
+        margin-bottom: 24px;
+    }
+
+    .descricao-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .descricao-card {
+        padding: 16px;
+    }
+
+    .descricao-card-header img {
+        width: 32px;
+        height: 28px;
+    }
+
+    .descricao-card-titulo {
+        font-size: 15px;
+    }
+
+    .descricao-card-desc {
+        font-size: 12px;
+    }
+
+    .descricao-card-exemplos {
+        font-size: 10px;
+    }
+
+    .tag {
+        font-size: 10px;
+        padding: 3px 10px;
+    }
 }
