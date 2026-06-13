@@ -2861,4 +2861,107 @@ header img {
         padding: 6px 12px;
         font-size: 12px;
     }
+
+     /* RESULTS SECTION RESPONSIVE */
+    .section-resultados {
+        padding: 32px 16px;
+    }
+
+    .section-resultados-title {
+        font-size: 28px;
+    }
+
+    .section-resultados-subtitle {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .resultados-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .resultados-stat-item {
+        padding: 12px;
+    }
+
+    .resultados-stat-valor {
+        font-size: 20px;
+    }
+
+    .resultados-stat-label {
+        font-size: 11px;
+    }
+
+    .resultados-ordenacao {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    .resultados-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .resultado-card {
+        padding: 12px;
+    }
+
+    .resultado-card-badge {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+
+    /* DIFFERENTIATORS SECTION RESPONSIVE */
+    .section-diferenciais {
+        padding: 40px 16px;
+        gap: 28px;
+        border-radius: 20px;
+        margin: 0 12px;
+    }
+
+    .diferenciais-eyebrow {
+        font-size: 12px;
+    }
+
+    .diferenciais-titulo {
+        font-size: 28px;
+    }
+
+    .diferenciais-subtitulo {
+        font-size: 13px;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .diferencial-card {
+        padding: 20px 16px;
+    }
+
+    .diferencial-card--elevado {
+        transform: translateY(0);
+        margin-bottom: 0;
+    }
+
+    .diferencial-card-icone {
+        width: 48px;
+        height: 48px;
+    }
+
+    .diferencial-card-icone img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .diferencial-card-titulo {
+        font-size: 16px;
+    }
+
+    .diferencial-card-desc {
+        font-size: 13px;
+    }
 }
