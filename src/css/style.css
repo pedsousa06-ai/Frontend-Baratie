@@ -2650,295 +2650,77 @@ header img {
     }
 }
 /* Celulares grandes (até 480px) */
+/* ---- MOBILE SMALL (max-width: 480px) ---- */
+
 @media (max-width: 480px) {
 
-    /* HEADER RESPONSIVO */
+    /* HEADER RESPONSIVE */
     header {
         padding: 10px 16px;
-        /* Reduz ainda mais o padding */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    header img {
+        width: 36px;
+        height: 36px;
     }
 
     .nav-header ul {
-        gap: 10px;
-        /* Reduz a distância entre os itens */
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .nav-header-item {
-        font-size: 13px;
-        /* Reduz o tamanho da fonte */
+        font-size: 12px;
+        white-space: nowrap;
     }
 
-    /* HERO RESPONSIVO */
+    /* HERO RESPONSIVE */
+    .hero {
+        min-height: auto;
+    }
+
     .hero-content {
+        grid-template-columns: 1fr;
         padding: 32px 16px;
-        /* Reduz o padding */
         gap: 24px;
-        /* Reduz a distância */
+        min-height: auto;
     }
 
     .hero-text {
         gap: 16px;
-        /* Reduz a distância entre os elementos */
+        align-items: center;
+        text-align: center;
     }
 
     .hero-text h1 {
-        font-size: 36px;
-        /* Reduz ainda mais o título */
+        font-size: 32px;
+        text-align: center;
     }
 
     .hero-text p {
-        font-size: 17px;
-        /* Reduz o tamanho do parágrafo */
+        font-size: 16px;
+        text-align: center;
+        max-width: 100%;
     }
 
     .hero-image {
-        height: 220px;
-        /* Altura menor para a imagem */
+        height: 200px;
         overflow: hidden;
-        /* Esconde o excesso */
     }
 
     .hero-image img {
         width: 100%;
-        /* Largura total */
         height: 100%;
-        /* Altura total */
         object-fit: cover;
-        /* Cobre o espaço */
-        object-position: center top;
-        /* Foco no topo */
+        object-position: center;
     }
 
-    /* SECTION PRATOS RESPONSIVO */
-    .section-pratos {
-        padding: 24px 16px 20px;
-        /* Reduz o padding */
-    }
-
-    .section-pratos-title {
-        font-size: 28px;
-        /* Reduz o tamanho do título */
-    }
-
-    .pratos-actions {
-        flex-direction: column;
-        /* Empilha os botões */
-        align-items: stretch;
-        /* Estica para a largura total */
-    }
-
-    .pratos-search {
-        width: 100%;
-        /* Largura total */
-    }
-
-    .pratos-grid {
-        grid-template-columns: 1fr;
-        /* 1 coluna (empilha) */
-        gap: 12px;
-        /* Reduz a distância */
-    }
-
-    .prato-card-img {
-        height: 200px;
-        /* Altura fixa para a imagem */
-    }
-
-    /* SECTION DIFERENCIAIS RESPONSIVO */
-    .section-diferenciais {
-        padding: 36px 16px 44px;
-        /* Reduz o padding */
-        gap: 32px;
-        /* Reduz a distância */
-        border-radius: 16px;
-        /* Reduz o arredondamento */
-    }
-
-    .diferenciais-titulo {
-        font-size: 28px;
-        /* Reduz o tamanho do título */
-    }
-
-    .diferenciais-subtitulo {
-        font-size: 13px;
-        /* Reduz o tamanho da fonte */
-    }
-
-    /* SECTION RESULTADOS RESPONSIVO */
-    .section-resultados {
-        padding: 32px 16px;
-        /* Reduz o padding */
-    }
-
-    .section-resultados-title {
-        font-size: 32px;
-        /* Reduz o tamanho do título */
-    }
-
-    .resultados-stats {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 colunas */
-        gap: 8px;
-        /* Reduz a distância */
-    }
-
-    .resultados-stat-valor {
-        font-size: 22px;
-        /* Reduz o tamanho do valor */
-    }
-
-    .resultados-grid {
-        grid-template-columns: 1fr;
-        /* 1 coluna (empilha) */
-    }
-
-    /* SECTION DESCRICAO RESPONSIVO */
-    .section-descricao {
-        padding: 24px 16px 32px;
-        /* Reduz o padding */
-        border-radius: 12px;
-        /* Reduz o arredondamento */
-    }
-
-    .descricao-titulo {
-        font-size: 24px;
-        /* Reduz o tamanho do título */
-        margin-bottom: 20px;
-        /* Reduz a margem inferior */
-    }
-
-    /* SECTION DEPOIMENTOS RESPONSIVO */
-    .section-depoimentos {
-        padding: 36px 16px 44px;
-        /* Reduz o padding */
-        gap: 28px;
-        /* Reduz a distância */
-    }
-
-    .depoimentos-titulo {
-        font-size: 26px;
-        /* Reduz o tamanho do título */
-    }
-
-    /* CTA SECTION RESPONSIVO */
-    .cta-section {
-        padding: 48px 16px;
-        /* Reduz o padding */
-        min-height: auto;
-        /* Altura automática */
-    }
-
-    .cta-headline {
-        font-size: 1.5rem;
-        /* Reduz o tamanho da fonte */
-        margin-bottom: 28px;
-        /* Reduz a margem inferior */
-    }
-
-    .anchor-badge {
-        width: 56px;
-        /* Reduz a largura */
-        height: 56px;
-        /* Reduz a altura */
-        margin-bottom: 20px;
-        /* Reduz a margem inferior */
-    }
-
-    /* FOOTER RESPONSIVO */
-    .footer {
-        grid-template-columns: 1fr;
-        /* 1 coluna (empilha tudo) */
-        gap: 24px;
-        /* Reduz a distância */
-        padding: 28px 16px;
-        /* Reduz o padding */
-    }
-
-    .brand-section {
-        grid-column: auto;
-        /* Remove a ocupação de todas as colunas */
-    }
-
-    .brand-name {
-        font-size: 20px;
-        /* Reduz o tamanho da fonte */
-    }
-
-    .brand-tagline {
-        font-size: 13px;
-        /* Reduz o tamanho da fonte */
-    }
-
-    .footer-col h4,
-    .help-col h4 {
-        font-size: 15px;
-        /* Reduz o tamanho da fonte do título */
-    }
-
-    .footer-col ul li a {
+    .btn-primary {
+        padding: 10px 20px;
         font-size: 14px;
-        /* Reduz o tamanho da fonte do link */
-    }
-
-    .help-col p {
-        font-size: 13px;
-        /* Reduz o tamanho da fonte */
-    }
-
-    .btn-suporte {
-        width: 100%;
-        /* Botão ocupa toda a largura */
-        text-align: center;
-        /* Centraliza o texto */
-        font-size: 14px;
-        /* Reduz o tamanho da fonte */
-        padding: 10px 18px;
-        /* Ajusta o padding */
-    }
-
-    .social-icons {
-        flex-direction: row;
-        /* Ícones em linha (horizontal) */
-        gap: 14px;
-        /* Distância entre os ícones */
-    }
-}
-
-/* Celulares muito pequenos (até 360px) */
-@media (max-width: 360px) {
-
-    /* HERO RESPONSIVO */
-    .hero-text h1 {
-        font-size: 30px;
-        /* Reduz ainda mais o título */
-    }
-
-    .hero-text p {
-        font-size: 15px;
-        /* Reduz ainda mais o parágrafo */
-    }
-
-    /* SECTION PRATOS RESPONSIVO */
-    .section-pratos-title {
-        font-size: 24px;
-        /* Reduz o tamanho do título */
-    }
-
-    /* SECTION DIFERENCIAIS RESPONSIVO */
-    .diferenciais-titulo {
-        font-size: 24px;
-        /* Reduz o tamanho do título */
-    }
-
-    /* CTA SECTION RESPONSIVO */
-    .cta-headline {
-        font-size: 1.25rem;
-        /* Reduz o tamanho da fonte */
-    }
-
-    /* SECTION RESULTADOS RESPONSIVO */
-    .resultados-stats {
-        grid-template-columns: 1fr;
-        /* 1 coluna (empilha) */
     }
 }
