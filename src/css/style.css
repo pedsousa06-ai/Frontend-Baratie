@@ -1934,485 +1934,1376 @@ header img {
 }
 
 /* ---- MEDIA QUERIES (RESPONSIVIDADE) ---- */
+/* ---- RESPONSIVIDADE TABLET (768px - 1024px) ---- */
 
-/* Tablets e telas médias (até 768px) */
-@media (max-width: 768px) {
+/* Tablet: Header e Hero */
+/* ---- CORREÇÃO TABLET (768px - 1024px) ---- */
 
-    /* HEADER RESPONSIVO */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CORREÇÃO 1: Header - evitar overflow */
     header {
-        padding: 12px 20px;
-        /* Reduz o padding do header */
+        padding: var(--spacing-md) var(--spacing-xl);
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
     }
-
-    header img {
-        width: 38px;
-        /* Reduz a largura da logo */
-        height: 38px;
-        /* Reduz a altura da logo */
-    }
-
+    
     .nav-header ul {
-        gap: 16px;
-        /* Reduz a distância entre os itens do menu */
+        gap: var(--spacing-lg);
+        flex-wrap: wrap;
+        justify-content: center;
     }
-
-    /* HERO RESPONSIVO */
+    
+    .nav-header-item {
+        font-size: var(--font-body4);
+        white-space: nowrap;
+    }
+    
+    /* CORREÇÃO 2: Hero - texto não estava responsivo */
+    .hero {
+        min-height: auto;
+        overflow-x: hidden;
+    }
+    
     .hero-content {
         grid-template-columns: 1fr;
-        /* Muda para uma coluna (empilha os elementos) */
-        padding: 40px 20px;
-        /* Reduz o padding */
+        padding: var(--spacing-3xl) var(--spacing-xl);
         min-height: auto;
-        /* Altura automática */
-        gap: 32px;
-        /* Distância entre os elementos */
+        gap: var(--spacing-2xl);
     }
-
+    
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
     .hero-text h1 {
         font-size: 48px;
-        /* Reduz o tamanho do título */
+        text-align: center;
     }
-
+    
     .hero-text p {
         font-size: 20px;
-        /* Reduz o tamanho do parágrafo */
+        text-align: center;
+        max-width: 100%;
     }
-
+    
     .hero-image {
-        height: 280px;
-        /* Altura fixa para a imagem */
+        height: auto;
         justify-content: center;
-        /* Centraliza a imagem */
-        overflow: hidden;
-        /* Esconde o excesso */
     }
-
+    
     .hero-image img {
         width: 100%;
-        /* Largura total */
-        height: 100%;
-        /* Altura total */
-        object-fit: cover;
-        /* Cobre o espaço sem distorcer */
-        object-position: center top;
-        /* Foco no topo da imagem */
+        max-width: 500px;
+        height: auto;
     }
-
-    /* SECTION PRATOS RESPONSIVO */
+    
+    /* CORREÇÃO 3: Pratos - botões flutuantes quebrados */
     .section-pratos {
-        padding: 32px 20px 24px;
-        /* Reduz o padding */
+        padding: var(--spacing-3xl) var(--spacing-xl);
+        position: relative;
     }
-
+    
     .pratos-actions {
         position: static;
-        /* Remove o posicionamento absoluto */
         flex-direction: row;
-        /* Alinha os botões em linha */
-        align-items: center;
-        /* Centraliza verticalmente */
         justify-content: flex-end;
-        /* Alinha no final (direita) */
-        margin-bottom: 20px;
-        /* Margem inferior */
+        margin-bottom: var(--spacing-xl);
+        gap: var(--spacing-md);
     }
-
+    
+    .btn-filtrar {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: var(--font-body4);
+    }
+    
+    .pratos-search {
+        width: 200px;
+    }
+    
     .pratos-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 colunas em vez de 3 */
+        gap: var(--spacing-lg);
         max-width: 100%;
-        /* Largura máxima total */
-        gap: 14px;
-        /* Reduz a distância entre os cards */
     }
-
-    /* SECTION DIFERENCIAIS RESPONSIVO */
-    .section-diferenciais {
-        padding: 48px 24px 56px;
-        /* Reduz o padding */
-        border-radius: 20px;
-        /* Reduz o arredondamento */
+    
+    .prato-card {
+        padding: var(--spacing-sm);
     }
-
-    .diferenciais-titulo {
+    
+    .prato-card-img {
+        height: 150px;
+    }
+    
+    .prato-card-title {
+        font-size: var(--font-h5);
+    }
+    
+    .prato-card-desc {
+        font-size: var(--font-small);
+    }
+    
+    .prato-card-macros {
+        gap: var(--spacing-md);
+    }
+    
+    /* CORREÇÃO 4: Filtros - slider e inputs quebrados */
+    .section-filtrar {
+        padding: var(--spacing-2xl) var(--spacing-xl);
+        margin: 0 var(--spacing-md);
+        max-width: calc(100% - var(--spacing-md) * 2);
+    }
+    
+    .filtrar-bloco-titulo {
+        font-size: var(--font-h5);
+    }
+    
+    .filtrar-slider {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .filtrar-macro-row {
+        gap: var(--spacing-md);
+    }
+    
+    .filtrar-macro-item {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+    
+    .filtrar-macro-label {
+        width: auto;
+        min-width: 45px;
+    }
+    
+    input[type="range"] {
+        flex: 1;
+        min-width: 150px;
+    }
+    
+    .filtrar-ordenar-btns {
+        flex-wrap: wrap;
+    }
+    
+    .btn-ordenar {
+        flex: auto;
+        min-width: 120px;
+    }
+    
+    .filtrar-restricoes {
+        gap: var(--spacing-xs);
+    }
+    
+    .tag-restricao {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-small);
+    }
+    
+    /* CORREÇÃO 5: Resultados - grid responsivo */
+    .section-resultados {
+        padding: 40px var(--spacing-xl);
+    }
+    
+    .section-resultados-title {
         font-size: 36px;
-        /* Reduz o tamanho do título */
     }
-
-    .diferenciais-grid {
-        grid-template-columns: 1fr;
-        /* 1 coluna em vez de 3 (empilha) */
-        gap: 16px;
-        /* Reduz a distância */
+    
+    .section-resultados-subtitle {
+        font-size: 14px;
+        margin-bottom: 24px;
     }
-
-    .diferencial-card--elevado {
-        margin-bottom: 0;
-        /* Remove a margem inferior extra */
-    }
-
-    /* SECTION RESULTADOS RESPONSIVO */
+    
     .resultados-stats {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 colunas em vez de 4 */
+        gap: var(--spacing-md);
     }
-
+    
+    .resultados-stat-item {
+        padding: var(--spacing-md);
+    }
+    
+    .resultados-stat-valor {
+        font-size: 24px;
+    }
+    
+    .resultados-stat-label {
+        font-size: 12px;
+    }
+    
+    .resultados-ordenacao {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    
     .resultados-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 colunas em vez de 4 */
+        gap: var(--spacing-md);
     }
-
-    /* SECTION DESCRICAO RESPONSIVO */
-    .section-descricao {
-        padding: 32px 20px 40px;
-        /* Reduz o padding */
-        border-radius: 16px;
-        /* Reduz o arredondamento */
+    
+    .resultado-card {
+        padding: var(--spacing-sm);
     }
-
-    .descricao-titulo {
-        font-size: 30px;
-        /* Reduz o tamanho do título */
-        margin-bottom: 28px;
-        /* Reduz a margem inferior */
+    
+    .resultado-card-badge {
+        font-size: 10px;
+        padding: 3px 8px;
     }
-
-    .descricao-grid {
-        grid-template-columns: 1fr;
-        /* 1 coluna em vez de 3 (empilha) */
+    
+    /* CORREÇÃO 6: Diferenciais - cards desalinhados */
+    .section-diferenciais {
+        padding: 48px var(--spacing-xl);
+        margin: 0 var(--spacing-md);
+        border-radius: 24px;
     }
-
-    /* SECTION DEPOIMENTOS RESPONSIVO */
+    
+    .diferenciais-header {
+        gap: var(--spacing-sm);
+    }
+    
+    .diferenciais-titulo {
+        font-size: 36px;
+    }
+    
+    .diferenciais-subtitulo {
+        font-size: 13px;
+    }
+    
+    .diferenciais-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-md);
+        align-items: stretch;
+    }
+    
+    .diferencial-card {
+        padding: var(--spacing-md);
+    }
+    
+    .diferencial-card--elevado {
+        margin-bottom: 0;
+        transform: translateY(-8px);
+    }
+    
+    .diferencial-card-icone {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .diferencial-card-icone img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .diferencial-card-titulo {
+        font-size: 14px;
+    }
+    
+    .diferencial-card-desc {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    
+    /* CORREÇÃO 7: Depoimentos - estrelas e cards */
     .section-depoimentos {
-        padding: 48px 24px 56px;
-        /* Reduz o padding */
-        gap: 36px;
-        /* Reduz a distância */
+        padding: 48px var(--spacing-xl);
     }
-
+    
     .depoimentos-titulo {
-        font-size: 30px;
-        /* Reduz o tamanho do título */
+        font-size: 32px;
     }
-
+    
+    .depoimentos-subtitulo {
+        font-size: 14px;
+    }
+    
     .depoimentos-grid {
-        grid-template-columns: 1fr;
-        /* 1 coluna em vez de 3 (empilha) */
-        max-width: 100%;
-        /* Largura máxima total */
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
     }
-
-    /* FOOTER RESPONSIVO */
+    
+    .depoimento-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .depoimento-estrelas img {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .depoimento-texto {
+        font-size: 13px;
+    }
+    
+    .depoimento-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .depoimento-nome {
+        font-size: 13px;
+    }
+    
+    .depoimento-cargo {
+        font-size: 11px;
+    }
+    
+    /* CORREÇÃO 8: Descrição - grid responsivo */
+    .section-descricao {
+        padding: 40px var(--spacing-xl);
+        margin: 0 var(--spacing-md);
+        border-radius: 20px;
+    }
+    
+    .descricao-titulo {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+    
+    .descricao-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .descricao-card {
+        padding: var(--spacing-md);
+    }
+    
+    .descricao-card-header img {
+        width: 32px;
+        height: 28px;
+    }
+    
+    .descricao-card-titulo {
+        font-size: 14px;
+    }
+    
+    .descricao-card-desc {
+        font-size: 12px;
+    }
+    
+    .descricao-card-exemplos {
+        font-size: 10px;
+    }
+    
+    .tag {
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+    
+    /* CORREÇÃO 9: CTA Section - texto responsivo */
+    .cta-section {
+        min-height: auto;
+        padding: 60px var(--spacing-xl);
+    }
+    
+    .anchor-badge {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 24px;
+    }
+    
+    .cta-headline {
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        max-width: 500px;
+        margin-bottom: 32px;
+    }
+    
+    .cta-button {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+    }
+    
+    /* CORREÇÃO 10: Footer - grid responsivo */
     .footer {
-        grid-template-columns: 1fr 1fr;
-        /* 2 colunas em vez de 4 */
-        gap: 28px;
-        /* Reduz a distância */
-        padding: 32px 24px;
-        /* Reduz o padding */
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl) var(--spacing-2xl);
+        padding: var(--spacing-xl);
     }
-
+    
     .brand-section {
-        grid-column: 1 / -1;
-        /* Ocupa todas as colunas (largura total) */
+        grid-column: span 1;
     }
-
+    
+    .brand-name {
+        font-size: 20px;
+    }
+    
     .brand-tagline {
+        font-size: 12px;
         max-width: 100%;
-        /* Largura máxima total */
+    }
+    
+    .footer-col h4 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-col ul {
+        gap: 5px;
+    }
+    
+    .footer-col ul li a {
+        font-size: 13px;
+    }
+    
+    .social-icons {
+        flex-direction: row;
+        gap: var(--spacing-md);
+        margin-top: 0;
+    }
+    
+    .social-icons a {
+        padding: 4px;
+    }
+    
+    .social-icons img {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .help-col p {
+        font-size: 12px;
+    }
+    
+    .btn-suporte {
+        padding: 6px 14px;
+        font-size: 13px;
     }
 }
 
+/* CORREÇÃO ADICIONAL: Landscape tablet (modo paisagem) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .hero {
+        min-height: 90vh;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        padding: var(--spacing-2xl);
+    }
+    
+    .hero-text h1 {
+        font-size: 42px;
+    }
+    
+    .hero-text p {
+        font-size: 18px;
+    }
+    
+    .hero-image img {
+        max-width: 100%;
+    }
+    
+    .pratos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .resultados-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .diferenciais-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* CORREÇÃO ADICIONAL: Tablet pequeno (entre 768px e 900px) */
+@media (min-width: 768px) and (max-width: 900px) {
+    .pratos-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .resultados-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .descricao-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .diferencial-card--elevado {
+        transform: translateY(0);
+    }
+    
+    .footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .brand-section {
+        align-items: center;
+    }
+    
+    .brand-logo {
+        justify-content: center;
+    }
+    
+    .footer-col ul {
+        align-items: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .help-col {
+        align-items: center;
+    }
+}
+
+/* ---- NOTEBOOK RESPONSIVENESS (1025px - 1366px) ---- */
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+    /* Header and Hero */
+    header {
+        padding: var(--spacing-md) var(--spacing-3xl);
+    }
+    
+    .hero-content {
+        padding-left: var(--spacing-3xl);
+        min-height: 85vh;
+    }
+    
+    .hero-text h1 {
+        font-size: 62px;
+    }
+    
+    .hero-text p {
+        font-size: 24px;
+        max-width: 550px;
+    }
+    
+    .hero-image {
+        height: 85vh;
+    }
+    
+    /* General containers */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Notebook: Grids and Layouts */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    /* Dishes Section */
+    .pratos-grid {
+        gap: var(--spacing-lg);
+        max-width: 1000px;
+    }
+    
+    .prato-card-img {
+        height: 170px;
+    }
+    
+    /* Results Section */
+    .resultados-grid {
+        gap: 20px;
+    }
+    
+    .resultados-stat-valor {
+        font-size: 26px;
+    }
+    
+    /* Differentiators Section */
+    .diferenciais-grid {
+        gap: 24px;
+    }
+    
+    .diferencial-card {
+        padding: 24px 20px;
+    }
+    
+    /* Testimonials Section */
+    .depoimentos-grid {
+        gap: 24px;
+    }
+    
+    /* Description Section */
+    .descricao-grid {
+        gap: 24px;
+    }
+    
+    .descricao-card {
+        padding: 18px;
+    }
+}
+
+/* Notebook: Spacing Adjustments */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    /* Main sections */
+    .section-pratos {
+        padding: var(--spacing-3xl) var(--spacing-3xl);
+    }
+    
+    .section-filtrar {
+        max-width: 900px;
+        padding: var(--spacing-2xl) var(--spacing-xl);
+    }
+    
+    .section-resultados {
+        padding: 44px 36px;
+    }
+    
+    .section-diferenciais {
+        padding: 60px 50px 70px;
+    }
+    
+    .section-depoimentos {
+        padding: 60px 50px 70px;
+    }
+    
+    .section-descricao {
+        padding: 44px 36px 50px;
+    }
+    
+    /* Titles */
+    .section-pratos-title,
+    .diferenciais-titulo {
+        font-size: 44px;
+    }
+    
+    .section-resultados-title {
+        font-size: 44px;
+    }
+    
+    .descricao-titulo {
+        font-size: 38px;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+        min-height: 500px;
+        padding: 50px 20px;
+    }
+    
+    .cta-headline {
+        max-width: 600px;
+        font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    }
+}
+
+/* Notebook: Footer Adjusted */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .footer {
+        grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr;
+        gap: 28px;
+        padding: 28px 36px;
+    }
+    
+    .brand-name {
+        font-size: 20px;
+    }
+    
+    .brand-tagline {
+        font-size: 13px;
+        max-width: 180px;
+    }
+    
+    .footer-col h4 {
+        font-size: 16px;
+    }
+    
+    .footer-col ul li a {
+        font-size: 14px;
+    }
+    
+    .social-icons img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .help-col p {
+        font-size: 13px;
+    }
+    
+    .btn-suporte {
+        padding: 7px 16px;
+        font-size: 14px;
+    }
+}
 /* Celulares grandes (até 480px) */
+/* ---- MOBILE SMALL (max-width: 480px) ---- */
+
 @media (max-width: 480px) {
 
-    /* HEADER RESPONSIVO */
+    /* HEADER RESPONSIVE */
     header {
         padding: 10px 16px;
-        /* Reduz ainda mais o padding */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    header img {
+        width: 36px;
+        height: 36px;
     }
 
     .nav-header ul {
-        gap: 10px;
-        /* Reduz a distância entre os itens */
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .nav-header-item {
-        font-size: 13px;
-        /* Reduz o tamanho da fonte */
+        font-size: 12px;
+        white-space: nowrap;
     }
 
-    /* HERO RESPONSIVO */
+    /* HERO RESPONSIVE */
+    .hero {
+        min-height: auto;
+    }
+
     .hero-content {
+        grid-template-columns: 1fr;
         padding: 32px 16px;
-        /* Reduz o padding */
         gap: 24px;
-        /* Reduz a distância */
+        min-height: auto;
     }
 
     .hero-text {
         gap: 16px;
-        /* Reduz a distância entre os elementos */
+        align-items: center;
+        text-align: center;
     }
 
     .hero-text h1 {
-        font-size: 36px;
-        /* Reduz ainda mais o título */
+        font-size: 32px;
+        text-align: center;
     }
 
     .hero-text p {
-        font-size: 17px;
-        /* Reduz o tamanho do parágrafo */
+        font-size: 16px;
+        text-align: center;
+        max-width: 100%;
     }
 
     .hero-image {
-        height: 220px;
-        /* Altura menor para a imagem */
+        height: 200px;
         overflow: hidden;
-        /* Esconde o excesso */
     }
 
     .hero-image img {
         width: 100%;
-        /* Largura total */
         height: 100%;
-        /* Altura total */
         object-fit: cover;
-        /* Cobre o espaço */
-        object-position: center top;
-        /* Foco no topo */
+        object-position: center;
     }
 
-    /* SECTION PRATOS RESPONSIVO */
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* DISHES SECTION RESPONSIVE */
     .section-pratos {
-        padding: 24px 16px 20px;
-        /* Reduz o padding */
+        padding: 32px 16px;
+    }
+
+    .section-pratos-eyebrow {
+        font-size: 12px;
     }
 
     .section-pratos-title {
         font-size: 28px;
-        /* Reduz o tamanho do título */
+    }
+
+    .section-pratos-subtitle {
+        font-size: 12px;
+        margin-bottom: 24px;
     }
 
     .pratos-actions {
+        position: static;
         flex-direction: column;
-        /* Empilha os botões */
         align-items: stretch;
-        /* Estica para a largura total */
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .btn-filtrar {
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 13px;
     }
 
     .pratos-search {
         width: 100%;
-        /* Largura total */
+    }
+
+    .pratos-search input {
+        font-size: 14px;
     }
 
     .pratos-grid {
         grid-template-columns: 1fr;
-        /* 1 coluna (empilha) */
-        gap: 12px;
-        /* Reduz a distância */
+        gap: 16px;
     }
 
     .prato-card-img {
-        height: 200px;
-        /* Altura fixa para a imagem */
+        height: 180px;
     }
 
-    /* SECTION DIFERENCIAIS RESPONSIVO */
-    .section-diferenciais {
-        padding: 36px 16px 44px;
-        /* Reduz o padding */
-        gap: 32px;
-        /* Reduz a distância */
-        border-radius: 16px;
-        /* Reduz o arredondamento */
+    .prato-card-title {
+        font-size: 18px;
     }
 
-    .diferenciais-titulo {
-        font-size: 28px;
-        /* Reduz o tamanho do título */
+    .prato-card-desc {
+        font-size: 12px;
     }
 
-    .diferenciais-subtitulo {
+    .prato-card-macros {
+        gap: 16px;
+    }
+
+    .prato-card-macro-valor {
+        font-size: 14px;
+    }
+
+    .prato-card-macro-label {
+        font-size: 10px;
+    }
+
+    .pratos-load-more {
         font-size: 13px;
-        /* Reduz o tamanho da fonte */
+        margin-top: 16px;
     }
 
-    /* SECTION RESULTADOS RESPONSIVO */
+    /* FILTERS SECTION RESPONSIVE */
+    .section-filtrar {
+        padding: 24px 16px;
+        margin: 0 12px;
+        gap: 20px;
+    }
+
+    .filtrar-bloco {
+        padding-bottom: 16px;
+    }
+
+    .filtrar-bloco-titulo {
+        font-size: 16px;
+    }
+
+    .filtrar-slider {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .filtrar-kcal-valor {
+        font-size: 13px;
+    }
+
+    .filtrar-macro-row {
+        gap: 12px;
+    }
+
+    .filtrar-macro-item {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .filtrar-macro-label {
+        width: auto;
+        min-width: 40px;
+        font-size: 13px;
+    }
+
+    input[type="range"] {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .filtrar-ordenar-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-ordenar {
+        padding: 10px 16px;
+        font-size: 13px;
+        width: 100%;
+    }
+
+    .filtrar-restricoes {
+        gap: 8px;
+    }
+
+    .tag-restricao {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+     /* RESULTS SECTION RESPONSIVE */
     .section-resultados {
         padding: 32px 16px;
-        /* Reduz o padding */
     }
 
     .section-resultados-title {
-        font-size: 32px;
-        /* Reduz o tamanho do título */
+        font-size: 28px;
+    }
+
+    .section-resultados-subtitle {
+        font-size: 13px;
+        margin-bottom: 20px;
     }
 
     .resultados-stats {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 colunas */
-        gap: 8px;
-        /* Reduz a distância */
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .resultados-stat-item {
+        padding: 12px;
     }
 
     .resultados-stat-valor {
-        font-size: 22px;
-        /* Reduz o tamanho do valor */
+        font-size: 20px;
+    }
+
+    .resultados-stat-label {
+        font-size: 11px;
+    }
+
+    .resultados-ordenacao {
+        font-size: 12px;
+        margin-bottom: 16px;
     }
 
     .resultados-grid {
         grid-template-columns: 1fr;
-        /* 1 coluna (empilha) */
+        gap: 14px;
     }
 
-    /* SECTION DESCRICAO RESPONSIVO */
-    .section-descricao {
-        padding: 24px 16px 32px;
-        /* Reduz o padding */
-        border-radius: 12px;
-        /* Reduz o arredondamento */
+    .resultado-card {
+        padding: 12px;
     }
 
-    .descricao-titulo {
-        font-size: 24px;
-        /* Reduz o tamanho do título */
-        margin-bottom: 20px;
-        /* Reduz a margem inferior */
+    .resultado-card-badge {
+        font-size: 10px;
+        padding: 3px 8px;
     }
 
-    /* SECTION DEPOIMENTOS RESPONSIVO */
-    .section-depoimentos {
-        padding: 36px 16px 44px;
-        /* Reduz o padding */
+    /* DIFFERENTIATORS SECTION RESPONSIVE */
+    .section-diferenciais {
+        padding: 40px 16px;
         gap: 28px;
-        /* Reduz a distância */
+        border-radius: 20px;
+        margin: 0 12px;
+    }
+
+    .diferenciais-eyebrow {
+        font-size: 12px;
+    }
+
+    .diferenciais-titulo {
+        font-size: 28px;
+    }
+
+    .diferenciais-subtitulo {
+        font-size: 13px;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .diferencial-card {
+        padding: 20px 16px;
+    }
+
+    .diferencial-card--elevado {
+        transform: translateY(0);
+        margin-bottom: 0;
+    }
+
+    .diferencial-card-icone {
+        width: 48px;
+        height: 48px;
+    }
+
+    .diferencial-card-icone img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .diferencial-card-titulo {
+        font-size: 16px;
+    }
+
+    .diferencial-card-desc {
+        font-size: 13px;
+    }
+
+        /* TESTIMONIALS SECTION RESPONSIVE */
+    .section-depoimentos {
+        padding: 40px 16px;
+        gap: 28px;
+    }
+
+    .depoimentos-eyebrow {
+        font-size: 12px;
     }
 
     .depoimentos-titulo {
         font-size: 26px;
-        /* Reduz o tamanho do título */
     }
 
-    /* CTA SECTION RESPONSIVO */
+    .depoimentos-subtitulo {
+        font-size: 13px;
+    }
+
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .depoimento-card {
+        padding: 20px;
+    }
+
+    .depoimento-estrelas img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .depoimento-texto {
+        font-size: 13px;
+    }
+
+    .depoimento-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .depoimento-nome {
+        font-size: 14px;
+    }
+
+    .depoimento-cargo {
+        font-size: 11px;
+    }
+
+    /* DESCRIPTION SECTION RESPONSIVE */
+    .section-descricao {
+        padding: 32px 16px;
+        margin: 0 12px;
+        border-radius: 16px;
+    }
+
+    .descricao-titulo {
+        font-size: 26px;
+        margin-bottom: 24px;
+    }
+
+    .descricao-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .descricao-card {
+        padding: 16px;
+    }
+
+    .descricao-card-header img {
+        width: 32px;
+        height: 28px;
+    }
+
+    .descricao-card-titulo {
+        font-size: 15px;
+    }
+
+    .descricao-card-desc {
+        font-size: 12px;
+    }
+
+    .descricao-card-exemplos {
+        font-size: 10px;
+    }
+
+    .tag {
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+
+    /* CTA SECTION RESPONSIVE */
     .cta-section {
         padding: 48px 16px;
-        /* Reduz o padding */
         min-height: auto;
-        /* Altura automática */
-    }
-
-    .cta-headline {
-        font-size: 1.5rem;
-        /* Reduz o tamanho da fonte */
-        margin-bottom: 28px;
-        /* Reduz a margem inferior */
     }
 
     .anchor-badge {
         width: 56px;
-        /* Reduz a largura */
         height: 56px;
-        /* Reduz a altura */
         margin-bottom: 20px;
-        /* Reduz a margem inferior */
     }
 
-    /* FOOTER RESPONSIVO */
+    .cta-headline {
+        font-size: 1.5rem;
+        max-width: 100%;
+        margin-bottom: 28px;
+        padding: 0 8px;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    /* FOOTER RESPONSIVE */
     .footer {
         grid-template-columns: 1fr;
-        /* 1 coluna (empilha tudo) */
-        gap: 24px;
-        /* Reduz a distância */
-        padding: 28px 16px;
-        /* Reduz o padding */
+        gap: 28px;
+        padding: 32px 20px;
+        text-align: center;
     }
 
     .brand-section {
-        grid-column: auto;
-        /* Remove a ocupação de todas as colunas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .brand-logo {
+        justify-content: center;
     }
 
     .brand-name {
         font-size: 20px;
-        /* Reduz o tamanho da fonte */
     }
 
     .brand-tagline {
+        font-size: 12px;
+        max-width: 100%;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col h4,
+    .help-col h4 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .footer-col ul {
+        align-items: center;
+        gap: 8px;
+    }
+
+    .footer-col ul li a {
         font-size: 13px;
-        /* Reduz o tamanho da fonte */
+    }
+
+    .help-col {
+        align-items: center;
+        text-align: center;
+    }
+
+    .help-col p {
+        font-size: 13px;
+    }
+
+    .btn-suporte {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+
+    .social-icons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 0;
+    }
+
+    .social-icons img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    /* HEADER */
+    .nav-header-item {
+        font-size: 11px;
+    }
+
+    /* HERO */
+    .hero-text h1 {
+        font-size: 26px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        height: 180px;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    /* DISHES SECTION */
+    .section-pratos-title {
+        font-size: 24px;
+    }
+
+    .prato-card-img {
+        height: 160px;
+    }
+
+    .prato-card-title {
+        font-size: 16px;
+    }
+
+    /* FILTERS SECTION */
+    .filtrar-bloco-titulo {
+        font-size: 15px;
+    }
+
+    .tag-restricao {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    /* RESULTS SECTION */
+    .section-resultados-title {
+        font-size: 24px;
+    }
+
+    .resultados-stats {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .resultados-stat-valor {
+        font-size: 18px;
+    }
+
+    /* DIFFERENTIATORS SECTION */
+    .diferenciais-titulo {
+        font-size: 24px;
+    }
+
+    .diferencial-card-titulo {
+        font-size: 15px;
+    }
+
+    .diferencial-card-desc {
+        font-size: 12px;
+    }
+
+    /* TESTIMONIALS SECTION */
+    .depoimentos-titulo {
+        font-size: 22px;
+    }
+
+    /* DESCRIPTION SECTION */
+    .descricao-titulo {
+        font-size: 22px;
+    }
+
+    /* CTA SECTION */
+    .cta-headline {
+        font-size: 1.25rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    /* FOOTER */
+    .brand-name {
+        font-size: 18px;
     }
 
     .footer-col h4,
     .help-col h4 {
         font-size: 15px;
-        /* Reduz o tamanho da fonte do título */
-    }
-
-    .footer-col ul li a {
-        font-size: 14px;
-        /* Reduz o tamanho da fonte do link */
-    }
-
-    .help-col p {
-        font-size: 13px;
-        /* Reduz o tamanho da fonte */
     }
 
     .btn-suporte {
-        width: 100%;
-        /* Botão ocupa toda a largura */
-        text-align: center;
-        /* Centraliza o texto */
-        font-size: 14px;
-        /* Reduz o tamanho da fonte */
-        padding: 10px 18px;
-        /* Ajusta o padding */
-    }
-
-    .social-icons {
-        flex-direction: row;
-        /* Ícones em linha (horizontal) */
-        gap: 14px;
-        /* Distância entre os ícones */
+        max-width: 180px;
+        font-size: 12px;
     }
 }
 
-/* Celulares muito pequenos (até 360px) */
-@media (max-width: 360px) {
+@media (max-height: 480px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+    }
 
-    /* HERO RESPONSIVO */
+    .hero-content {
+        padding: 20px 16px;
+        gap: 16px;
+    }
+
+    .hero-image {
+        height: 150px;
+    }
+
     .hero-text h1 {
-        font-size: 30px;
-        /* Reduz ainda mais o título */
+        font-size: 28px;
     }
 
     .hero-text p {
-        font-size: 15px;
-        /* Reduz ainda mais o parágrafo */
+        font-size: 14px;
     }
 
-    /* SECTION PRATOS RESPONSIVO */
-    .section-pratos-title {
-        font-size: 24px;
-        /* Reduz o tamanho do título */
+    .section-pratos,
+    .section-resultados,
+    .section-diferenciais {
+        padding: 24px 16px;
     }
 
-    /* SECTION DIFERENCIAIS RESPONSIVO */
-    .diferenciais-titulo {
-        font-size: 24px;
-        /* Reduz o tamanho do título */
+    .pratos-grid,
+    .resultados-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
-    /* CTA SECTION RESPONSIVO */
-    .cta-headline {
-        font-size: 1.25rem;
-        /* Reduz o tamanho da fonte */
-    }
-
-    /* SECTION RESULTADOS RESPONSIVO */
-    .resultados-stats {
-        grid-template-columns: 1fr;
-        /* 1 coluna (empilha) */
+    .cta-section {
+        padding: 32px 16px;
     }
 }
