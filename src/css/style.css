@@ -2477,6 +2477,39 @@ header img {
         align-items: center;
     }
 }
+
+/* ---- NOTEBOOK RESPONSIVENESS (1025px - 1366px) ---- */
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+    /* Header and Hero */
+    header {
+        padding: var(--spacing-md) var(--spacing-3xl);
+    }
+    
+    .hero-content {
+        padding-left: var(--spacing-3xl);
+        min-height: 85vh;
+    }
+    
+    .hero-text h1 {
+        font-size: 62px;
+    }
+    
+    .hero-text p {
+        font-size: 24px;
+        max-width: 550px;
+    }
+    
+    .hero-image {
+        height: 85vh;
+    }
+    
+    /* General containers */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
 /* Celulares grandes (até 480px) */
 @media (max-width: 480px) {
 
