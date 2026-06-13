@@ -3057,4 +3057,214 @@ header img {
         font-size: 10px;
         padding: 3px 10px;
     }
+
+    /* CTA SECTION RESPONSIVE */
+    .cta-section {
+        padding: 48px 16px;
+        min-height: auto;
+    }
+
+    .anchor-badge {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 20px;
+    }
+
+    .cta-headline {
+        font-size: 1.5rem;
+        max-width: 100%;
+        margin-bottom: 28px;
+        padding: 0 8px;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    /* FOOTER RESPONSIVE */
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 32px 20px;
+        text-align: center;
+    }
+
+    .brand-section {
+        align-items: center;
+        text-align: center;
+    }
+
+    .brand-logo {
+        justify-content: center;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .brand-tagline {
+        font-size: 12px;
+        max-width: 100%;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col h4,
+    .help-col h4 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .footer-col ul {
+        align-items: center;
+        gap: 8px;
+    }
+
+    .footer-col ul li a {
+        font-size: 13px;
+    }
+
+    .help-col {
+        align-items: center;
+        text-align: center;
+    }
+
+    .help-col p {
+        font-size: 13px;
+    }
+
+    .btn-suporte {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+
+    .social-icons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 0;
+    }
+
+    .social-icons img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    /* HEADER */
+    .nav-header-item {
+        font-size: 11px;
+    }
+
+    /* HERO */
+    .hero-text h1 {
+        font-size: 26px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        height: 180px;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    /* DISHES SECTION */
+    .section-pratos-title {
+        font-size: 24px;
+    }
+
+    .prato-card-img {
+        height: 160px;
+    }
+
+    .prato-card-title {
+        font-size: 16px;
+    }
+
+    /* FILTERS SECTION */
+    .filtrar-bloco-titulo {
+        font-size: 15px;
+    }
+
+    .tag-restricao {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    /* RESULTS SECTION */
+    .section-resultados-title {
+        font-size: 24px;
+    }
+
+    .resultados-stats {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .resultados-stat-valor {
+        font-size: 18px;
+    }
+
+    /* DIFFERENTIATORS SECTION */
+    .diferenciais-titulo {
+        font-size: 24px;
+    }
+
+    .diferencial-card-titulo {
+        font-size: 15px;
+    }
+
+    .diferencial-card-desc {
+        font-size: 12px;
+    }
+
+    /* TESTIMONIALS SECTION */
+    .depoimentos-titulo {
+        font-size: 22px;
+    }
+
+    /* DESCRIPTION SECTION */
+    .descricao-titulo {
+        font-size: 22px;
+    }
+
+    /* CTA SECTION */
+    .cta-headline {
+        font-size: 1.25rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    /* FOOTER */
+    .brand-name {
+        font-size: 18px;
+    }
+
+    .footer-col h4,
+    .help-col h4 {
+        font-size: 15px;
+    }
+
+    .btn-suporte {
+        max-width: 180px;
+        font-size: 12px;
+    }
 }
