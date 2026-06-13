@@ -2723,4 +2723,142 @@ header img {
         padding: 10px 20px;
         font-size: 14px;
     }
+
+    /* DISHES SECTION RESPONSIVE */
+    .section-pratos {
+        padding: 32px 16px;
+    }
+
+    .section-pratos-eyebrow {
+        font-size: 12px;
+    }
+
+    .section-pratos-title {
+        font-size: 28px;
+    }
+
+    .section-pratos-subtitle {
+        font-size: 12px;
+        margin-bottom: 24px;
+    }
+
+    .pratos-actions {
+        position: static;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .btn-filtrar {
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .pratos-search {
+        width: 100%;
+    }
+
+    .pratos-search input {
+        font-size: 14px;
+    }
+
+    .pratos-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .prato-card-img {
+        height: 180px;
+    }
+
+    .prato-card-title {
+        font-size: 18px;
+    }
+
+    .prato-card-desc {
+        font-size: 12px;
+    }
+
+    .prato-card-macros {
+        gap: 16px;
+    }
+
+    .prato-card-macro-valor {
+        font-size: 14px;
+    }
+
+    .prato-card-macro-label {
+        font-size: 10px;
+    }
+
+    .pratos-load-more {
+        font-size: 13px;
+        margin-top: 16px;
+    }
+
+    /* FILTERS SECTION RESPONSIVE */
+    .section-filtrar {
+        padding: 24px 16px;
+        margin: 0 12px;
+        gap: 20px;
+    }
+
+    .filtrar-bloco {
+        padding-bottom: 16px;
+    }
+
+    .filtrar-bloco-titulo {
+        font-size: 16px;
+    }
+
+    .filtrar-slider {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .filtrar-kcal-valor {
+        font-size: 13px;
+    }
+
+    .filtrar-macro-row {
+        gap: 12px;
+    }
+
+    .filtrar-macro-item {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .filtrar-macro-label {
+        width: auto;
+        min-width: 40px;
+        font-size: 13px;
+    }
+
+    input[type="range"] {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .filtrar-ordenar-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-ordenar {
+        padding: 10px 16px;
+        font-size: 13px;
+        width: 100%;
+    }
+
+    .filtrar-restricoes {
+        gap: 8px;
+    }
+
+    .tag-restricao {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
 }
