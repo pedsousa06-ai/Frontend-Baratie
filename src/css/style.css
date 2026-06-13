@@ -2011,6 +2011,45 @@ header img {
     }
 }
 
+/* Tablet: Seção Filtrar */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .section-filtrar {
+        padding: var(--spacing-2xl) var(--spacing-xl);
+        margin: 0 var(--spacing-lg);
+    }
+    
+    .filtrar-bloco-titulo {
+        font-size: var(--font-h5);
+    }
+    
+    .filtrar-slider {
+        width: 70%;
+    }
+    
+    .filtrar-macro-row {
+        gap: var(--spacing-sm);
+    }
+    
+    .filtrar-macro-item {
+        flex-wrap: wrap;
+    }
+    
+    .filtrar-macro-label {
+        width: 40px;
+        font-size: var(--font-body4);
+    }
+    
+    .btn-ordenar {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-body4);
+    }
+    
+    .tag-restricao {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-small);
+    }
+}
+
 /* Celulares grandes (até 480px) */
 @media (max-width: 480px) {
 
