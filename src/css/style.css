@@ -705,7 +705,8 @@ header img {
     /* Transições suaves */
 }
 
-.btn-ordenar:hover:not(.ativo) {
+.btn-ordenar:hover,
+.btn-ordenar.ativo:hover {
     border-color: #6AC8E3;
     /* Cor da borda ao passar o mouse */
     color: #6AC8E3;
@@ -715,11 +716,11 @@ header img {
 }
 
 .btn-ordenar.ativo {
-    border-color: #6AC8E3;
+    border-color: var(--color-gray-200);
     /* Cor da borda do botão ativo */
-    color: #6AC8E3;
+    color: var(--color-gray-300);
     /* Cor do texto do botão ativo */
-    background: #e6f7fb;
+    background: var(--color-white);
     /* Cor de fundo do botão ativo */
     font-weight: var(--font-semibold);
     /* Espessura da fonte mais grossa */
