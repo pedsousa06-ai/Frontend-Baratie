@@ -2556,6 +2556,59 @@ header img {
     }
 }
 
+/* Notebook: Spacing Adjustments */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    /* Main sections */
+    .section-pratos {
+        padding: var(--spacing-3xl) var(--spacing-3xl);
+    }
+    
+    .section-filtrar {
+        max-width: 900px;
+        padding: var(--spacing-2xl) var(--spacing-xl);
+    }
+    
+    .section-resultados {
+        padding: 44px 36px;
+    }
+    
+    .section-diferenciais {
+        padding: 60px 50px 70px;
+    }
+    
+    .section-depoimentos {
+        padding: 60px 50px 70px;
+    }
+    
+    .section-descricao {
+        padding: 44px 36px 50px;
+    }
+    
+    /* Titles */
+    .section-pratos-title,
+    .diferenciais-titulo {
+        font-size: 44px;
+    }
+    
+    .section-resultados-title {
+        font-size: 44px;
+    }
+    
+    .descricao-titulo {
+        font-size: 38px;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+        min-height: 500px;
+        padding: 50px 20px;
+    }
+    
+    .cta-headline {
+        max-width: 600px;
+        font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    }
+}
 
 /* Celulares grandes (até 480px) */
 @media (max-width: 480px) {
